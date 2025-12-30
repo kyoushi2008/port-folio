@@ -1,0 +1,13 @@
+# ビルド成果物
+assets/css/
+assets/js/
+
+# OS・エディタ系
+.DS_Store
+Thumbs.db
+*.log
+
+# gulp関連（必要なら除外）
+/gulp/node_modules/
+/gulp/dist/
+/gulp/src/
