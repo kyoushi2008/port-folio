@@ -37,6 +37,10 @@ function my_script_init()
 	// jQueryの読み込み
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', "", "1.0.1");
+
+	// Google Fonts
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap', array(), null );
+
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '1.0.1', 'all');
 	wp_enqueue_style( 'my', get_template_directory_uri() . '/assets/css/styles.min.css', array(), '1.0.1', 'all' );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array( 'jquery' ), '1.0.1', true );
@@ -86,7 +90,7 @@ add_filter( 'get_the_archive_title', 'my_archive_title' );
 
 /**
  * 投稿タイプごとに異なるアーカイブの表示件数を指定
- * 
+ *
  * 参考：https://webcreatetips.com/coding/152/
  */
 // function change_posts_per_page($query) {
@@ -95,7 +99,7 @@ add_filter( 'get_the_archive_title', 'my_archive_title' );
 //   if ( $query->is_post_type_archive('works') ) {
 //     $query->set( 'posts_per_page', '6' );
 //   }
-// 	if ( $query->is_tax('works_category') ) { 	
+// 	if ( $query->is_tax('works_category') ) {
 // 		$query->set( 'posts_per_page', '6' );
 // 	}
 // }
@@ -157,3 +161,11 @@ add_filter( 'get_the_archive_title', 'my_archive_title' );
 // }
 // add_action('init', 'change_post_object_label');
 // add_action('admin_menu', 'change_post_menu_label');
+
+// 投稿とコメントを管理メニューから非表示
+function remove_default_menu_items() {
+    remove_menu_page('edit.php');          // 投稿
+    remove_menu_page('edit-comments.php'); // コメント
+}
+add_action('admin_menu', 'remove_default_menu_items');
+
