@@ -12,3 +12,4 @@
   <header class="">
     ヘッダー
   </header>
+  <main>
