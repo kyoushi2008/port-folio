@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.c-btn {
+  width: max-content;
+@include mq(md) {}
+}
+
+.c-btn__link {
+  font-family: $font-sub;
+  font-size: myrem(22);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .1em;
+  display: inline-flex;
+  align-items: center;
+  gap: myrem(8);
+@include mq(md) {
+  gap: myrem(12);
+}
+}
+
+.c-btn--circle {
+  position: relative;
+  display: block;
+  width: myrem(30);
+  height: myrem(30);
+  border-radius: 50%;
+  background: linear-gradient( to bottom, #104C93 0%, #104C93 41%, #0E2D52 100%);
+  @include mq(md) {
+    width: myrem(42);
+    height: myrem(42);
+}
+}
+.c-btn--circle::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: myrem(8);
+  height: myrem(10);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  background: $white;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    width: myrem(10);
+    height: myrem(14);
+}
+}
