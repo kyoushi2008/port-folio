@@ -178,8 +178,8 @@ button {
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#104C93), color-stop(41%, #104C93), to(#0E2D52));
-  background: linear-gradient(to bottom, #104C93 0%, #104C93 41%, #0E2D52 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#104c93), color-stop(41%, #104c93), to(#0e2d52));
+  background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
 }
 @media screen and (min-width: 768px) {
   .c-btn--circle {
@@ -206,6 +206,55 @@ button {
   .c-btn--circle::before {
     width: 0.625rem;
     height: 0.875rem;
+  }
+}
+
+.c-btn--l {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .c-btn--l {
+    display: inline;
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-btn--l-circle {
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-btn--l-circle::before {
+    width: 1.25rem;
+    height: 1.125rem;
+    -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    top: 47%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.c-label {
+  font-size: 1.125rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: #fff;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(#104c93), color-stop(41%, #104c93), to(#0e2d52));
+  background: linear-gradient(to right, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  padding: 0.5rem 0 0.5625rem 0.3125rem;
+}
+@media screen and (min-width: 768px) {
+  .c-label {
+    font-size: 2.125rem;
+    font-weight: 800;
+    padding: 0.1875rem 0 0.5625rem 0.625rem;
   }
 }
 

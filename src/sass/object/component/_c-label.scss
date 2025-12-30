@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.c-label {
+  font-size: myrem(18);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $white;
+  display: inline-block;
+  background: linear-gradient(to right, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  padding: myrem(8) 0 myrem(9) myrem(5);
+  @include mq(md) {
+    font-size: myrem(34);
+    font-weight: 800;
+    padding: myrem(3) 0 myrem(9) myrem(10);
+  }
+}

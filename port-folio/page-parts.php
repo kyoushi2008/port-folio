@@ -6,6 +6,10 @@
         <div class="c-btn">
             <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
         </div>
+        <!-- ボタントップへもどる -->
+        <div class="c-btn c-btn--l">
+            <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="c-btn__link"><span class="c-btn--circle c-btn--l-circle"></span></a>
+        </div>
 
         <!-- タイトル -->
         <div class="c-title">
@@ -22,6 +26,10 @@
             <h2 class="c-title--l c-title--wl">PROFILE</h2>
             <p class="c-title--s c-title--ws c-title--wsc">経歴・職歴</p>
          </div>
-    </div>
+
+         <!-- ラベル -->
+          <span class="c-label">ハイクオリティなコードを納品。</span>
+
+
 </main>
 <?php get_footer(); ?>
