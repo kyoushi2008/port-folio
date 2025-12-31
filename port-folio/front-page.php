@@ -30,6 +30,21 @@
       </div>
     </div>
   </div>
+  <div class="p-fv__title-group">
+    <p class="p-fv__text">High quality code<span class="p-fv-bar"></span></p>
+    <div class="p-fv__title02">スキルだけじゃない</div>
+    <div class="p-fv__title01">パートナーに。</div>
+  </div>
 </section>
 
+<!-- section works -->
+<section class="p-top-works l-top-works">
+  <div class="p-top-works__cotent">
+    <!-- タイトル -->
+    <div class="c-title">
+      <h2 class="c-title--l">WORKS</h2>
+      <p class="c-title--s">実績</p>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>

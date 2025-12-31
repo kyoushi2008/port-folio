@@ -63,3 +63,59 @@ $(function() {
     // loop: true,
   });
 });
+
+// ファーストビューテキスト
+$(function() {
+  const fvSwiper = new Swiper('.p-fv__swiper', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 1000,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+
+  const $fvTitle01 = $('.p-fv__title01');
+  const $fvTitle02 = $('.p-fv__title02');
+
+  if ($fvTitle02.length) {
+    const text02 = $fvTitle02.text();
+    const htmlContent02 = text02.split('').map(char => {
+      return `<span class="is-fv-title">${char}</span>`;
+    }).join('');
+    $fvTitle02.html(htmlContent02).css('visibility', 'visible');
+
+    const $spans02 = $fvTitle02.find('.is-fv-title');
+    let delayCounter = 0;
+
+    $spans02.each(function() {
+      const $span = $(this);
+      setTimeout(() => {
+        $span.addClass('is-fv-show');
+      }, 80 * delayCounter);
+      delayCounter++;
+    });
+  }
+
+  if ($fvTitle01.length) {
+    const text01 = $fvTitle01.text();
+    const htmlContent01 = text01.split('').map(char => {
+      return `<span class="is-fv-title">${char}</span>`;
+    }).join('');
+    $fvTitle01.html(htmlContent01).css('visibility', 'visible');
+
+    const $spans01 = $fvTitle01.find('.is-fv-title');
+    let delayCounter = 0;
+
+    $spans01.each(function() {
+      const $span = $(this);
+      setTimeout(() => {
+        $span.addClass('is-fv-show');
+      }, 80 * (9 + delayCounter));
+      delayCounter++;
+    });
+  }
+});

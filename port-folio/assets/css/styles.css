@@ -273,7 +273,7 @@ button {
 .c-title--l {
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0em;
   color: #104C93;
@@ -762,6 +762,106 @@ button {
 .p-fv__swiper .swiper-slide-active .p-fv__image img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.p-fv__title-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #fff;
+  text-align: left;
+}
+.p-fv__text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0;
+  -webkit-animation: textFadeIn 1s ease forwards;
+          animation: textFadeIn 1s ease forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .p-fv__text {
+    font-size: 40px;
+  }
+}
+
+@-webkit-keyframes textFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.p-fv-bar {
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  margin-left: 10px;
+  -webkit-animation: expandLine 1s ease forwards;
+          animation: expandLine 1s ease forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@-webkit-keyframes expandLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+@keyframes expandLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+.p-fv__title02 {
+  font-size: 32px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .p-fv__title02 {
+    font-size: 62px;
+  }
+}
+
+.p-fv__title01 {
+  font-size: 62px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .p-fv__title01 {
+    font-size: 100px;
+  }
+}
+
+.is-fv-title {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.is-fv-title.is-fv-show {
+  opacity: 1;
 }
 
 .p-header {
