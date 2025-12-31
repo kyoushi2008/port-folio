@@ -11,7 +11,7 @@
 .c-title--l {
   font-family: $font-sub;
   font-size: myrem(28);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0em;
   color: $blue;
@@ -112,5 +112,12 @@
   @include mq(md) {
     top: 47%;
     left: 11%;
+  }
+}
+
+.c-title--sl {
+  font-size: myrem(20);
+  @include mq(md) {
+    font-size: myrem(60);
   }
 }

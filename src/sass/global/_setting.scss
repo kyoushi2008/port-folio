@@ -2,7 +2,7 @@
 @use "sass:map";
 
 // インナー幅
-$innerWidth: 1024px;
+$innerWidth: 1300px;
 
 // 余白
 $padding-pc: 70px;
@@ -11,9 +11,11 @@ $padding-sp: 20px;
 // フォント
 $font-main: "Noto Sans JP", sans-serif;
 $font-sub: "Roboto", sans-serif;
+$font-tertiary: "open-sans-condensed", sans-serif;
 
 // 色指定
-$black: #333;
+$black: #000;
+$black2: #2A2A2A;
 $white: #fff;
 $blue: #104C93;
 $blue2: #0E2D52;
