@@ -2,17 +2,13 @@
 
 .p-footer {
   width: 100%;
+  display: flex;
+  background: linear-gradient(to bottom, #104C93 0%, #0E2D52 100%);
   @include mq(md) {}
 }
 
 .p-footer__wrapper {
   width: inherit;
-  display: flex;
-  background: linear-gradient(
-  to bottom,
-  #104C93 0%,
-  #0E2D52 100%
-  );
   @include mq(md) {}
 }
 
@@ -45,6 +41,12 @@
 }
 
 .p-footer__privacy-text {
+  font-family: $font-tertiary;
+  font-size: myrem(12);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .1em;
+  color: $white;
 @include mq(md) {}
 }
 
