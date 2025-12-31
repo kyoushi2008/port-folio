@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.p-footer {
+  width: 100%;
+  @include mq(md) {}
+}
+
+.p-footer__wrapper {
+  width: inherit;
+  display: flex;
+  background: linear-gradient(
+  to bottom,
+  #104C93 0%,
+  #0E2D52 100%
+  );
+  @include mq(md) {}
+}
+
+.p-footer__group {
+@include mq(md) {}
+}
+
+.p-footer__logo {
+@include mq(md) {}
+}
+
+.p-footer__icon-group {
+@include mq(md) {}
+}
+
+.p-footer__icon-line {
+@include mq(md) {}
+}
+
+.p-footer__icon-x {
+@include mq(md) {}
+}
+
+.p-footer__icon-instagram {
+@include mq(md) {}
+}
+
+.p-footer__icon-facebook {
+@include mq(md) {}
+}
+
+.p-footer__privacy-text {
+@include mq(md) {}
+}
+
+.p-footer__nav-list {
+@include mq(md) {}
+}
+
+.p-footer__nav-item {
+@include mq(md) {}
+}
+
+.p-footer__nav-link {
+@include mq(md) {}
+}
+
+.p-footer__nav-text--l {
+@include mq(md) {}
+}
+
+.p-footer__nav-text {
+@include mq(md) {}
+}
+
+.p-footer__nav-list02 {
+@include mq(md) {}
+}
+
+.p-footer__copyright {
+@include mq(md) {}
+}
