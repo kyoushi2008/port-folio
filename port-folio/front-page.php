@@ -31,8 +31,8 @@
     </div>
   </div>
   <div class="p-fv__title-group">
-    <p class="p-fv__text">High quality code<span class="p-fv-bar"></span></p>
-    <div class="p-fv__title02">スキルだけじゃない</div>
+    <p class="p-fv__text">High&thinsp;quality&thinsp;code<span class="p-fv-bar"></span></p>
+    <div class="p-fv__title02"><span class="p-fv__title02--l">スキル</span>だけじゃない</div>
     <div class="p-fv__title01">パートナーに。</div>
   </div>
 </section>
