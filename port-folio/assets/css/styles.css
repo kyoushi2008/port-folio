@@ -703,6 +703,53 @@ button {
   }
 }
 
+.p-fv__swiper {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .p-fv__swiper .swiper-slide {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+    transition: opacity 1s ease, -webkit-transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-fv__swiper .swiper-slide-active {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.p-fv__image {
+  width: 100%;
+  height: 100%;
+}
+.p-fv__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 6s ease;
+  transition: -webkit-transform 6s ease;
+  transition: transform 6s ease;
+  transition: transform 6s ease, -webkit-transform 6s ease;
+}
+
+.p-fv__swiper .swiper-slide-active .p-fv__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .p-header {
   position: fixed;
   top: 0;

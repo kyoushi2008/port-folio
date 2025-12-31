@@ -49,3 +49,17 @@ $('.js-drawer a').on('click', function () {
   $('.js-drawer').fadeOut();
   $('body').removeClass('active');
 });
+
+// ファーストビュー
+$(function() {
+  // FV Swiper
+  const fvSwiper = new Swiper('.p-fv__swiper', {
+    effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    // loop: true,
+  });
+});
