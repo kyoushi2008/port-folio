@@ -111,16 +111,16 @@ add_filter( 'get_the_archive_title', 'my_archive_title' );
  *
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
  */
-// function my_menu_init() {
-// 	register_nav_menus(
-// 		array(
-// 			'global'  => 'ヘッダーメニュー',
-// 			'utility' => 'ユーティリティメニュー',
-// 			'drawer'  => 'ドロワーメニュー',
-// 		)
-// 	);
-// }
-// add_action( 'init', 'my_menu_init' );
+function my_menu_init() {
+	register_nav_menus(
+		array(
+			'global'  => 'ヘッダーメニュー',
+			'utility' => 'ユーティリティメニュー',
+			'drawer'  => 'ドロワーメニュー',
+		)
+	);
+}
+add_action( 'init', 'my_menu_init' );
 
 
 /**
@@ -168,4 +168,3 @@ function remove_default_menu_items() {
     remove_menu_page('edit-comments.php'); // コメント
 }
 add_action('admin_menu', 'remove_default_menu_items');
-
