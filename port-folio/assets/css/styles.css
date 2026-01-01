@@ -156,6 +156,15 @@ button {
   }
 }
 
+.l-service {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .l-service {
+    margin-top: 5rem;
+  }
+}
+
 .breadcrumb {
   width: 100%;
   display: -webkit-box;
@@ -1992,6 +2001,327 @@ body.active {
 .p-main {
   width: 100%;
   background: gray;
+}
+
+.p-service {
+  width: 100%;
+  background: #f3f7fa;
+}
+
+.p-service__container {
+  width: inherit;
+  padding: 4.9375rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-service__container {
+    padding: 6.375rem 0 0 0;
+  }
+}
+
+.p-service__top-image {
+  margin: 0.375rem calc(50% - 50vw) 0.625rem;
+  width: 100vw;
+  max-width: none;
+}
+@media screen and (min-width: 768px) {
+  .p-service__top-image {
+    margin: 2.25rem calc(50% - 50vw) 0;
+  }
+}
+
+.p-service__top-image img {
+  width: 100%;
+  aspect-ratio: 375/250;
+}
+@media screen and (min-width: 768px) {
+  .p-service__top-image img {
+    aspect-ratio: 1440/480;
+  }
+}
+
+.p-price__content {
+  width: 100%;
+  padding: 0.625rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-price__content {
+    padding: 0.875rem 0 0 0;
+  }
+}
+
+.p-price__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  list-style: none;
+  margin: 2.5625rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-price__grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    margin: 2.4375rem 0 0 0;
+  }
+}
+
+.price-item {
+  background: #fff;
+  padding: 1.25rem 0 1.875rem 0.625rem;
+  border-radius: 0.25rem;
+}
+/* お見積もり：3列分 */
+.price-item:nth-child(1) {
+  grid-column: 1/3;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(1) {
+    grid-column: span 3;
+  }
+}
+
+/* 基本料金：9列分 */
+.price-item:nth-child(2) {
+  grid-column: 1/2;
+  padding: 1.25rem 0 2.8125rem 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(2) {
+    grid-column: span 9;
+  }
+}
+
+/* アニメーション：5列分 */
+.price-item:nth-child(3) {
+  grid-column: 2/3;
+  padding: 1.25rem 0.625rem 2.8125rem 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(3) {
+    grid-column: span 5;
+  }
+}
+
+/* レスポンシブ：7列分 */
+.price-item:nth-child(4) {
+  grid-column: 1/3;
+  padding: 1.25rem 0 0.75rem 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(4) {
+    grid-column: span 7;
+  }
+}
+
+/* 実装工期：全幅 */
+.price-item:nth-child(5) {
+  grid-column: 1/3;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(5) {
+    grid-column: span 12;
+  }
+}
+
+.price-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #104C93;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .price-title {
+    font-size: 2rem;
+  }
+}
+
+.price-item:nth-child(4) .price-title {
+  margin-bottom: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(4) .price-title {
+    font-size: 2rem;
+  }
+}
+
+.price-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .price-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.price-item:nth-child(2) .price-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+.price-item:nth-child(3) .price-content {
+  margin: 6.75rem 0 0 0;
+}
+.price-item:nth-child(4) .price-content {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 1.6875rem 0.625rem 0;
+}
+.price-item:nth-child(2) .price-image {
+  width: 86px;
+  height: 69px;
+  margin: 0 0 0 2.0625rem;
+}
+.price-item:nth-child(4) .price-image {
+  width: 78px;
+  height: 102px;
+  margin: 0 2.4375rem 0 0;
+}
+.price-item:nth-child(5) .price-image {
+  width: 157px;
+  height: 72px;
+}
+@media screen and (min-width: 768px) {
+  .price-item:nth-child(5) .price-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 0;
+  }
+}
+
+.price-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.price-number {
+  font-family: "Roboto", sans-serif;
+  font-size: 4.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #104C93;
+  margin: 0 0 0 0.3125rem;
+}
+.price-number--s {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.125rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #104C93;
+  margin: 0 0 0 0.3125rem;
+}
+.price-number--s::after {
+  content: "円～";
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #2A2A2A;
+}
+.price-item:nth-child(4) .price-number--s {
+  margin: 0 0 0.625rem 0;
+}
+.price-number--j {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.125rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #104C93;
+}
+.price-unit {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #2A2A2A;
+}
+.price-label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #2A2A2A;
+  margin-bottom: 5px;
+}
+
+.price-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+  margin: 0.6875rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .price-detail {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.price-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3125rem;
+}
+.price-row02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: bottom;
+  gap: 0.3125rem;
+  place-items: baseline;
+}
+.price-row-label {
+  font-size: 0.8125rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #2A2A2A;
+  margin: 0 0 0 0.3125rem;
+}
+
+.price-note {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
 }
 
 .p-test {

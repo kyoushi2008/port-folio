@@ -1,0 +1,288 @@
+@use "global" as *;
+
+.p-service {
+  width: 100%;
+  background: #f3f7fa;
+}
+
+.p-service__container {
+  width: inherit;
+  padding: myrem(79) 0 0 0;
+  @include mq(md) {
+    padding: myrem(102) 0 0 0;
+  }
+}
+
+.p-service__top-image {
+  margin: myrem(6) calc(50% - 50vw) myrem(10);
+  width: 100vw;
+  max-width: none;
+  @include mq(md) {
+    margin: myrem(36) calc(50% - 50vw) 0;
+  }
+}
+
+.p-service__top-image img {
+  width: 100%;
+  aspect-ratio: 375 / 250;
+  @include mq(md) {
+    aspect-ratio: 1440 / 480;
+  }
+}
+
+.p-price__content {
+  width: 100%;
+  padding: myrem(10) 0 0 0;
+  @include mq(md) {
+    padding: myrem(14) 0 0 0;
+  }
+}
+
+// price
+.p-price__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: myrem(12);
+  list-style: none;
+  margin: myrem(41) 0 0 0;
+  @include mq(md) {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    margin: myrem(39) 0 0 0;
+  }
+}
+
+.price-item {
+  background: $white;
+  padding: myrem(20) 0 myrem(30) myrem(10);
+  border-radius: myrem(4);
+  @include mq(md) {
+  }
+}
+
+/* お見積もり：3列分 */
+.price-item:nth-child(1) {
+  grid-column: 1 / 3;
+  @include mq(md) {
+    grid-column: span 3;
+  }
+}
+
+/* 基本料金：9列分 */
+.price-item:nth-child(2) {
+  grid-column: 1 / 2;
+  padding: myrem(20) 0 myrem(45) myrem(10);
+  @include mq(md) {
+    grid-column: span 9;
+  }
+}
+
+/* アニメーション：5列分 */
+.price-item:nth-child(3) {
+  grid-column: 2 / 3;
+  padding: myrem(20) myrem(10) myrem(45) myrem(10);
+  @include mq(md) {
+    grid-column: span 5;
+  }
+}
+
+/* レスポンシブ：7列分 */
+.price-item:nth-child(4) {
+  grid-column: 1 / 3;
+  padding: myrem(20) 0 myrem(12) myrem(10);
+  @include mq(md) {
+    grid-column: span 7;
+  }
+}
+
+/* 実装工期：全幅 */
+.price-item:nth-child(5) {
+  grid-column: 1 / 3;
+  @include mq(md) {
+    grid-column: span 12;
+  }
+}
+
+.price-title {
+  font-size: myrem(18);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .05em;
+  color: $blue;
+  margin-bottom: 20px;
+  @include mq(md) {
+    font-size: myrem(32);
+
+  }
+}
+.price-item:nth-child(4) .price-title {
+  margin-bottom: myrem(10);
+  @include mq(md) {
+    font-size: myrem(32);
+
+  }
+}
+
+.price-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.price-item:nth-child(2) .price-content {
+  flex-direction: column-reverse;
+  @include mq(md) {}
+}
+.price-item:nth-child(3) .price-content {
+  margin: myrem(108) 0 0 0;
+  @include mq(md) {}
+}
+.price-item:nth-child(4) .price-content {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 myrem(27) myrem(10) 0;
+  @include mq(md) {}
+}
+
+.price-item:nth-child(2) .price-image {
+  width: 86px;
+  height: 69px;
+  margin: 0 0 0 myrem(33);
+  @include mq(md) {
+  }
+}
+.price-item:nth-child(4) .price-image {
+  width: 78px;
+  height: 102px;
+  margin: 0 myrem(39) 0 0;
+  @include mq(md) {
+  }
+}
+.price-item:nth-child(5) .price-image {
+  width: 157px;
+  height: 72px;
+  @include mq(md) {
+    order: 2;
+    margin-bottom: 0;
+  }
+}
+
+.price-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.price-number {
+  font-family: $font-sub;
+  font-size: myrem(70);
+  font-weight: 600;
+  line-height: 1.2;
+  color: $blue;
+  margin: 0 0 0 myrem(5);
+  @include mq(md) {
+  }
+}
+
+.price-number--s {
+  font-family: $font-sub;
+  font-size: myrem(34);
+  font-weight: 600;
+  line-height: 1;
+  color: $blue;
+  margin: 0 0 0 myrem(5);
+  @include mq(md) {
+  }
+}
+
+.price-number--s::after {
+  content: "円～";
+  font-size: myrem(14);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .04em;
+  color: $black2;
+  @include mq(md) {
+  }
+}
+
+.price-item:nth-child(4) .price-number--s {
+  margin: 0 0 myrem(10) 0;
+  @include mq(md) {
+  }
+}
+
+.price-number--j {
+  font-family: $font-sub;
+  font-size: myrem(34);
+  font-weight: 600;
+  line-height: 1;
+  color: $blue;
+@include mq(md) {}
+}
+
+.price-unit {
+  font-size: myrem(14);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .04em;
+  color: $black2;
+  @include mq(md) {
+
+  }
+}
+
+.price-label {
+  font-size: myrem(14);
+  font-weight: bold;
+  color: $black2;
+  margin-bottom: 5px;
+}
+
+.price-detail {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(10);
+  margin: myrem(11) 0 0 0;
+  @include mq(md) {
+    order: 1;
+    align-items: flex-start;
+  }
+}
+
+.price-row {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(5);
+  @include mq(md) {
+  }
+}
+.price-row02 {
+  display: flex;
+  vertical-align: bottom;
+  gap: myrem(5);
+  place-items: baseline;
+  @include mq(md) {
+  }
+}
+
+.price-row-label {
+  font-size: myrem(13);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .04em;
+  color: $black2;
+  margin: 0 0 0 myrem(5);
+}
+
+.price-note {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
