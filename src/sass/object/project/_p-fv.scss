@@ -40,6 +40,13 @@
   @include mq(md) {
   }
 }
+.p-fv__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+  }
+}
 
 .p-fv__image::before {
   content: "";

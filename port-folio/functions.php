@@ -179,3 +179,124 @@ function remove_default_menu_items()
 	remove_menu_page('edit-comments.php'); // コメント
 }
 add_action('admin_menu', 'remove_default_menu_items');
+
+
+// パンくずリスト
+// パンくずリスト
+function breadcrumb()
+{
+    echo '<ul class="breadcrumb">';
+    $home = '<li class="breadcrumb-item"><a href="' . get_bloginfo('url') . '">TOP</a></li><span class="breadcrumb-separator"> / </span>';
+    echo $home;
+
+    if (is_front_page()) {
+        echo "</ul>";
+        return;
+    } else if (is_single()) {
+        $post_type = get_post_type();
+
+        // カスタム投稿タイプの場合
+        if ($post_type !== 'post') {
+            $archive_link = get_post_type_archive_link($post_type);
+            $post_type_obj = get_post_type_object($post_type);
+
+            if ($archive_link && $post_type_obj) {
+                echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . esc_html($post_type_obj->labels->name) . '</a></li><span class="breadcrumb-separator"> / </span>';
+            }
+
+            // タクソノミーを取得して表示
+            $taxonomies = get_object_taxonomies($post_type);
+            if (!empty($taxonomies)) {
+                $terms = get_the_terms(get_the_ID(), $taxonomies[0]);
+                if ($terms && !is_wp_error($terms)) {
+                    $term = array_shift($terms);
+                    echo '<li class="breadcrumb-item"><a href="' . get_term_link($term) . '">' . esc_html($term->name) . '</a></li><span class="breadcrumb-separator"> / </span>';
+                }
+            }
+
+            the_title('<li class="breadcrumb-item active">', '</li>');
+
+        } else {
+            // デフォルトの投稿の場合
+            $categories = get_the_category();
+            if (!empty($categories)) {
+                $current_cat = $categories[0];
+                $cat_list = array();
+
+                while ($current_cat->parent != 0) {
+                    $cat_link = get_category_link($current_cat->term_id);
+                    array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . $cat_link . '">' . esc_html($current_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
+                    $current_cat = get_category($current_cat->parent);
+                }
+                array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
+                echo implode('', $cat_list);
+            }
+            the_title('<li class="breadcrumb-item active">', '</li>');
+        }
+
+    } else if (is_page()) {
+        // 固定ページ
+        $parent_id = wp_get_post_parent_id(get_the_ID());
+        $page_list = array();
+
+        while ($parent_id != 0) {
+            $page = get_post($parent_id);
+            $page_link = get_permalink($page->ID);
+            array_unshift($page_list, '<li class="breadcrumb-item"><a href="' . $page_link . '">' . esc_html($page->post_title) . '</a></li><span class="breadcrumb-separator"> / </span>');
+            $parent_id = wp_get_post_parent_id($parent_id);
+        }
+        echo implode('', $page_list);
+        the_title('<li class="breadcrumb-item active">', '</li>');
+
+    } else if (is_post_type_archive()) {
+        // カスタム投稿タイプのアーカイブ
+        $post_type_obj = get_queried_object();
+        echo '<li class="breadcrumb-item active">' . esc_html($post_type_obj->labels->name) . '</li>';
+
+    } else if (is_tax()) {
+        // タクソノミーアーカイブ
+        $term = get_queried_object();
+        $post_type = get_taxonomy($term->taxonomy)->object_type[0];
+        $archive_link = get_post_type_archive_link($post_type);
+        $post_type_obj = get_post_type_object($post_type);
+
+        if ($archive_link && $post_type_obj) {
+            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . esc_html($post_type_obj->labels->name) . '</a></li><span class="breadcrumb-separator"> / </span>';
+        }
+        echo '<li class="breadcrumb-item active">' . esc_html($term->name) . '</li>';
+
+    } else if (is_category()) {
+        // カテゴリーページ
+        $current_cat = get_queried_object();
+        $cat_list = array();
+
+        $temp_cat = $current_cat;
+        while ($temp_cat->parent != 0) {
+            $cat_link = get_category_link($temp_cat->term_id);
+            array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . $cat_link . '">' . esc_html($temp_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
+            $temp_cat = get_category($temp_cat->parent);
+        }
+
+        if ($temp_cat->term_id != $current_cat->term_id) {
+            array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . get_category_link($temp_cat->term_id) . '">' . esc_html($temp_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
+        }
+
+        echo implode('', $cat_list);
+        echo '<li class="breadcrumb-item active">' . esc_html($current_cat->name) . '</li>';
+
+    } else if (is_tag()) {
+        echo '<li class="breadcrumb-item active">#' . single_tag_title('', false) . '</li>';
+
+    } else if (is_404()) {
+        echo '<li class="breadcrumb-item active">ページが見つかりません</li>';
+
+    } else if (is_search()) {
+        echo '<li class="breadcrumb-item active">「' . esc_html(get_search_query()) . '」の検索結果</li>';
+
+    } else if (is_archive()) {
+        echo '<li class="breadcrumb-item active">' . post_type_archive_title('', false) . '</li>';
+    }
+
+    echo "</ul>";
+}
+///////////////////////////////////////////////////////////////////////////////////

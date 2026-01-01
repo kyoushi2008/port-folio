@@ -147,6 +147,86 @@ button {
   }
 }
 
+.l-message {
+  margin-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-message {
+    margin-top: 3.75rem;
+  }
+}
+
+.breadcrumb {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0 3.125rem 0;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumb {
+    margin: 1.125rem 0 3.125rem 0;
+  }
+}
+
+.breadcrumb-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumb-item a {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0em;
+  color: #2A2A2A;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumb-item a {
+    font-size: 0.875rem;
+  }
+}
+
+.breadcrumb-separator {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  line-height: 1.6;
+  display: inline-block;
+  margin-inline: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumb-separator {
+    font-size: 0.875rem;
+    margin-inline: 0.625rem;
+  }
+}
+
+.breadcrumb-item.active {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0em;
+  color: #104C93;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumb-item.active {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
 .c-btn {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -273,13 +353,22 @@ button {
 .c-title--l {
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: 0em;
   color: #104C93;
 }
 @media screen and (min-width: 768px) {
   .c-title--l {
+    font-size: 3.75rem;
+  }
+}
+
+.c-title--lp {
+  font-size: 2.25rem;
+}
+@media screen and (min-width: 768px) {
+  .c-title--lp {
     font-size: 3.75rem;
   }
 }
@@ -733,6 +822,11 @@ button {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+.p-fv__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .p-fv__image::before {
   content: "";
