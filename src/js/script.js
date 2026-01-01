@@ -65,6 +65,7 @@ $(function() {
 });
 
 // ファーストビューテキスト
+// ファーストビューテキスト
 $(function() {
   const fvSwiper = new Swiper('.p-fv__swiper', {
     effect: 'fade',
@@ -82,11 +83,29 @@ $(function() {
   const $fvTitle02 = $('.p-fv__title02');
 
   if ($fvTitle02.length) {
-    const text02 = $fvTitle02.text();
-    const htmlContent02 = text02.split('').map(char => {
+    // p-fv__title02--l の内容を取得して分割
+    const $title02L = $fvTitle02.find('.p-fv__title02--l');
+    const text02L = $title02L.text();
+    const htmlContent02L = text02L.split('').map(char => {
       return `<span class="is-fv-title">${char}</span>`;
     }).join('');
-    $fvTitle02.html(htmlContent02).css('visibility', 'visible');
+    $title02L.html(htmlContent02L);
+
+    // 残りのテキストノードを取得して分割
+    const remainingText = $fvTitle02.contents().filter(function() {
+      return this.nodeType === 3; // テキストノードのみ
+    }).text();
+
+    const htmlContentRemaining = remainingText.split('').map(char => {
+      return `<span class="is-fv-title">${char}</span>`;
+    }).join('');
+
+    // テキストノードを置き換え
+    $fvTitle02.contents().filter(function() {
+      return this.nodeType === 3;
+    }).replaceWith(htmlContentRemaining);
+
+    $fvTitle02.css('visibility', 'visible');
 
     const $spans02 = $fvTitle02.find('.is-fv-title');
     let delayCounter = 0;

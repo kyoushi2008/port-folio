@@ -11,10 +11,16 @@
 .c-title--l {
   font-family: $font-sub;
   font-size: myrem(28);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: 0em;
   color: $blue;
+  @include mq(md) {
+    font-size: myrem(60);
+  }
+}
+.c-title--lp {
+  font-size: myrem(36);
   @include mq(md) {
     font-size: myrem(60);
   }

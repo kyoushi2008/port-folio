@@ -16,6 +16,11 @@
             <h2 class="c-title--l">WORKS</h2>
             <p class="c-title--s">実績</p>
         </div>
+         <!-- タイトル 個別ページ -->
+        <div class="c-title">
+            <h2 class="c-title--l c-title--lp">WORKS</h2>
+            <p class="c-title--s">実績</p>
+        </div>
         <!-- 白タイトル -->
         <div class="c-title">
             <h2 class="c-title--l c-title--wl">SERVICE</h2>

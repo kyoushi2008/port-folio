@@ -87,7 +87,7 @@
         </ul>
       </div>
     </div>
-    <small class="p-footer__copyright">&copy;2024&emsp;CODO ASSIST</small>
+    <small class="p-footer__copyright">&copy;2024&emsp;&thinsp;CODO ASSIST</small>
   </div>
 </footer>
 <?php wp_footer(); ?>
