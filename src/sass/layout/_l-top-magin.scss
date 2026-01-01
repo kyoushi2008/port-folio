@@ -2,8 +2,8 @@
 
 
 .l-message {
-  margin-top: myrem(80);
+  margin-top: myrem(60);
   @include mq(md) {
-    margin-top: myrem(60);
+    margin-top: myrem(80);
   }
 }
