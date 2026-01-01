@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.p-footer-cta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-footer-cta__contact {
+  position: relative;
+  width: inherit;
+  aspect-ratio: 375 / 225;
+  overflow: hidden;
+  @include mq(md) {
+    aspect-ratio: 720 / 410;
+  }
+}
+.p-footer-cta__contact:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/cta/cta-sp-contact.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq(md) {
+    transition: transform 0.3s ease;
+    background-image: url("../images/cta/cta-pc-contact.png");
+  }
+}
+
+.p-footer-cta__faq {
+  position: relative;
+  width: inherit;
+  aspect-ratio: 375 / 225;
+  overflow: hidden;
+  @include mq(md) {
+    overflow: hidden;
+    aspect-ratio: 720 / 410;
+  }
+}
+.p-footer-cta__faq:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/cta/cta-sp-faq.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq(md) {
+    transition: transform 0.3s ease;
+    background-image: url("../images/cta/cta-pc-faq.png");
+  }
+}
+
+.p-footer-cta__contact:hover::before,
+.p-footer-cta__faq:hover:before {
+  @include mq(md) {
+    transform: scale(1.1);
+  }
+}
+
+.p-footer-cta__title {
+  position: absolute;
+  top: 48%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+  @include mq(md) {
+    top: 51%;
+    left: 10%;
+  }
+}

@@ -1,0 +1,129 @@
+@use "global" as *;
+
+.c-title {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+  }
+}
+
+.c-title--l {
+  font-family: $font-sub;
+  font-size: myrem(28);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0em;
+  color: $blue;
+  @include mq(md) {
+    font-size: myrem(60);
+  }
+}
+.c-title--lp {
+  font-size: myrem(36);
+  @include mq(md) {
+    font-size: myrem(60);
+  }
+}
+
+.c-title--s {
+  position: relative;
+  font-size: myrem(13);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: #2a2a2a;
+  display: inline-block;
+  padding: 0 0 0 myrem(30);
+  margin: myrem(5) 0 0 0;
+  @include mq(md) {
+    font-size: myrem(16);
+    padding: 0 0 0 myrem(43);
+    margin: myrem(3) 0 0 0;
+  }
+}
+
+.c-title--s::before {
+  position: absolute;
+  content: "";
+  width: myrem(8);
+  height: myrem(4);
+  background: $blue;
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    width: myrem(16);
+    top: 47%;
+    left: 5%;
+  }
+}
+.c-title--wl {
+  color: $white;
+  @include mq(md) {
+  }
+}
+
+.c-title--ws {
+  position: relative;
+  color: $white;
+  display: inline-block;
+  padding: 0 0 0 myrem(28);
+  margin: myrem(7) 0 0 0;
+  @include mq(md) {
+    padding: 0 0 0 myrem(43);
+  }
+}
+
+.c-title--ws::before {
+  position: absolute;
+  content: "";
+  width: myrem(16);
+  height: myrem(4);
+  background: linear-gradient(
+    to right,
+    #104c93 0%,
+    #104c93 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    width: myrem(32);
+    top: 47%;
+    left: 7%;
+  }
+}
+
+.c-title--wsc {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: myrem(20) 0 0 0;
+  @include mq(md) {
+    text-align: initial;
+    padding: 0 0 0 myrem(52);
+    margin: myrem(4) 0 0 0;
+  }
+}
+
+.c-title--wsc::before {
+  position: absolute;
+  content: "";
+  top: -79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    top: 47%;
+    left: 11%;
+  }
+}
+
+.c-title--sl {
+  font-size: myrem(20);
+  @include mq(md) {
+    font-size: myrem(60);
+  }
+}
