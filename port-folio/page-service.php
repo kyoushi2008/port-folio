@@ -77,18 +77,19 @@
                     <li class="price-item">
                         <h3 class="price-title">実装工期</h3>
                         <div class="price-content">
-                            <div class="price-detail">
+                            <div class="price-detail price-detail02">
                                 <div class="price-row02">
                                     <span class="price-label">平均</span>
                                     <span class="price-number--j">00</span>
-                                    <span class="price-unit">週間</span>
+                                    <span class="price-unit price-unit02">週間</span>
                                 </div>
-                                <p class="price-note">※コーポレートサイト00ページあたり</p>
+                                <p class="price-note u-desktop">※コーポレートサイト00ページあたり</p>
                             </div>
                             <div class="price-image">
                                 <img src="<?php echo $img_path; ?>price-03.png" alt="実装工期" loading="lazy">
                             </div>
                         </div>
+                        <p class="price-note u-mobile">※コーポレートサイト00ページあたり</p>
                     </li>
 
                 </ul>
