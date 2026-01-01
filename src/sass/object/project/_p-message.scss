@@ -16,6 +16,9 @@
   margin: myrem(26) calc(50% - 50vw) 0;
   width: 100vw;
   max-width: none;
+  @include mq(md) {
+    margin: myrem(36) calc(50% - 50vw) 0;
+  }
 }
 
 .p-message__top-image img {
@@ -30,12 +33,14 @@
   width: 100%;
   padding: myrem(10) 0 0 0;
   @include mq(md) {
+    padding: myrem(14) 0 0 0;
   }
 }
 
 .p-message__content-group {
   width: inherit;
   @include mq(md) {
+    display: flex;
   }
 }
 
@@ -54,7 +59,9 @@
   @include mq(md) {
     font-size: myrem(34);
     font-weight: 800;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
+    margin: 0 0 myrem(14) 0;
+    padding: 0 0 0 myrem(10);
   }
 }
 
@@ -64,7 +71,11 @@
   flex-direction: column;
   gap: myrem(28);
   margin: myrem(19) 0 0 0;
-@include mq(md) {}
+  @include mq(md) {
+    gap: myrem(28);
+    margin: myrem(31) 0 0 0;
+    padding: 0 myrem(15) 0 0;
+  }
 }
 
 .p-message__content-text {
@@ -72,7 +83,9 @@
   font-weight: normal;
   line-height: calc(28 / 16);
   letter-spacing: 0.1em;
+  color: $black2;
   @include mq(md) {
+    color: $black;
   }
 }
 
@@ -80,6 +93,23 @@
   width: 100%;
   margin: myrem(60) 0 0 0;
   @include mq(md) {
+    width: calc(320 / 1300 * 100%);
+    margin: myrem(4) 0 0 0;
+  }
+}
+.p-message__content-person picture {
+  width: 100%;
+  @include mq(md) {
+    width: myrem(320);
+    height: myrem(210);
+  }
+}
+.p-message__content-person img {
+  width: 100%;
+  aspect-ratio: 335 / 216;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 320 / 210;
   }
 }
 
@@ -89,7 +119,13 @@
   line-height: 1;
   letter-spacing: 0.06em;
   color: $black2;
+  text-align: right;
+  margin: myrem(13) 0 0 0;
   @include mq(md) {
+    font-size: myrem(24);
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin: myrem(11) 0 0 0;
   }
 }
 
@@ -99,49 +135,63 @@
   line-height: 1;
   letter-spacing: 0.06em;
   color: $blue;
-  opacity: .5;
+  opacity: 0.5;
   text-align: right;
-  margin: myrem(10) 0 0 0;
+  margin: myrem(8) 0 0 0;
   @include mq(md) {
+    font-size: myrem(14);
+    letter-spacing: 0em;
+    text-align: left;
+    margin: myrem(12) 0 0 0;
   }
 }
 
 .p-message__content-slide-group {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-  padding: 60px 0;
-  background: #f5f5f5;
+  margin: 0 calc(50% - 50vw);
+  padding: myrem(64) 0 myrem(35);
   @include mq(md) {
+    padding: myrem(76) 0 myrem(35);
   }
 }
 
 .slide-list {
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: myrem(17);
+  margin-bottom: myrem(12);
   list-style: none;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   width: max-content;
   @include mq(md) {
+    gap: myrem(18);
+    margin-bottom: myrem(20);
   }
 }
 
 .slide-list:nth-child(1) {
-  animation: slideRight 30s linear infinite;
+  animation: slideRight 50s linear infinite;
 }
 
 .slide-list:nth-child(2) {
-  animation: slideLeft 30s linear infinite;
+  animation: slideLeft 50s linear infinite;
 }
 
 .slide-item {
   flex-shrink: 0;
-  width: 320px;
-  height: 200px;
-  background: #ddd;
-  border-radius: 8px;
+  height: myrem(187);
+  width: auto;
   overflow: hidden;
+  @include mq(md) {
+    height: myrem(200);
+  }
+}
+.slide-item img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
   @include mq(md) {
   }
 }
@@ -161,5 +211,22 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+.p-message__content02 {
+  width: 100%;
+  padding: myrem(19) 0 myrem(60) 0;
+  @include mq(md) {
+    padding: myrem(39) 0 myrem(105) 0;
+  }
+}
+
+.p-message__content02-text-group02 {
+  gap: myrem(28);
+  margin: myrem(19) 0 0 0;
+  @include mq(md) {
+    gap: myrem(28);
+    margin: myrem(20) 0 0 0;
   }
 }

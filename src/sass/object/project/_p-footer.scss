@@ -167,13 +167,12 @@
   font-size: myrem(12);
   font-weight: 800;
   line-height: calc(20 / 12);
-  letter-spacing: 0em;
+  letter-spacing: 0.1em;
   color: $white;
   display: flex;
   justify-content: center;
-  margin: myrem(56) 0 myrem(31) 0;
+  margin: myrem(48) 0 myrem(31) 0;
   @include mq(md) {
-    letter-spacing: .1em;
     margin: myrem(54) 0 myrem(20) 0;
   }
 }

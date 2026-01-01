@@ -33,8 +33,8 @@
                             <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>message-sp02.png">
                             <img src="<?php echo $img_path; ?>message-pc02.png" alt="message" loading="lazy">
                         </picture>
-                        <p class="p-message__content-person-name">田中&ensp;太郎</p>
-                        <p class="p-message__content-person-spell">Tanaka&ensp;Tarou</p>
+                        <p class="p-message__content-person-name">田中&thinsp;太郎</p>
+                        <p class="p-message__content-person-spell">Tanaka&thinsp;Tarou</p>
                     </div>
                 </div>
                 <div class="p-message__content-slide-group">
@@ -96,9 +96,19 @@
                     </ul>
                 </div>
             </div>
+            <div class="p-message__content02">
+                <div class="p-message__content-group02">
+                        <h2 class="p-message__content-title">丁寧な作業とコミュニケーションで</h2>
+                        <!-- ラベル -->
+                        <span class="c-label">ハイクオリティなコードを納品。</span>
+                        <div class="p-message__content-text-group p-message__content02-text-group02">
+                            <p class="p-message__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            <p class="p-message__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
 </section>
 
 <?php get_footer(); ?>
