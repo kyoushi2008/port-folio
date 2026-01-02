@@ -1,0 +1,458 @@
+@use "global" as *;
+
+.p-profile {
+  width: 100%;
+}
+
+.p-profile__container {
+  width: inherit;
+  padding: myrem(79) 0 0 0;
+  @include mq(md) {
+    padding: myrem(102) 0 0 0;
+  }
+}
+
+.p-profile__top-image {
+  margin: myrem(23) calc(50% - 50vw) 0;
+  width: 100vw;
+  max-width: none;
+  @include mq(md) {
+    margin: myrem(32) calc(50% - 50vw) 0;
+  }
+}
+
+.p-profile__top-image img {
+  width: 100%;
+  aspect-ratio: 375 / 230;
+  @include mq(md) {
+    aspect-ratio: 1440 / 480;
+  }
+}
+
+.p-profile__content {
+  width: 100%;
+  padding: myrem(10) 0 myrem(60) 0;
+  background: #F3F7FA;
+  @include mq(md) {
+    padding: myrem(18) 0 myrem(107) 0;
+  }
+}
+
+.p-profile__wrapper {
+  width: inherit;
+  padding: myrem(58) 0 0 0;
+  @include mq(md) {
+    padding: myrem(62) 0 0 0;
+  }
+}
+
+.p-profile__slill-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(20);
+  margin: myrem(55) 0 0 0;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto;
+    margin: myrem(39) 0 0 0;
+  }
+}
+
+// coding
+.p-profile__coding-group {
+  width: inherit;
+  background: $white;
+  padding: myrem(25) 0 myrem(20);
+  @include mq(md) {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    padding: myrem(36) 0 myrem(52);
+  }
+}
+
+.p-profile__title {
+  font-size: myrem(20);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $blue;
+  padding: 0 0 0 myrem(10);
+  @include mq(md) {
+    font-size: myrem(28);
+    padding: 0 0 0 myrem(55);
+  }
+}
+
+.p-profile__list {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: myrem(38);
+  margin: myrem(37) 0 0 0;
+  @include mq(md) {
+    flex-wrap: nowrap;
+    padding: 0 0 0 myrem(55);
+    margin: myrem(50) 0 0 0;
+    gap: myrem(43);
+  }
+}
+
+.p-profile__item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: myrem(11);
+  @include mq(md) {
+    width: auto;
+    gap: myrem(13);
+  }
+}
+
+.html-icon {
+  width: myrem(87);
+  aspect-ratio: 87 / 99;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(90);
+    aspect-ratio: 90 / 103;
+  }
+}
+.css-icon {
+  width: myrem(88);
+  aspect-ratio: 88 / 99;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(90);
+    aspect-ratio: 90 / 103;
+    margin: 0 0 0 myrem(15);
+  }
+}
+.sass-icon {
+  width: myrem(108);
+  aspect-ratio: 108 / 80;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(129);
+    aspect-ratio: 129 / 97;
+    margin: myrem(-5) 0 0 myrem(6);
+  }
+}
+.javascript-icon {
+  width: myrem(91);
+  aspect-ratio: 91 / 91;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(115);
+    aspect-ratio: 115 / 115;
+    margin: myrem(-15) 0 0 myrem(-32);
+  }
+}
+.php-icon {
+  width: myrem(158);
+  aspect-ratio: 158 / 83;
+  object-fit: contain;
+  @include mq(md) {
+  }
+}
+
+.p-profile__name {
+  font-size: myrem(14);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  @include mq(md) {
+    font-size: myrem(18);
+  }
+}
+.p-profile__name--l {
+  font-size: myrem(16);
+  @include mq(md) {
+    font-size: myrem(18);
+  }
+}
+// cms
+.p-profile-cms__group {
+  width: 100%;
+  background: $white;
+  padding: myrem(24) 0 myrem(32) 0;
+  @include mq(md) {
+    grid-column: 5 / 7;
+    grid-row: 1;
+    padding: myrem(36) 0 myrem(20) 0;
+  }
+}
+
+.p-profile__cms-list {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  margin: myrem(24) 0 0 0;
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.wordpress-icon {
+  width: myrem(110);
+  aspect-ratio: 110 / 107;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(133);
+    aspect-ratio: 133 / 130;
+  }
+}
+
+// デザイン
+.p-profile__design-group {
+  width: inherit;
+  background: $white;
+  padding: myrem(25) 0 myrem(32) 0;
+  @include mq(md) {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    padding: myrem(45) 0 myrem(61) 0;
+  }
+}
+
+.p-profile__design-list {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: myrem(29);
+  margin: myrem(24) 0 0 0;
+  @include mq(md) {
+    padding: 0 0 0 myrem(65);
+    margin: myrem(39) 0 0 0;
+    gap: myrem(34);
+  }
+}
+
+.Illustrator-icon {
+  width: myrem(82);
+  aspect-ratio: 82 / 81;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(97);
+    aspect-ratio: 97 / 97;
+  }
+}
+
+.Photoshop-icon {
+  width: myrem(82);
+  aspect-ratio: 82 / 82;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(97);
+    aspect-ratio: 97 / 97;
+  }
+}
+
+.xd-icon {
+  width: myrem(83);
+  aspect-ratio: 83 / 82;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(98);
+    aspect-ratio: 98 / 98;
+    margin: 0 0 0 myrem(8);
+  }
+}
+
+.figma-icon {
+  width: myrem(56);
+  aspect-ratio: 56 / 84;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(67);
+    aspect-ratio: 67 / 100;
+    margin: myrem(-3) 0 0 myrem(12);
+  }
+}
+
+// コミュニケーション
+.p-profile__communication-group {
+  width: inherit;
+  background: $white;
+  padding: myrem(25) 0 myrem(32) 0;
+  @include mq(md) {
+    grid-column: 4 / 7;
+    grid-row: 2;
+    padding: myrem(45) 0 myrem(63) 0;
+  }
+}
+
+.p-profile__communication-list {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: myrem(40);
+  margin: myrem(33) 0 0 0;
+  @include mq(md) {
+    padding: 0 0 0 myrem(62);
+    margin: myrem(35) 0 0 0;
+    gap: myrem(40);
+  }
+}
+
+.chatwork-icon {
+  width: myrem(94);
+  aspect-ratio: 94 / 94;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(94);
+    aspect-ratio: 94 / 94;
+  }
+}
+
+.mail-icon {
+  width: myrem(100);
+  aspect-ratio: 100 / 100;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(100);
+    aspect-ratio: 100 / 100;
+    margin: myrem(-3) 0 0 0;
+  }
+}
+
+.slack-icon {
+  width: myrem(74);
+  aspect-ratio: 74 / 74;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(93);
+    aspect-ratio: 93 / 93;
+  }
+}
+
+.line-icon {
+  width: myrem(78);
+  aspect-ratio: 78 / 76;
+  object-fit: contain;
+  @include mq(md) {
+    width: myrem(97);
+    aspect-ratio: 97 / 97;
+    margin: myrem(-1) 0 0 myrem(5);
+  }
+}
+
+//
+.p-message__content {
+  width: 100%;
+  padding: myrem(59) 0 0 0;
+  @include mq(md) {
+    padding: myrem(63) 0 0 0;
+  }
+}
+
+.p-message__content-group {
+  width: inherit;
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.p-message__content-title-wrapper {
+  width: inherit;
+  @include mq(md) {
+  }
+}
+
+.p-message__content-title {
+  font-size: myrem(20);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  margin: 0 0 myrem(7) 0;
+  @include mq(md) {
+    font-size: myrem(34);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin: 0 0 myrem(14) 0;
+    padding: 0 0 0 myrem(10);
+  }
+}
+
+.p-message__content-text-group {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(28);
+  margin: myrem(19) 0 0 0;
+  @include mq(md) {
+    gap: myrem(28);
+    margin: myrem(31) 0 0 0;
+    padding: 0 myrem(15) 0 0;
+  }
+}
+
+.p-message__content-text {
+  font-size: myrem(16);
+  font-weight: normal;
+  line-height: calc(28 / 16);
+  letter-spacing: 0.1em;
+  color: $black2;
+  @include mq(md) {
+    color: $black;
+  }
+}
+
+.p-message__content-person {
+  width: 100%;
+  margin: myrem(61) 0 0 0;
+  @include mq(md) {
+    width: calc(320 / 1300 * 100%);
+    margin: myrem(4) 0 0 0;
+  }
+}
+.p-message__content-person picture {
+  width: 100%;
+  @include mq(md) {
+    width: myrem(320);
+    height: myrem(210);
+  }
+}
+.p-message__content-person img {
+  width: 100%;
+  aspect-ratio: 335 / 216;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 320 / 210;
+  }
+}
+
+.p-message__content-person-name {
+  font-size: myrem(16);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: $black2;
+  text-align: right;
+  margin: myrem(13) 0 0 0;
+  @include mq(md) {
+    font-size: myrem(24);
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin: myrem(11) 0 0 0;
+  }
+}
+
+.p-message__content-person-spell {
+  font-size: myrem(12);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: $blue;
+  opacity: 0.5;
+  text-align: right;
+  margin: myrem(8) 0 0 0;
+  @include mq(md) {
+    font-size: myrem(14);
+    letter-spacing: 0em;
+    text-align: left;
+    margin: myrem(12) 0 0 0;
+  }
+}

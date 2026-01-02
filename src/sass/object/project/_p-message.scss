@@ -13,11 +13,11 @@
 }
 
 .p-message__top-image {
-  margin: myrem(26) calc(50% - 50vw) 0;
+  margin: myrem(23) calc(50% - 50vw) 0;
   width: 100vw;
   max-width: none;
   @include mq(md) {
-    margin: myrem(36) calc(50% - 50vw) 0;
+    margin: myrem(31) calc(50% - 50vw) 0;
   }
 }
 
@@ -29,11 +29,19 @@
   }
 }
 
+.p-message__wrapper {
+  width: 100%;
+  padding: myrem(8) 0 0 0;
+  @include mq(md) {
+  padding: myrem(19) 0 0 0;
+}
+}
+
 .p-message__content {
   width: 100%;
-  padding: myrem(10) 0 0 0;
+  padding: myrem(59) 0 0 0;
   @include mq(md) {
-    padding: myrem(14) 0 0 0;
+    padding: myrem(63) 0 0 0;
   }
 }
 
@@ -91,7 +99,7 @@
 
 .p-message__content-person {
   width: 100%;
-  margin: myrem(60) 0 0 0;
+  margin: myrem(61) 0 0 0;
   @include mq(md) {
     width: calc(320 / 1300 * 100%);
     margin: myrem(4) 0 0 0;

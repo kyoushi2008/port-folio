@@ -7,11 +7,17 @@
   @include mq(md) {
   }
 }
+.c-title--50 {
+  gap: 0;
+  @include mq(md) {
+    gap: myrem(8);
+  }
+}
 
 .c-title--l {
   font-family: $font-sub;
   font-size: myrem(28);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0em;
   color: $blue;
@@ -25,37 +31,48 @@
     font-size: myrem(60);
   }
 }
+.c-title--ls {
+  font-size: myrem(36);
+  @include mq(md) {
+    font-size: myrem(50);
+  }
+}
 
 .c-title--s {
   position: relative;
-  font-size: myrem(13);
+  font-size: myrem(14);
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.5;
   letter-spacing: 0.06em;
-  color: #2a2a2a;
+  color: $black2;
   display: inline-block;
   padding: 0 0 0 myrem(30);
-  margin: myrem(5) 0 0 0;
   @include mq(md) {
     font-size: myrem(16);
     padding: 0 0 0 myrem(43);
-    margin: myrem(3) 0 0 0;
   }
 }
 
 .c-title--s::before {
   position: absolute;
   content: "";
-  width: myrem(8);
-  height: myrem(4);
-  background: $blue;
-  top: 50%;
-  left: 8%;
+  width: myrem(16);
+  height: myrem(2);
+  background: linear-gradient(
+    to right,
+    #104c93 0%,
+    #104c93 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  top: myrem(11);
+  left: myrem(12);
   transform: translate(-50%, -50%);
   @include mq(md) {
-    width: myrem(16);
+    width: myrem(32);
+    height: myrem(4);
     top: 47%;
-    left: 5%;
+    left: myrem(20);
   }
 }
 .c-title--wl {
