@@ -73,7 +73,7 @@
             </a>
           </li>
           <li class="p-footer__nav-item">
-            <a href="<?php echo esc_url(home_url('/faq/')); ?>" class="p-footer__nav-link">
+            <a href="<?php echo esc_url(home_url('/service/#faq')); ?>" class="p-footer__nav-link">
               <p class="p-footer__nav-text--l">FAQ</p>
               <p class="p-footer__nav-text">よくあるご質問</p>
             </a>

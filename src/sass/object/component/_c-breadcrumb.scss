@@ -5,9 +5,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: myrem(8) 0 myrem(50) 0;
   @include mq(md) {
-    margin: myrem(18) 0 myrem(50) 0;
   }
 }
 
