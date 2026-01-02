@@ -29,7 +29,7 @@
                     <li class="price-item">
                         <h3 class="price-title">お見積もり</h3>
                         <div class="price-content">
-                            <span class="price-number">0</span>
+                            <span class="price-number">100</span>
                             <span class="price-unit">円</span>
                         </div>
                     </li>
@@ -58,7 +58,7 @@
                     <li class="price-item">
                         <h3 class="price-title">アニメーション</h3>
                         <div class="price-content">
-                            <span class="price-number--s">00,000</span>
+                            <span class="price-number--s">0,000</span>
                         </div>
                     </li>
 
@@ -80,7 +80,7 @@
                             <div class="price-detail price-detail02">
                                 <div class="price-row02">
                                     <span class="price-label">平均</span>
-                                    <span class="price-number--j">00</span>
+                                    <span class="price-number--j">0</span>
                                     <span class="price-unit price-unit02">週間</span>
                                 </div>
                                 <p class="price-note u-desktop">※コーポレートサイト00ページあたり</p>
@@ -91,16 +91,156 @@
                         </div>
                         <p class="price-note u-mobile">※コーポレートサイト00ページあたり</p>
                     </li>
-
                 </ul>
 
-            </div>
+                <!-- FAQ -->
+                <div id="faq" class="p-service-faq">
+                    <!-- タイトル -->
+                    <div class="c-title">
+                        <h2 class="c-title--l c-title--lp">FAQ</h2>
+                        <p class="c-title--s">よくあるご質問</p>
+                    </div>
+                    <div class="p-faq__list-group">
+                        <dl class="p-service-faq__list is-open">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-service-faq__list">
+                            <dt class="p-service-faq__list-title">
+                                <span class="p-service-faq__icon-q">Q</span>ここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れるここに質問を入れる
+                            </dt>
+                            <dd class="p-service-faq__text-box" style="">
+                                <p class="p-service-faq__text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </dd>
+                        </dl>
+                        <button class="p-service-faq__more">もっと見る<span class="button-icon"></span></button>
+                    </div>
 
 
-            <div id="faq" class="l-faq p-faq">
+
+
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <?php get_footer(); ?>
