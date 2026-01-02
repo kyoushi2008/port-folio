@@ -2071,11 +2071,11 @@ body.active {
 .p-profile__content {
   width: 100%;
   padding: 0.625rem 0 3.75rem 0;
-  background: pink;
+  background: #F3F7FA;
 }
 @media screen and (min-width: 768px) {
   .p-profile__content {
-    padding: 1.125rem 0 0 0;
+    padding: 1.125rem 0 6.6875rem 0;
   }
 }
 
@@ -2314,7 +2314,7 @@ body.active {
   .p-profile__design-group {
     grid-column: 1/4;
     grid-row: 2;
-    padding: 2.8125rem 0 2rem 0;
+    padding: 2.8125rem 0 3.8125rem 0;
   }
 }
 
@@ -2386,7 +2386,7 @@ body.active {
   .figma-icon {
     width: 4.1875rem;
     aspect-ratio: 67/100;
-    margin: 0 0 0 0.75rem;
+    margin: -0.1875rem 0 0 0.75rem;
   }
 }
 
@@ -2399,7 +2399,7 @@ body.active {
   .p-profile__communication-group {
     grid-column: 4/7;
     grid-row: 2;
-    padding: 2.8125rem 0 2rem 0;
+    padding: 2.8125rem 0 3.9375rem 0;
   }
 }
 
@@ -2417,7 +2417,7 @@ body.active {
   .p-profile__communication-list {
     padding: 0 0 0 3.875rem;
     margin: 2.1875rem 0 0 0;
-    gap: 10px;
+    gap: 2.5rem;
   }
 }
 
@@ -2444,6 +2444,7 @@ body.active {
   .mail-icon {
     width: 6.25rem;
     aspect-ratio: 100/100;
+    margin: -0.1875rem 0 0 0;
   }
 }
 
@@ -2470,6 +2471,7 @@ body.active {
   .line-icon {
     width: 6.0625rem;
     aspect-ratio: 97/97;
+    margin: -0.0625rem 0 0 0.3125rem;
   }
 }
 

@@ -32,9 +32,9 @@
 .p-profile__content {
   width: 100%;
   padding: myrem(10) 0 myrem(60) 0;
-  background: pink;
+  background: #F3F7FA;
   @include mq(md) {
-    padding: myrem(18) 0 0 0;
+    padding: myrem(18) 0 myrem(107) 0;
   }
 }
 
@@ -213,7 +213,7 @@
   @include mq(md) {
     grid-column: 1 / 4;
     grid-row: 2;
-    padding: myrem(45) 0 myrem(32) 0;
+    padding: myrem(45) 0 myrem(61) 0;
   }
 }
 
@@ -268,7 +268,7 @@
   @include mq(md) {
     width: myrem(67);
     aspect-ratio: 67 / 100;
-    margin: 0 0 0 myrem(12);
+    margin: myrem(-3) 0 0 myrem(12);
   }
 }
 
@@ -280,7 +280,7 @@
   @include mq(md) {
     grid-column: 4 / 7;
     grid-row: 2;
-    padding: myrem(45) 0 myrem(32) 0;
+    padding: myrem(45) 0 myrem(63) 0;
   }
 }
 
@@ -293,7 +293,7 @@
   @include mq(md) {
     padding: 0 0 0 myrem(62);
     margin: myrem(35) 0 0 0;
-    gap: 10px;
+    gap: myrem(40);
   }
 }
 
@@ -314,6 +314,7 @@
   @include mq(md) {
     width: myrem(100);
     aspect-ratio: 100 / 100;
+    margin: myrem(-3) 0 0 0;
   }
 }
 
@@ -334,5 +335,6 @@
   @include mq(md) {
     width: myrem(97);
     aspect-ratio: 97 / 97;
+    margin: myrem(-1) 0 0 myrem(5);
   }
 }
