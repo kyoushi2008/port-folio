@@ -165,6 +165,15 @@ button {
   }
 }
 
+.l-l-profile {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .l-l-profile {
+    margin-top: 5rem;
+  }
+}
+
 .breadcrumb {
   width: 100%;
   display: -webkit-box;
