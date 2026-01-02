@@ -22,7 +22,7 @@
                 <?php breadcrumb(); ?>
                 <div class="p-profile__wrapper">
                     <!-- タイトル -->
-                    <div class="c-title">
+                    <div class="c-title c-title--50">
                         <h2 class="c-title--l c-title--ls">CODE SKILL</h2>
                         <p class="c-title--s">対応が可能なコーディングスキルと<br class="u-mobile">デザインデータ</p>
                     </div>

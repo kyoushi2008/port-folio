@@ -7,6 +7,12 @@
   @include mq(md) {
   }
 }
+.c-title--50 {
+  gap: 0;
+  @include mq(md) {
+    gap: myrem(8);
+  }
+}
 
 .c-title--l {
   font-family: $font-sub;
