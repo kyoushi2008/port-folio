@@ -174,6 +174,13 @@ $(document).ready(function () {
     $(this).text("Q" + (index + 1));
   });
 
+  // PC のときだけ末尾にドットを付ける
+  if (window.matchMedia("(min-width: 1025px)").matches) {
+    $(".p-service-faq__icon-q").each(function (index) {
+      $(this).text("Q" + (index + 1) + ".");
+    });
+  }
+
   // 初期状態で 15 個以降を非表示
   $(".p-service-faq__list").slice(7).hide();
 

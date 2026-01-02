@@ -2487,6 +2487,12 @@ body.active {
   width: 100%;
   padding: 3.625rem 0 3.75rem 0;
 }
+@media screen and (min-width: 768px) {
+  .p-service-faq {
+    padding: 7.25rem 0 6.875rem 0;
+  }
+}
+
 .p-faq__list-group {
   width: 100%;
   display: -webkit-box;
@@ -2499,15 +2505,24 @@ body.active {
   gap: 0.625rem;
   margin: 2.9375rem 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .p-faq__list-group {
+    margin: 2.625rem 0 0 0;
+    gap: 0.625rem;
+  }
+}
+
 .p-service-faq__list {
   width: 100%;
-  background: orange;
+  background: #fff;
   border-radius: 0.625rem;
   padding: 1.5rem 0.875rem 1.5rem 0.9375rem;
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__list {
-    padding: 0.4375rem 1.125rem 0 1.25rem;
+    border-radius: 0;
+    border-radius: initial;
+    padding: 0.5rem 1.125rem 0.625rem 1.25rem;
   }
 }
 
@@ -2530,7 +2545,12 @@ body.active {
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__list-title {
-    padding: 12px 0 13px 0.375rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: #000;
+    padding: 0 0 0 0.625rem;
   }
 }
 
@@ -2546,7 +2566,8 @@ body.active {
   .p-service-faq__list-title::before,
   .p-service-faq__list-title::after {
     width: 0.1875rem;
-    height: 1.8125rem;
+    height: 1.125rem;
+    border-radius: 0;
   }
 }
 
@@ -2557,7 +2578,7 @@ body.active {
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__list-title::before {
-    top: 1rem;
+    top: 1.1875rem;
     right: 1.25rem;
   }
 }
@@ -2576,7 +2597,7 @@ body.active {
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__list-title::after {
-    top: 1rem;
+    top: 1.1875rem;
     right: 1.25rem;
   }
 }
@@ -2600,7 +2621,7 @@ body.active {
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__text-box {
-    padding: 1.8125rem 0 2.0625rem 1.4375rem;
+    padding: 0 1.3125rem 0.3125rem 4.375rem;
   }
 }
 
@@ -2611,6 +2632,14 @@ body.active {
   letter-spacing: 0.04em;
   color: #000;
 }
+@media screen and (min-width: 768px) {
+  .p-service-faq__text {
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0em;
+  }
+}
+
 .p-service-faq__icon-q {
   font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
@@ -2632,10 +2661,10 @@ body.active {
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__icon-q {
-    font-size: 1.6875rem;
-    width: 3.25rem;
+    position: relative;
+    font-size: 1.625rem;
     height: 3.25rem;
-    margin: 0 1.3125rem 0 0;
+    margin: 0 0.75rem 0 0;
   }
 }
 
@@ -2661,7 +2690,10 @@ body.active {
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__more {
-    padding: 20px 0;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    padding: 1.25rem 5.9375rem;
+    margin: 2.4375rem auto 0;
   }
 }
 
@@ -2675,6 +2707,18 @@ body.active {
   background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ") no-repeat center;
   background-size: contain;
 }
+@media screen and (min-width: 768px) {
+  .p-service-faq__more::before {
+    position: absolute;
+    content: "▼";
+    top: 1.5rem;
+    right: 3.875rem;
+    font-size: 0.8125rem;
+    color: #fff;
+    background: none;
+  }
+}
+
 .p-test {
   color: red;
   font-size: 1.5625rem;
