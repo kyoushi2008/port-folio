@@ -338,3 +338,121 @@
     margin: myrem(-1) 0 0 myrem(5);
   }
 }
+
+//
+.p-message__content {
+  width: 100%;
+  padding: myrem(59) 0 0 0;
+  @include mq(md) {
+    padding: myrem(63) 0 0 0;
+  }
+}
+
+.p-message__content-group {
+  width: inherit;
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.p-message__content-title-wrapper {
+  width: inherit;
+  @include mq(md) {
+  }
+}
+
+.p-message__content-title {
+  font-size: myrem(20);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  margin: 0 0 myrem(7) 0;
+  @include mq(md) {
+    font-size: myrem(34);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin: 0 0 myrem(14) 0;
+    padding: 0 0 0 myrem(10);
+  }
+}
+
+.p-message__content-text-group {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(28);
+  margin: myrem(19) 0 0 0;
+  @include mq(md) {
+    gap: myrem(28);
+    margin: myrem(31) 0 0 0;
+    padding: 0 myrem(15) 0 0;
+  }
+}
+
+.p-message__content-text {
+  font-size: myrem(16);
+  font-weight: normal;
+  line-height: calc(28 / 16);
+  letter-spacing: 0.1em;
+  color: $black2;
+  @include mq(md) {
+    color: $black;
+  }
+}
+
+.p-message__content-person {
+  width: 100%;
+  margin: myrem(61) 0 0 0;
+  @include mq(md) {
+    width: calc(320 / 1300 * 100%);
+    margin: myrem(4) 0 0 0;
+  }
+}
+.p-message__content-person picture {
+  width: 100%;
+  @include mq(md) {
+    width: myrem(320);
+    height: myrem(210);
+  }
+}
+.p-message__content-person img {
+  width: 100%;
+  aspect-ratio: 335 / 216;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 320 / 210;
+  }
+}
+
+.p-message__content-person-name {
+  font-size: myrem(16);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: $black2;
+  text-align: right;
+  margin: myrem(13) 0 0 0;
+  @include mq(md) {
+    font-size: myrem(24);
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin: myrem(11) 0 0 0;
+  }
+}
+
+.p-message__content-person-spell {
+  font-size: myrem(12);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: $blue;
+  opacity: 0.5;
+  text-align: right;
+  margin: myrem(8) 0 0 0;
+  @include mq(md) {
+    font-size: myrem(14);
+    letter-spacing: 0em;
+    text-align: left;
+    margin: myrem(12) 0 0 0;
+  }
+}

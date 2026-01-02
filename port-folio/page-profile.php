@@ -110,6 +110,27 @@
                 </div>
             </div>
         </div>
+        <!--  -->
+        <div class="p-message__content">
+                    <div class="p-message__content-group">
+                        <div class="p-message__content-title-wrapper">
+                            <h2 class="p-message__content-title">丁寧な作業とコミュニケーションで</h2>
+                            <!-- ラベル -->
+                            <span class="c-label">ハイクオリティなコードを納品。</span>
+                            <div class="p-message__content-text-group">
+                                <p class="p-message__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                                <p class="p-message__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            </div>
+                        </div>
+                        <div class="p-message__content-person">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>message-sp02.png">
+                                <img src="<?php echo $img_path; ?>message-pc02.png" alt="message" loading="lazy">
+                            </picture>
+                            <p class="p-message__content-person-name">田中&thinsp;太郎</p>
+                            <p class="p-message__content-person-spell">Tanaka&thinsp;Tarou</p>
+                        </div>
+                    </div>
     </div>
 </section>
 
