@@ -4,8 +4,8 @@
         <div class="p-profile__inner l-inner">
             <!-- タイトル -->
             <div class="c-title">
-                <h2 class="c-title--l c-title--lp">profile</h2>
-                <p class="c-title--s">メッセージ</p>
+                <h2 class="c-title--l c-title--lp">PROFILE</h2>
+                <p class="c-title--s">経歴・職歴</p>
             </div>
             <?php
             // 画像パスを簡潔にするための変数
@@ -15,8 +15,102 @@
                 <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>profile-sp01.png">
                 <img src="<?php echo $img_path; ?>profile-pc01.png" alt="profile" loading="lazy">
             </picture>
-            <?php breadcrumb(); ?>
-            <div class="p-profile__content">
+        </div>
+        <!-- code skill -->
+        <div class="p-profile__content">
+            <div class="p-profile__inner l-inner">
+                <?php breadcrumb(); ?>
+                <div class="p-profile__wrapper">
+                    <!-- タイトル -->
+                    <div class="c-title">
+                        <h2 class="c-title--l c-title--ls">CODE SKILL</h2>
+                        <p class="c-title--s">対応が可能なコーディングスキルと<br class="u-mobile">デザインデータ</p>
+                    </div>
+                    <div class="p-profile__slill-wrapper">
+                        <div class="p-profile__coding-group">
+                            <p class="p-profile__title">コーディング</p>
+                            <ul class="p-profile__list">
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>html-icon.png" alt="html-icon" loading="lazy" class="html-icon">
+                                    <span class="p-profile__name">HTML</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>css-icon.png" alt="css-icon" loading="lazy" class="css-icon">
+                                    <span class="p-profile__name">CSS</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>sass-icon.png" alt="sass-icon" loading="lazy" class="sass-icon">
+                                    <span class="p-profile__name">Sass</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>javascript-icon.png" alt="javascript-icon" loading="lazy" class="javascript-icon">
+                                    <span class="p-profile__name">JavaScript</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>php-icon.png" alt="php-icon" loading="lazy" class="php-icon">
+                                    <span class="p-profile__name">PHP</span>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <div class="p-profile-cms__group">
+                            <p class="p-profile__title">CMS</p>
+                            <ul class="p-profile__list p-profile__cms-list">
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>wordpress-icon.png" alt="wordpress-icon" loading="lazy" class="wordpress-icon">
+                                    <span class="p-profile__name p-profile__name--l">WordPress</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-profile__design-group">
+                            <p class="p-profile__title">デザイン</p>
+                            <ul class="p-profile__list p-profile__design-list">
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>Illustrator-icon.png" alt="Illustrator-icon" loading="lazy" class="Illustrator-icon">
+                                    <span class="p-profile__name p-profile__name--l">Illustrator</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>Photoshop-icon.png" alt="Photoshop-icon" loading="lazy" class="Photoshop-icon">
+                                    <span class="p-profile__name p-profile__name--l">Photoshop</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>xd-icon.png" alt="xd-icon" loading="lazy" class="xd-icon">
+                                    <span class="p-profile__name p-profile__name--l">XD</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>figma-icon.png" alt="wordpress-icon" loading="lazy" class="figma-icon">
+                                    <span class="p-profile__name p-profile__name--l">Figma</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-profile__communication-group">
+                            <p class="p-profile__title">コミュニケーション</p>
+                            <ul class="p-profile__list p-profile__communication-list">
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>chatwork-icon.png" alt="chatwork-icon" loading="lazy" class="chatwork-icon">
+                                    <span class="p-profile__name p-profile__name--l">Chatwork</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>mail-icon.png" alt="mail-icon" loading="lazy" class="mail-icon">
+                                    <span class="p-profile__name p-profile__name--l">メール</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>slack-icon.png" alt="slack-icon" loading="lazy" class="slack-icon">
+                                    <span class="p-profile__name p-profile__name--l">Slack</span>
+                                </li>
+                                <li class="p-profile__item">
+                                    <img src="<?php echo $img_path; ?>line-icon.png" alt="line-icon" loading="lazy" class="line-icon">
+                                    <span class="p-profile__name p-profile__name--l">LINE</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>

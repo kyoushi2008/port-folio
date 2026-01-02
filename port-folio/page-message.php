@@ -5,7 +5,7 @@
         <div class="p-message__inner l-inner">
             <!-- タイトル -->
             <div class="c-title">
-                <h2 class="c-title--l c-title--lp">MESSAGE</h2>
+                <h2 class="c-title--l">MESSAGE</h2>
                 <p class="c-title--s">メッセージ</p>
             </div>
             <?php

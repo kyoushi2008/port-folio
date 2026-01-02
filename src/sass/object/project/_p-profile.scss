@@ -1,0 +1,262 @@
+@use "global" as *;
+
+.p-profile {
+  width: 100%;
+}
+
+.p-profile__container {
+  width: inherit;
+  padding: myrem(79) 0 0 0;
+  @include mq(md) {
+    padding: myrem(102) 0 0 0;
+  }
+}
+
+.p-profile__top-image {
+  margin: myrem(23) calc(50% - 50vw) 0;
+  width: 100vw;
+  max-width: none;
+  @include mq(md) {
+    margin: myrem(36) calc(50% - 50vw) 0;
+  }
+}
+
+.p-profile__top-image img {
+  width: 100%;
+  aspect-ratio: 375 / 230;
+  @include mq(md) {
+    aspect-ratio: 1440 / 480;
+  }
+}
+
+.p-profile__content {
+  width: 100%;
+  padding: myrem(2) 0 0 0;
+  background: pink;
+  @include mq(md) {
+    padding: myrem(14) 0 0 0;
+  }
+}
+
+.p-profile__wrapper {
+  width: inherit;
+  padding: myrem(8) 0 0 0;
+  @include mq(md) {
+    padding: myrem(8) 0 0 0;
+  }
+}
+
+.p-profile__slill-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(20);
+  margin: myrem(55) 0 0 0;
+  @include mq(md) {
+  }
+}
+
+// coding
+.p-profile__coding-group {
+  width: inherit;
+  background: $white;
+  padding: myrem(25) 0 myrem(20);
+  @include mq(md) {
+  }
+}
+
+.p-profile__title {
+  font-size: myrem(20);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $blue;
+  padding: 0 0 0 myrem(10);
+  @include mq(md) {
+  }
+}
+
+.p-profile__list {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 38px;
+  margin: 37px 0 0 0;
+  @include mq(md) {
+  }
+}
+
+.p-profile__item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: myrem(11);
+  @include mq(md) {
+  }
+}
+
+.html-icon {
+  width: myrem(87);
+  aspect-ratio: 87 / 99;
+  object-fit: contain;
+  @include mq(md) {
+  }
+}
+.css-icon {
+  width: myrem(88);
+  aspect-ratio: 88 / 99;
+  object-fit: contain;
+  @include mq(md) {
+  }
+}
+.sass-icon {
+  width: myrem(108);
+  aspect-ratio: 108 / 80;
+  object-fit: contain;
+  @include mq(md) {
+  }
+}
+.javascript-icon {
+  width: myrem(91);
+  aspect-ratio: 91 / 91;
+  object-fit: contain;
+  @include mq(md) {
+  }
+}
+.php-icon {
+  width: myrem(132);
+  aspect-ratio: 132 / 69;
+  object-fit: contain;
+  @include mq(md) {
+  }
+}
+
+.p-profile__name {
+  font-size: myrem(14);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .1em;
+  @include mq(md) {
+  }
+}
+.p-profile__name--l {
+  font-size: myrem(16);
+  @include mq(md) {
+  }
+}
+// cms
+.p-profile-cms__group {
+  width: 100%;
+  background: $white;
+  padding: 24px 0 32px 0;
+@include mq(md) {}
+}
+
+.p-profile__cms-list {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 0 0;
+  @include mq(md) {
+  }
+}
+
+.wordpress-icon {
+  width: myrem(110);
+  aspect-ratio:110 / 107;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+// デザイン
+.p-profile__design-group {
+  width: inherit;
+  background: $white;
+  padding: myrem(25) 0 myrem(32) 0;
+@include mq(md) {}
+}
+
+.p-profile__design-list {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 29px;
+  margin: 24px 0 0 0;
+  @include mq(md) {
+
+  }
+}
+
+.Illustrator-icon {
+  width: myrem(82);
+  aspect-ratio: 82 / 81;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+.Photoshop-icon {
+  width: myrem(82);
+  aspect-ratio: 82 / 82;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+.xd-icon {
+  width: myrem(83);
+  aspect-ratio: 83 / 82;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+.figma-icon {
+  width: myrem(56);
+  aspect-ratio: 56 / 84;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+// コミュニケーション
+.p-profile__communication-group {
+  width: inherit;
+  background: $white;
+  padding: myrem(25) 0 myrem(32) 0;
+@include mq(md) {}
+}
+
+.p-profile__communication-list {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  margin: 33px 0 0 0;
+@include mq(md) {}
+}
+
+.chatwork-icon {
+  width: myrem(94);
+  aspect-ratio: 94 / 94;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+.mail-icon {
+  width: myrem(100);
+  aspect-ratio: 100 / 100;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+.slack-icon {
+  width: myrem(74);
+  aspect-ratio: 74 / 74;
+  object-fit: contain;
+@include mq(md) {}
+}
+
+.line-icon {
+  width: myrem(90);
+  aspect-ratio: 90 / 90;
+  object-fit: contain;
+@include mq(md) {}
+}
