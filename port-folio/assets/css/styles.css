@@ -174,6 +174,15 @@ button {
   }
 }
 
+.l-404 {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .l-404 {
+    margin-top: 5rem;
+  }
+}
+
 .breadcrumb {
   width: 100%;
   display: -webkit-box;
@@ -327,6 +336,56 @@ button {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+}
+
+.c-top-btn {
+  position: relative;
+  font-family: "open-sans-condensed", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: #104C93;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  border-radius: 3.125rem;
+  border: 0.125rem solid #104C93;
+  padding: 1.125rem 5.75rem;
+  cursor: pointer;
+  background: #fff;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .c-top-btn {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    padding: 1.125rem 5.75rem;
+    margin: auto;
+  }
+}
+
+.c-top-btn--o {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+.c-top-btn::before {
+  position: absolute;
+  content: "▼";
+  top: 1.25rem;
+  right: 3.75rem;
+  font-size: 0.9375rem;
+  color: #104C93;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+@media screen and (min-width: 768px) {
+  .c-top-btn::before {
+    top: 1.3125rem;
+    right: 3.875rem;
   }
 }
 
@@ -527,6 +586,68 @@ button {
 @media screen and (min-width: 768px) {
   .c-title--sl {
     font-size: 3.75rem;
+  }
+}
+
+.p-404 {
+  width: 100%;
+}
+
+.p-404__content {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 4.75rem 0 0 0;
+  gap: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  .p-404__content {
+    padding: 12.625rem 0 0 0;
+    gap: 2.75rem;
+  }
+}
+
+.p-404__lead {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.1666666667;
+  letter-spacing: 0.05em;
+  color: #104C93;
+}
+@media screen and (min-width: 768px) {
+  .p-404__lead {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+.p-404__text {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+@media screen and (min-width: 768px) {
+  .p-404__text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+}
+
+.p-404__btn {
+  width: 100%;
+  margin: 3.8125rem 0 3.6875rem 0;
+}
+@media screen and (min-width: 768px) {
+  .p-404__btn {
+    margin: 2.9375rem 0 6.875rem 0;
   }
 }
 
@@ -1072,7 +1193,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 5rem;
+    height: 5.5555555556vw;
   }
 }
 
@@ -1965,7 +2086,7 @@ body.active {
 .slide-item {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  height: 11.6875rem;
+  height: 49.8666666667vw;
   width: auto;
   overflow: hidden;
 }

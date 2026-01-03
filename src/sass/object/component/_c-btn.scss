@@ -73,3 +73,50 @@
     transform: translate(-50%, -50%);
   }
 }
+
+// トップに戻る
+.c-top-btn {
+  position: relative;
+  font-family: $font-tertiary;
+  font-size: myrem(20);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $blue;
+  display: block;
+  width: fit-content;
+  text-align: center;
+  border-radius: myrem(50);
+  border: myrem(2) solid $blue;
+  padding: myrem(18) myrem(92);
+  cursor: pointer;
+  background: $white;
+  margin: auto;
+  @include mq(md) {
+    font-size: myrem(20);
+    letter-spacing: 0.1em;
+    padding: myrem(18) myrem(92);
+    margin: auto;
+  }
+}
+
+.c-top-btn--o {
+  font-family: $font-sub;
+  font-weight: 900;
+@include mq(md) {
+}
+}
+
+.c-top-btn::before {
+  position: absolute;
+    content: "▼";
+    top: myrem(20);
+    right: myrem(60);
+    font-size: myrem(15);
+    color: $blue;
+    transform: rotate(-90deg);
+  @include mq(md) {
+    top: myrem(21);
+    right: myrem(62);
+  }
+}

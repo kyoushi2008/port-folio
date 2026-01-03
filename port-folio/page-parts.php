@@ -50,6 +50,10 @@
         <!-- ラベル -->
         <span class="c-label">ハイクオリティなコードを納品。</span>
 
+        <!-- トップに戻る -->
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-top-btn"><span class="c-top-btn--o">TOP</span>へ戻る</a>
 
+
+    </div>
 </main>
 <?php get_footer(); ?>
