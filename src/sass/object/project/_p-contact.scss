@@ -131,6 +131,7 @@
 .p-contact__select-custom {
   position: relative;
   width: 85%;
+  background: #F3F7FA;
 }
 
 .p-contact__select-trigger {
@@ -151,8 +152,8 @@
 .p-contact__select-trigger::after {
   content: "";
   position: absolute;
-  top: myrem(20);
-  right: myrem(60);
+  top: myrem(17);
+  right: myrem(9);
   width: myrem(18);
   height: myrem(18);
   background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ") no-repeat center;
