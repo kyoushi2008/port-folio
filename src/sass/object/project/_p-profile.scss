@@ -112,7 +112,8 @@
 }
 
 .html-icon {
-  width: myrem(87);
+  // width: myrem(87);
+  width: vw(375, 87);
   aspect-ratio: 87 / 99;
   object-fit: contain;
   @include mq(md) {
@@ -121,7 +122,8 @@
   }
 }
 .css-icon {
-  width: myrem(88);
+  // width: myrem(88);
+  width: vw(375, 88);
   aspect-ratio: 88 / 99;
   object-fit: contain;
   @include mq(md) {
@@ -131,7 +133,8 @@
   }
 }
 .sass-icon {
-  width: myrem(108);
+  // width: myrem(108);
+  width: vw(375, 108);
   aspect-ratio: 108 / 80;
   object-fit: contain;
   @include mq(md) {
@@ -141,7 +144,8 @@
   }
 }
 .javascript-icon {
-  width: myrem(91);
+  // width: myrem(91);
+  width: vw(375, 91);
   aspect-ratio: 91 / 91;
   object-fit: contain;
   @include mq(md) {
@@ -151,10 +155,13 @@
   }
 }
 .php-icon {
-  width: myrem(158);
-  aspect-ratio: 158 / 83;
+  // width: myrem(132);
+  width: vw(375, 132);
+  aspect-ratio: 132 / 69;
   object-fit: contain;
   @include mq(md) {
+    width: myrem(158);
+    aspect-ratio: 158 / 83;
   }
 }
 
@@ -196,7 +203,8 @@
 }
 
 .wordpress-icon {
-  width: myrem(110);
+  // width: myrem(110);
+  width: vw(375, 110);
   aspect-ratio: 110 / 107;
   object-fit: contain;
   @include mq(md) {
@@ -231,7 +239,8 @@
 }
 
 .Illustrator-icon {
-  width: myrem(82);
+  // width: myrem(82);
+  width: vw(375, 82);
   aspect-ratio: 82 / 81;
   object-fit: contain;
   @include mq(md) {
@@ -241,7 +250,8 @@
 }
 
 .Photoshop-icon {
-  width: myrem(82);
+  // width: myrem(82);
+  width: vw(375, 82);
   aspect-ratio: 82 / 82;
   object-fit: contain;
   @include mq(md) {
@@ -251,7 +261,8 @@
 }
 
 .xd-icon {
-  width: myrem(83);
+  // width: myrem(83);
+  width: vw(375, 83);
   aspect-ratio: 83 / 82;
   object-fit: contain;
   @include mq(md) {
@@ -262,7 +273,8 @@
 }
 
 .figma-icon {
-  width: myrem(56);
+  // width: myrem(56);
+  width: vw(375, 56);
   aspect-ratio: 56 / 84;
   object-fit: contain;
   @include mq(md) {
@@ -298,7 +310,8 @@
 }
 
 .chatwork-icon {
-  width: myrem(94);
+  // width: myrem(94);
+  width: vw(375, 94);
   aspect-ratio: 94 / 94;
   object-fit: contain;
   @include mq(md) {
@@ -308,7 +321,8 @@
 }
 
 .mail-icon {
-  width: myrem(100);
+  // width: myrem(100);
+  width: vw(375, 100);
   aspect-ratio: 100 / 100;
   object-fit: contain;
   @include mq(md) {
@@ -319,7 +333,8 @@
 }
 
 .slack-icon {
-  width: myrem(74);
+  // width: myrem(74);
+  width: vw(375, 74);
   aspect-ratio: 74 / 74;
   object-fit: contain;
   @include mq(md) {
@@ -329,7 +344,8 @@
 }
 
 .line-icon {
-  width: myrem(78);
+  // width: myrem(78);
+  width: vw(375, 78);
   aspect-ratio: 78 / 76;
   object-fit: contain;
   @include mq(md) {
@@ -339,29 +355,103 @@
   }
 }
 
-//
-.p-message__content {
+///////////////////////////////
+.p-profile__content02 {
   width: 100%;
-  padding: myrem(59) 0 0 0;
-  @include mq(md) {
-    padding: myrem(63) 0 0 0;
-  }
-}
-
-.p-message__content-group {
-  width: inherit;
+  padding: myrem(65) 0 myrem(60) 0;
   @include mq(md) {
     display: flex;
+    padding: myrem(114) 0 myrem(110) 0;
   }
 }
 
-.p-message__content-title-wrapper {
+.p-profile__content02-group {
   width: inherit;
+  display: flex;
+  flex-direction: column;
   @include mq(md) {
   }
 }
 
-.p-message__content-title {
+.p-profile__content02-title-wrapper {
+  width: inherit;
+  @include mq(md) {
+  }
+}
+.profile-picture01 {
+  width: 100vw;
+  max-width: none;
+  margin: myrem(56) calc(50% - 50vw) myrem(64);
+  @include mq(md) {
+    width: myrem(950);
+    margin: myrem(74) 0 myrem(105) 0;
+  }
+}
+.profile-picture01 img {
+  width: 100%;
+  aspect-ratio: 375 / 271;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 950 / 327;
+  }
+}
+
+
+.p-profile__content02-title-wrapper .profile-picture03 {
+  justify-content: flex-end;
+  @include mq(md) {
+    justify-content: initial;
+  }
+}
+
+.p-profile__img-group {
+@include mq(md) {
+  width: 100%;
+  display: flex;
+  gap: myrem(25);
+  margin: myrem(72) 0 0 0;
+}
+}
+
+.profile-picture02 {
+  width: 100%;
+  margin: myrem(41) 0 0 calc(50% - 50vw);
+  @include mq(md) {
+    width: myrem(462);
+    margin: 0;
+  }
+}
+.profile-picture02 img {
+  width: vw(375, 283);
+  aspect-ratio: 283 / 182;
+  object-fit: cover;
+  @include mq(md) {
+    width: 100%;
+    aspect-ratio: 462 / 298;
+  }
+}
+.profile-picture03 {
+  width: auto;
+  display: flex;
+  max-width: none;
+  margin: myrem(20) calc(50% - 50vw) 0 0;
+  @include mq(md) {
+    width: myrem(462);
+    margin: myrem(54) 0 0 0;
+  }
+}
+.profile-picture03 img {
+  // width: myrem(283);
+  width: vw(375, 283);
+  aspect-ratio: 283 / 182;
+  object-fit: cover;
+  @include mq(md) {
+    width: 100%;
+    aspect-ratio: 462 / 298;
+  }
+}
+
+.p-profile__content02-title {
   font-size: myrem(20);
   font-weight: 900;
   line-height: 1;
@@ -376,7 +466,7 @@
   }
 }
 
-.p-message__content-text-group {
+.p-profile__content02-text-group {
   width: inherit;
   display: flex;
   flex-direction: column;
@@ -384,12 +474,39 @@
   margin: myrem(19) 0 0 0;
   @include mq(md) {
     gap: myrem(28);
-    margin: myrem(31) 0 0 0;
-    padding: 0 myrem(15) 0 0;
+    margin: myrem(20) 0 0 0;
+    padding: 0 myrem(30) 0 0;
   }
 }
 
-.p-message__content-text {
+.p-profile__content02-person-text-group {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(17);
+  @include mq(md) {
+    width: 100%;
+    gap: myrem(45);
+    margin: myrem(53) 0 0 0;
+}
+}
+
+.p-profile__content02-person-text-block {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(3);
+  margin: myrem(35) 0 0 0;
+  @include mq(md) {
+  gap: myrem(8);
+  margin: 0;
+  padding: 0 myrem(12) 0 0;
+}
+}
+
+
+
+.p-profile__content02-text {
   font-size: myrem(16);
   font-weight: normal;
   line-height: calc(28 / 16);
@@ -399,23 +516,31 @@
     color: $black;
   }
 }
+.p-profile__content02-text02 {
+  font-size: myrem(14);
+  font-weight: normal;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.1em;
+  @include mq(md) {
+  }
+}
 
-.p-message__content-person {
+.p-profile__content02-person {
   width: 100%;
   margin: myrem(61) 0 0 0;
   @include mq(md) {
     width: calc(320 / 1300 * 100%);
-    margin: myrem(4) 0 0 0;
+    margin: 0;
   }
 }
-.p-message__content-person picture {
+.p-profile__content02-person picture {
   width: 100%;
   @include mq(md) {
     width: myrem(320);
     height: myrem(210);
   }
 }
-.p-message__content-person img {
+.p-profile__content02-person img {
   width: 100%;
   aspect-ratio: 335 / 216;
   object-fit: cover;
@@ -424,7 +549,7 @@
   }
 }
 
-.p-message__content-person-name {
+.p-profile__content02-person-name {
   font-size: myrem(16);
   font-weight: bold;
   line-height: 1;
@@ -436,11 +561,11 @@
     font-size: myrem(24);
     letter-spacing: 0.1em;
     text-align: left;
-    margin: myrem(11) 0 0 0;
+    margin: myrem(17) 0 0 0;
   }
 }
 
-.p-message__content-person-spell {
+.p-profile__content02-person-spell {
   font-size: myrem(12);
   font-weight: bold;
   line-height: 1;
@@ -453,6 +578,6 @@
     font-size: myrem(14);
     letter-spacing: 0em;
     text-align: left;
-    margin: myrem(12) 0 0 0;
+    margin: myrem(7) 0 0 0;
   }
 }

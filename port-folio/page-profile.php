@@ -111,16 +111,40 @@
             </div>
         </div>
         <!-- //////////////////////////////////////////////// -->
-        <div class="p-profile__content02">
-            <div class="p-profile__content02-group">
-
-                <div class="p-profile__content02-title-wrapper">
-                    <h2 class="p-profile__content02-title">丁寧な作業とコミュニケーションで</h2>
-                    <!-- ラベル -->
-                    <span class="c-label">ハイクオリティなコードを納品。</span>
-                    <div class="p-profile__content02-text-group">
-                        <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
-                        <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+        <div class="p-profile__inner l-inner">
+            <div class="p-profile__content02">
+                <div class="p-profile__content02-group">
+                    <div class="p-profile__content02-title-wrapper">
+                        <h2 class="p-profile__content02-title">丁寧な作業とコミュニケーションで</h2>
+                        <!-- ラベル -->
+                        <span class="c-label">ハイクオリティなコードを納品。</span>
+                        <div class="p-profile__content02-text-group">
+                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                        </div>
+                        <picture class="profile-picture01">
+                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>profile-sp03.png">
+                            <img src="<?php echo $img_path; ?>profile-pc03.png" alt="モックアップ" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="p-profile__content02-title-wrapper">
+                        <h2 class="p-profile__content02-title">丁寧な作業とコミュニケーションで</h2>
+                        <!-- ラベル -->
+                        <span class="c-label">ハイクオリティなコードを納品。</span>
+                        <div class="p-profile__content02-text-group">
+                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                        </div>
+                        <div class="p-profile__img-group">
+                            <picture class="profile-picture02">
+                                <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>profile-sp04.png">
+                                <img src="<?php echo $img_path; ?>profile-pc04.png" alt="profile-sp04" loading="lazy">
+                            </picture>
+                            <picture class="profile-picture03">
+                                <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>profile-sp05.png">
+                                <img src="<?php echo $img_path; ?>profile-pc05.png" alt="profile-sp05" loading="lazy">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="p-profile__content02-person">
@@ -139,7 +163,7 @@
                                 <p class="c-title--l c-title--black">経歴</p>
                                 <p class="c-title--s">&emsp;</p>
                             </div>
-                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            <p class="p-profile__content02-text02">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
                         </div>
                         <div class="p-profile__content02-person-text-block">
                             <!-- テキスト 上タイトルサイズ28 -->
@@ -147,7 +171,7 @@
                                 <p class="c-title--l c-title--black">職歴</p>
                                 <p class="c-title--s">&emsp;</p>
                             </div>
-                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                            <p class="p-profile__content02-text02">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
                         </div>
                     </div>
                 </div>
