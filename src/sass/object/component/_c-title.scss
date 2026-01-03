@@ -38,6 +38,19 @@
   }
 }
 
+.c-title--black {
+  font-family: $font-tertiary;
+  font-size: myrem(22);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $black2;
+  display: inline-block;
+  @include mq(md) {
+    font-size: myrem(28);
+  }
+}
+
 .c-title--s {
   position: relative;
   font-size: myrem(14);
@@ -53,11 +66,12 @@
   }
 }
 
+
 .c-title--s::before {
   position: absolute;
   content: "";
-  width: myrem(16);
-  height: myrem(2);
+  width: myrem(32);
+  height: myrem(4);
   background: linear-gradient(
     to right,
     #104c93 0%,
@@ -66,7 +80,7 @@
     #ffffff 100%
   );
   top: myrem(11);
-  left: myrem(12);
+  left: myrem(16);
   transform: translate(-50%, -50%);
   @include mq(md) {
     width: myrem(32);
@@ -95,7 +109,7 @@
 .c-title--ws::before {
   position: absolute;
   content: "";
-  width: myrem(16);
+  width: myrem(32);
   height: myrem(4);
   background: linear-gradient(
     to right,

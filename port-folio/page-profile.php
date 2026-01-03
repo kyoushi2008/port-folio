@@ -110,27 +110,49 @@
                 </div>
             </div>
         </div>
-        <!--  -->
-        <div class="p-message__content">
-                    <div class="p-message__content-group">
-                        <div class="p-message__content-title-wrapper">
-                            <h2 class="p-message__content-title">丁寧な作業とコミュニケーションで</h2>
-                            <!-- ラベル -->
-                            <span class="c-label">ハイクオリティなコードを納品。</span>
-                            <div class="p-message__content-text-group">
-                                <p class="p-message__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
-                                <p class="p-message__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+        <!-- //////////////////////////////////////////////// -->
+        <div class="p-profile__content02">
+            <div class="p-profile__content02-group">
+
+                <div class="p-profile__content02-title-wrapper">
+                    <h2 class="p-profile__content02-title">丁寧な作業とコミュニケーションで</h2>
+                    <!-- ラベル -->
+                    <span class="c-label">ハイクオリティなコードを納品。</span>
+                    <div class="p-profile__content02-text-group">
+                        <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                        <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
+                    </div>
+                </div>
+                <div class="p-profile__content02-person">
+                    <div class="p-profile__content02-person-img-group">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>profile-sp02.png">
+                            <img src="<?php echo $img_path; ?>profile-pc02.png" alt="田中太郎" loading="lazy">
+                        </picture>
+                        <p class="p-profile__content02-person-name">田中&thinsp;太郎</p>
+                        <p class="p-profile__content02-person-spell">Tanaka&thinsp;Tarou</p>
+                    </div>
+                    <div class="p-profile__content02-person-text-group">
+                        <div class="p-profile__content02-person-text-block">
+                            <!-- テキスト 上タイトルサイズ28 -->
+                            <div class="c-title c-title--28">
+                                <p class="c-title--l c-title--black">経歴</p>
+                                <p class="c-title--s">&emsp;</p>
                             </div>
+                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
                         </div>
-                        <div class="p-message__content-person">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>message-sp02.png">
-                                <img src="<?php echo $img_path; ?>message-pc02.png" alt="message" loading="lazy">
-                            </picture>
-                            <p class="p-message__content-person-name">田中&thinsp;太郎</p>
-                            <p class="p-message__content-person-spell">Tanaka&thinsp;Tarou</p>
+                        <div class="p-profile__content02-person-text-block">
+                            <!-- テキスト 上タイトルサイズ28 -->
+                            <div class="c-title c-title--28">
+                                <p class="c-title--l c-title--black">職歴</p>
+                                <p class="c-title--s">&emsp;</p>
+                            </div>
+                            <p class="p-profile__content02-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
