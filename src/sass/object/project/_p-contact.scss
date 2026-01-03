@@ -1,0 +1,261 @@
+@use "global" as *;
+
+.p-contact {
+  width: 100%;
+@include mq(md) {}
+}
+
+.p-contact__container {
+  width: inherit;
+  padding: myrem(80) 0 0 0;
+  @include mq(md) {
+  padding: myrem(102) 0 0 0;
+}
+}
+
+.p-content__content {
+  width: 100%;
+  padding: myrem(61) 0 0 0;
+  @include mq(md) {
+  padding: myrem(32) 0 0 0;
+
+}
+}
+
+.p-contact__wrapper {
+  width: inherit;
+  padding: myrem(60) 0 0 0;
+  @include mq(md) {
+  padding: myrem(55) 0 0 0;
+}
+}
+.p-contact__wrapper form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: pink;
+  gap: 33px;
+  @include mq(md) {
+}
+}
+
+.p-contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(18);
+  @include mq(md) {
+  }
+}
+.p-contact__item-label {
+  font-size: myrem(16);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .06em;
+  color: $black2;
+  @include mq(md) {
+  }
+}
+.p-contact__required {
+  font-size: myrem(14);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .04em;
+  color: $white;
+  background: #C52238;
+  padding: 0 myrem(8);
+  margin: 0 0 0 myrem(15);
+  @include mq(md) {
+  }
+}
+
+// .p-contact__item.is-select select {
+//   width: 85%;
+//   border: 1px solid transparent;
+//   padding: myrem(16) 0 myrem(19) myrem(16);
+//   @include mq(md) {
+
+//   }
+// }
+// .p-contact__item.is-select select option {
+//   font-size: myrem(20);
+//   @include mq(md) {
+
+//   }
+// }
+
+// .is-select {
+//   position: relative;
+// }
+
+// .is-select::before {
+//   position: absolute;
+//   content: "";
+//   top: myrem(53);
+//   right: myrem(60);
+//   width: myrem(18);
+//   height: myrem(18);
+//   background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ")
+//   no-repeat center;
+//   background-size: contain;
+//   z-index: 2;
+//   @include mq(md) {
+
+//   }
+// }
+
+// .choice {
+//   -webkit-appearance: none;
+//     appearance: none;
+//     font-size: myrem(16);
+//     font-weight: 600;
+//     line-height: 1;
+//     letter-spacing: .06em;
+//   @include mq(md) {
+
+//   }
+// }
+
+// .choice:focus {
+//   outline: none;
+// }
+
+// .choice option:first-child {
+//   display: none;
+// }
+
+// カスタムセレクトボックス
+.p-contact__item.is-select select {
+  display: none;
+}
+
+.p-contact__select-custom {
+  position: relative;
+  width: 85%;
+}
+
+.p-contact__select-trigger {
+  width: 100%;
+  padding: myrem(16) 0 myrem(19) myrem(16);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: myrem(16);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .06em;
+  position: relative;
+  transition: background-color 0.3s ease;
+  @include mq(md) {
+  }
+}
+
+.p-contact__select-trigger::after {
+  content: "";
+  position: absolute;
+  top: myrem(20);
+  right: myrem(60);
+  width: myrem(18);
+  height: myrem(18);
+  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ") no-repeat center;
+  background-size: contain;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  @include mq(md) {
+  }
+}
+
+.p-contact__select-trigger.active {
+  background-color: #e0ffff;
+  border: 1px solid #afeeee;
+  @include mq(md) {
+  }
+}
+
+.p-contact__select-trigger.active::after {
+  transform: rotate(180deg);
+}
+
+.p-contact__select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: $white;
+  border: 1px solid #afeeee;
+  border-top: none;
+  max-height: myrem(200);
+  overflow-y: auto;
+  display: none;
+  z-index: 10;
+  @include mq(md) {
+  }
+}
+
+.p-contact__select-options.active {
+  display: block;
+}
+
+.p-contact__select-option {
+  padding: myrem(12) myrem(16);
+  cursor: pointer;
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .06em;
+  transition: background-color 0.2s ease;
+  @include mq(md) {
+  }
+}
+
+.p-contact__select-option:hover {
+  background-color: #e0ffff;
+}
+
+.p-contact__select-option.selected {
+  background-color: #e0ffff;
+  font-weight: 600;
+}
+
+.p-contact__item input {
+  width: 100%;
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .06em;
+  border: 1px solid transparent;
+  outline: none;
+  padding: myrem(12) myrem(15) myrem(13) 0;
+  @include mq(md) {
+  }
+}
+.p-contact__item input::placeholder {
+  width: 100%;
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .06em;
+  color: #888888;
+  opacity: 1;
+  padding: myrem(12) myrem(15) myrem(15) myrem(16);
+  @include mq(md) {
+  }
+}
+ // フォーカスした時
+.p-contact__item input:focus {
+  background-color: #e0ffff;
+  border: 1px solid #afeeee;
+  @include mq(md) {
+  }
+}
+.p-contact__item.is-select select:focus {
+  background-color: #e0ffff;
+  border: 1px solid #afeeee;
+  @include mq(md) {
+  }
+}
+
+.p-contact__item textarea:focus {
+  background-color: #e0ffff;
+  border: 1px solid #afeeee;
+  @include mq(md) {
+  }
+}
