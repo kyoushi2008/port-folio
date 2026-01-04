@@ -2,55 +2,60 @@
 
 .p-contact {
   width: 100%;
-@include mq(md) {}
+  @include mq(md) {
+  }
 }
 
 .p-contact__container {
   width: inherit;
   padding: myrem(80) 0 0 0;
   @include mq(md) {
-  padding: myrem(102) 0 0 0;
-}
+    padding: myrem(106) 0 0 0;
+  }
 }
 
-.p-content__content {
-  width: 100%;
-  padding: myrem(61) 0 0 0;
+.p-breadcrumb {
+  margin: myrem(61) 0 0 0;
   @include mq(md) {
-  padding: myrem(32) 0 0 0;
-
+    margin: myrem(28) 0 0 0;
+  }
 }
+
+.p-contact__content {
+  width: 100%;
+  padding: 0 0 myrem(31) 0;
+  @include mq(md) {
+    width: calc(980 / 1300 * 100%);
+    display: block;
+    margin: auto;
+    padding: 0 0 myrem(80) 0;
+  }
 }
 
 .p-contact__wrapper {
   width: inherit;
-  padding: myrem(60) 0 0 0;
-  @include mq(md) {
-  padding: myrem(55) 0 0 0;
-}
-}
-.p-contact__wrapper form {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  background: pink;
-  gap: 33px;
+  gap: myrem(27);
+  margin: myrem(55) 0 myrem(58) 0;
   @include mq(md) {
-}
+    margin: myrem(94) 0 myrem(58) 0;
+  }
 }
 
 .p-contact__item {
   display: flex;
   flex-direction: column;
-  gap: myrem(18);
+  gap: myrem(17);
   @include mq(md) {
+    gap: myrem(17);
   }
 }
 .p-contact__item-label {
   font-size: myrem(16);
   font-weight: bold;
-  line-height: 1;
-  letter-spacing: .06em;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
   color: $black2;
   @include mq(md) {
   }
@@ -59,71 +64,18 @@
   font-size: myrem(14);
   font-weight: 500;
   line-height: 1;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   color: $white;
-  background: #C52238;
+  background: #c52238;
   padding: 0 myrem(8);
   margin: 0 0 0 myrem(15);
   @include mq(md) {
   }
 }
 
-// .p-contact__item.is-select select {
-//   width: 85%;
-//   border: 1px solid transparent;
-//   padding: myrem(16) 0 myrem(19) myrem(16);
-//   @include mq(md) {
-
-//   }
-// }
-// .p-contact__item.is-select select option {
-//   font-size: myrem(20);
-//   @include mq(md) {
-
-//   }
-// }
-
-// .is-select {
-//   position: relative;
-// }
-
-// .is-select::before {
-//   position: absolute;
-//   content: "";
-//   top: myrem(53);
-//   right: myrem(60);
-//   width: myrem(18);
-//   height: myrem(18);
-//   background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ")
-//   no-repeat center;
-//   background-size: contain;
-//   z-index: 2;
-//   @include mq(md) {
-
-//   }
-// }
-
-// .choice {
-//   -webkit-appearance: none;
-//     appearance: none;
-//     font-size: myrem(16);
-//     font-weight: 600;
-//     line-height: 1;
-//     letter-spacing: .06em;
-//   @include mq(md) {
-
-//   }
-// }
-
-// .choice:focus {
-//   outline: none;
-// }
-
-// .choice option:first-child {
-//   display: none;
-// }
-
-// カスタムセレクトボックス
+.p-contact__item.is-select {
+  gap: myrem(8);
+}
 .p-contact__item.is-select select {
   display: none;
 }
@@ -131,21 +83,25 @@
 .p-contact__select-custom {
   position: relative;
   width: 85%;
-  background: #F3F7FA;
+  background: #f3f7fa;
+  @include mq(md) {
+    width: 29%;
+  }
 }
 
 .p-contact__select-trigger {
-  width: 100%;
-  padding: myrem(16) 0 myrem(19) myrem(16);
-  border: 1px solid transparent;
-  cursor: pointer;
+  position: relative;
   font-size: myrem(16);
   font-weight: 600;
   line-height: 1;
-  letter-spacing: .06em;
-  position: relative;
+  letter-spacing: 0.06em;
+  width: 100%;
+  padding: myrem(13) 0 myrem(19) myrem(16);
+  border: 1px solid transparent;
+  cursor: pointer;
   transition: background-color 0.3s ease;
   @include mq(md) {
+    padding: myrem(14) 0 myrem(19) myrem(16);
   }
 }
 
@@ -156,11 +112,13 @@
   right: myrem(9);
   width: myrem(18);
   height: myrem(18);
-  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ") no-repeat center;
+  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path d='M4 6 L12 14 L20 6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> ")
+    no-repeat center;
   background-size: contain;
   z-index: 2;
   transition: transform 0.3s ease;
   @include mq(md) {
+    right: myrem(17);
   }
 }
 
@@ -201,7 +159,7 @@
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   transition: background-color 0.2s ease;
   @include mq(md) {
   }
@@ -221,10 +179,11 @@
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   border: 1px solid transparent;
   outline: none;
-  padding: myrem(12) myrem(15) myrem(13) 0;
+  padding: myrem(10) myrem(15) myrem(14) myrem(16);
+  background: #f3f7fa;
   @include mq(md) {
   }
 }
@@ -233,14 +192,43 @@
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   color: #888888;
   opacity: 1;
-  padding: myrem(12) myrem(15) myrem(15) myrem(16);
   @include mq(md) {
   }
 }
- // フォーカスした時
+
+.p-contact__item textarea {
+  width: 100%;
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  border: 1px solid transparent;
+  outline: none;
+  padding: myrem(10) myrem(15) myrem(13) myrem(16);
+  height: myrem(250);
+  resize: none;
+  display: block;
+  background: #f3f7fa;
+  @include mq(md) {
+    padding: myrem(10) myrem(15) myrem(13) myrem(16);
+  }
+}
+
+.p-contact__item textarea::placeholder {
+  width: 100%;
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #888888;
+  opacity: 1;
+  @include mq(md) {
+  }
+}
+// フォーカスした時
 .p-contact__item input:focus {
   background-color: #e0ffff;
   border: 1px solid #afeeee;
@@ -259,4 +247,248 @@
   border: 1px solid #afeeee;
   @include mq(md) {
   }
+}
+
+///////////////////////////////////
+.p-contact__policy {
+  width: inherit;
+  text-align: center;
+  @include mq(md) {
+  }
+}
+
+.p-contact__policy-box {
+  margin: myrem(30) 0 myrem(28) 0;
+  width: 100%;
+  height: myrem(280);
+  overflow-y: scroll;
+  padding: myrem(23) myrem(30) myrem(20) myrem(19);
+  @include mq(md) {
+    padding: myrem(23) myrem(45) myrem(20) myrem(15);
+  }
+}
+
+.p-contact__policy-box .simplebar-content-wrapper {
+  border: 1px solid #d8d8d8;
+  border-radius: myrem(4);
+}
+
+.p-contact__policy-box .simplebar-content {
+  font-size: myrem(14);
+  line-height: 1.72;
+  letter-spacing: 0.1em;
+  text-align: left;
+  @include mq(md) {
+  }
+}
+
+.p-contact__policy-box .simplebar-content p {
+  margin-bottom: myrem(20);
+  @include mq(md) {
+    margin-bottom: myrem(22);
+  }
+}
+
+// Simplebarのスクロールバーをカスタマイズ
+.p-contact__policy-box .simplebar-track.simplebar-vertical {
+  width: myrem(10);
+  height: myrem(267);
+  right: myrem(11);
+  top: myrem(7);
+  background: #f3f7fa;
+  border-radius: myrem(10);
+}
+
+.p-contact__policy-box .simplebar-scrollbar::before {
+  background: $blue;
+  width: myrem(10);
+  height: myrem(60);
+  top: 0;
+  right: 0;
+  left: initial;
+  opacity: 1;
+  border-radius: myrem(10);
+}
+///////////////////////
+.p-contact__acceptance {
+  width: inherit;
+  margin: 0 0 myrem(55) 0;
+  @include mq(md) {
+    text-align: center;
+  }
+}
+
+.p-contact__acceptance label {
+  font-size: myrem(16);
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: $black2;
+  display: flex;
+  align-items: center;
+  gap: myrem(13);
+  margin: 0 0 0 myrem(-3);
+  @include mq(md) {
+    margin: 0 0 0 myrem(-21);
+  }
+}
+
+.acceptance {
+  appearance: none;
+  border-radius: myrem(4);
+  border: 1px solid $black;
+  width: myrem(24);
+  height: myrem(24);
+  @include mq(md) {
+  }
+}
+
+// チェック時のスタイル
+.acceptance:checked {
+  position: relative;
+  @include mq(md) {
+  }
+}
+
+.acceptance:checked::after {
+  content: "";
+  position: absolute;
+  left: myrem(7);
+  top: myrem(2);
+  width: myrem(9);
+  height: myrem(15);
+  border: solid $blue;
+  border-width: 0 myrem(4) myrem(4) 0;
+  transform: rotate(45deg);
+}
+///////////////////////////////
+.p-contact__confirm,
+.p-contact__submit {
+  width: 100%;
+  @include mq(md) {
+  }
+}
+.confirm::before {
+  content: "";
+  position: absolute;
+  right: myrem(50);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: myrem(7) 0 myrem(7) myrem(12);
+  border-color: transparent transparent transparent $white;
+  z-index: 1;
+  @include mq(md) {
+  }
+}
+
+.confirm,
+.submit {
+  position: relative;
+  font-size: myrem(20);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: $white;
+  margin: 0 auto;
+  padding: myrem(16) myrem(76) myrem(14) myrem(70);
+  background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  border: none;
+  border-radius: myrem(60);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  @include mq(md) {
+  }
+}
+
+.confirm:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  @include mq(md) {
+  }
+}
+
+////////////
+.p-contact__button-group {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  gap: 40px;
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-contact__back-btn {
+  font-size: myrem(20);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: $blue;
+  padding: myrem(14) myrem(92);
+  background: $white;
+  border: myrem(2) solid $blue;
+  border-radius: myrem(60);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  @include mq(md) {
+    padding: myrem(14) myrem(92);
+  }
+}
+
+// エラーメッセージ用
+.p-contact__error {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #dc3232;
+  @include mq(md) {
+  }
+}
+// 送信内容確認
+.p-contact__confirm-title {
+  font-size: myrem(24);
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #104c93;
+  text-align: center;
+  margin: 0 0 myrem(40) 0;
+  @include mq(md) {
+    font-size: myrem(32);
+    margin: 0 0 myrem(60) 0;
+  }
+}
+
+.p-contact__confirm-text {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: $black2;
+  padding: myrem(10) myrem(15);
+  background: #F3F7FA;
+  min-height: myrem(40);
+}
+.p-contact__confirm-text-message {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: $black2;
+  text-align: center;
+  margin: myrem(20) 0 myrem(40) 0;
+  @include mq(md) {
+    margin: myrem(24) 0 myrem(60) 0;
+  }
+}
+.p-contact__confirm-textarea {
+  white-space: pre-wrap;
+  min-height: myrem(100);
 }

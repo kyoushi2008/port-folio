@@ -4,14 +4,15 @@
     <div class="p-contact__container">
         <div class="p-contact__inner l-inner">
             <div class="c-title">
-                <h2 class="c-title--l c-title--lp">WORKS</h2>
-                <p class="c-title--s">実績</p>
+                <h2 class="c-title--l c-title--lp">CONTACT</h2>
+                <p class="c-title--s">お問い合わせ</p>
             </div>
-            <div class="p-content__content">
+            <div class="p-breadcrumb">
                 <?php breadcrumb(); ?>
-                <div class="p-contact__wrapper">
-                    <?php the_content(); ?>
-                </div>
+            </div>
+            <div class="p-contact__content">
+                <?php the_content(); ?>
+
             </div>
         </div>
     </div>
