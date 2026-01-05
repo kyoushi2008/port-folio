@@ -31,3 +31,9 @@
     margin-top: myrem(80);
   }
 }
+.l-single-news {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}

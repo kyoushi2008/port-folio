@@ -2,9 +2,13 @@
 
 <main class="p-main">
     <div class="l-inner">
-        <!-- ボタン -->
+        <!-- ボタンroboto -->
         <div class="c-btn">
             <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+        </div>
+        <!-- ボタンnotosas -->
+        <div class="c-btn">
+            <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link-n">Read more<span class="c-btn--circle"></span></a>
         </div>
         <!-- ボタントップへもどる -->
         <div class="c-btn c-btn--l">

@@ -19,6 +19,19 @@
     gap: myrem(12);
   }
 }
+.c-btn__link-n {
+  font-size: myrem(16);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: myrem(8);
+  @include mq(md) {
+    font-size: myrem(18);
+    gap: myrem(12);
+  }
+}
 
 .c-btn--circle {
   position: relative;
@@ -27,11 +40,21 @@
   height: myrem(30);
   border-radius: 50%;
   background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  transition: width 0.3s ease, height 0.3s ease;
   @include mq(md) {
     width: myrem(42);
     height: myrem(42);
   }
 }
+
+.c-btn__link-n:hover .c-btn--circle,
+.c-btn__link:hover .c-btn--circle {
+  @include mq(md) {
+    width: myrem(50);
+    height: myrem(50);
+  }
+}
+
 .c-btn--circle::before {
   position: absolute;
   content: "";
@@ -103,18 +126,18 @@
 .c-top-btn--o {
   font-family: $font-sub;
   font-weight: 900;
-@include mq(md) {
-}
+  @include mq(md) {
+  }
 }
 
 .c-top-btn::before {
   position: absolute;
-    content: "▼";
-    top: myrem(20);
-    right: myrem(60);
-    font-size: myrem(15);
-    color: $blue;
-    transform: rotate(-90deg);
+  content: "▼";
+  top: myrem(20);
+  right: myrem(60);
+  font-size: myrem(15);
+  color: $blue;
+  transform: rotate(-90deg);
   @include mq(md) {
     top: myrem(21);
     right: myrem(62);
