@@ -352,8 +352,8 @@ button {
 }
 @media screen and (min-width: 768px) {
   .c-btn--circle::before {
-    width: 0.625rem;
-    height: 0.875rem;
+    width: 0.8125rem;
+    height: 1rem;
   }
 }
 
@@ -4388,10 +4388,17 @@ body.active {
 .p-single-news {
   width: 100%;
 }
+
 .p-single-news__container {
   width: inherit;
-  padding: 6.625rem 0 0 0;
+  padding: 4.9375rem 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .p-single-news__container {
+    padding: 6.625rem 0 0 0;
+  }
+}
+
 .p-single-news__content {
   width: inherit;
   display: -webkit-box;
@@ -4401,7 +4408,7 @@ body.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 6.625rem 0 0 0;
+  padding: 2.5625rem 0 4.4375rem 0;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__content {
@@ -4409,7 +4416,7 @@ body.active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 5.625rem 0 40px 0;
+    padding: 5.625rem 0 6.9375rem 0;
   }
 }
 
@@ -4424,7 +4431,7 @@ body.active {
 
 .p-single-news__title-group {
   width: 100%;
-  padding: 0 5.375rem 0 0;
+  padding: 0 1.875rem 0 0;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__title-group {
@@ -4450,8 +4457,8 @@ body.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.625rem;
-  margin: 0 0 0 0;
+  gap: 1.3125rem;
+  margin: 2.625rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__meta {
@@ -4468,6 +4475,7 @@ body.active {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+
 .p-single-news__cat {
   font-size: 0.875rem;
   font-weight: bold;
@@ -4476,7 +4484,7 @@ body.active {
   color: #fff;
   display: inline-block;
   background: #104C93;
-  padding: 0 0 0 0;
+  padding: 0.3125rem 0.75rem 0.375rem 0.75rem;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__cat {
@@ -4486,6 +4494,7 @@ body.active {
 
 .p-single-news__body {
   width: 100%;
+  padding: 1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__body {
@@ -4497,8 +4506,14 @@ body.active {
   width: 100%;
   aspect-ratio: 950/500;
   height: auto;
-  margin: 1.5rem 0 1.3125rem 0;
+  margin: 1.5rem 0 1.25rem 0;
 }
+@media screen and (min-width: 768px) {
+  .p-single-news__body img {
+    margin: 1.5rem 0 1.3125rem 0;
+  }
+}
+
 .p-single-news__body h2 {
   font-size: 1.25rem;
   font-weight: bold;
@@ -4530,7 +4545,7 @@ body.active {
   font-weight: normal;
   line-height: 1.75;
   letter-spacing: 0.1em;
-  margin: 0 0 0 0;
+  margin: 0 0 1.75rem 0;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__body p {
@@ -4547,7 +4562,8 @@ body.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 4.5625rem;
+  padding: 3.875rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__sidebar {
@@ -4567,7 +4583,7 @@ body.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__category,
@@ -4585,7 +4601,7 @@ body.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.625rem;
+  gap: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .p-single-news__category-list,
@@ -4598,6 +4614,7 @@ body.active {
 .p-single-news__archive-item {
   width: inherit;
 }
+
 .p-single-news__category-item-link,
 .p-single-news__archive-item-link {
   font-family: "open-sans-condensed", sans-serif;
@@ -4611,6 +4628,7 @@ body.active {
   position: relative;
   padding: 0.75rem 0;
 }
+
 .p-single-news__category-item-link::before,
 .p-single-news__category-item-link:after,
 .p-single-news__archive-item-link::before,
@@ -4629,12 +4647,23 @@ body.active {
   -webkit-transform: rotate(37deg);
           transform: rotate(37deg);
 }
+
 .p-single-news__category-item-link:after,
 .p-single-news__archive-item-link:after {
   bottom: 0.9375rem;
   -webkit-transform: rotate(-37deg);
           transform: rotate(-37deg);
 }
+
+.p-single-news__btn {
+  margin: 2rem auto 0;
+}
+@media screen and (min-width: 768px) {
+  .p-single-news__btn {
+    margin: 4.875rem auto 0;
+  }
+}
+
 .p-test {
   color: red;
   font-size: 1.5625rem;

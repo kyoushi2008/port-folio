@@ -67,8 +67,8 @@
   left: 55%;
   transform: translate(-50%, -50%);
   @include mq(md) {
-    width: myrem(10);
-    height: myrem(14);
+    width: myrem(13);
+    height: myrem(16);
   }
 }
 
