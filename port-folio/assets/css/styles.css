@@ -1100,8 +1100,7 @@ button {
   border-color: transparent transparent transparent #fff;
   z-index: 1;
 }
-.confirm,
-.submit {
+.confirm {
   position: relative;
   font-size: 1.25rem;
   font-weight: bold;
@@ -1109,6 +1108,31 @@ button {
   color: #fff;
   margin: 0 auto;
   padding: 1rem 4.75rem 0.875rem 4.375rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#104c93), color-stop(41%, #104c93), to(#0e2d52));
+  background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  border: none;
+  border-radius: 3.75rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.submit {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin: 0 auto;
+  padding: 1rem 6.625rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#104c93), color-stop(41%, #104c93), to(#0e2d52));
   background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
   border: none;
@@ -1157,7 +1181,7 @@ button {
   font-weight: bold;
   letter-spacing: 0.1em;
   color: #104C93;
-  padding: 0.875rem 5.75rem;
+  padding: 0.875rem 7.875rem;
   background: #fff;
   border: 0.125rem solid #104C93;
   border-radius: 3.75rem;
@@ -1172,7 +1196,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-contact__back-btn {
-    padding: 0.875rem 5.75rem;
+    padding: 0.875rem 7.875rem;
   }
 }
 
@@ -1212,7 +1236,7 @@ button {
 
 .p-contact__confirm-text-message {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.5;
   letter-spacing: 0.06em;
   color: #2A2A2A;
@@ -1228,6 +1252,114 @@ button {
 .p-contact__confirm-textarea {
   white-space: pre-wrap;
   min-height: 6.25rem;
+}
+
+.p-contact__complete {
+  text-align: center;
+  padding: 3.1875rem 0 1.6875rem;
+}
+@media screen and (min-width: 768px) {
+  .p-contact__complete {
+    padding: 5.5625rem 0;
+  }
+}
+
+.p-contact__complete-title {
+  font-size: 1.375rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #104C93;
+  margin: 0 0 1.3125rem 0;
+}
+@media screen and (min-width: 768px) {
+  .p-contact__complete-title {
+    font-size: 2rem;
+    margin: 0 0 3.4375rem 0;
+  }
+}
+
+.p-contact__complete-text {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: #2A2A2A;
+  margin: 0 0 2.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .p-contact__complete-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 0 3.9375rem 0;
+  }
+}
+
+.p-contact__complete-text p {
+  margin: 0 0 0.1875rem 0;
+}
+
+.p-contact__complete-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-contact__complete-top-btn {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #104c93;
+  padding: 0.875rem 5.75rem;
+  background: #fff;
+  border: 0.125rem solid #104c93;
+  border-radius: 3.75rem;
+  text-decoration: none;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .p-contact__complete-top-btn {
+    font-size: 1.25rem;
+    padding: 0.875rem 5.75rem;
+  }
+}
+
+.p-contact__complete-top-btn::after {
+  position: absolute;
+  content: "▶";
+  display: block;
+  font-size: 0.9375rem;
+  top: 50%;
+  right: 4.375rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (min-width: 768px) {
+  .p-contact__complete-top-btn::after {
+    right: 4.375rem;
+  }
+}
+
+.wpcf7-response-output {
+  display: none !important;
+}
+
+.wpcf7-not-valid-tip {
+  display: none !important;
 }
 
 .p-footer-cta {

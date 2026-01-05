@@ -189,7 +189,6 @@ add_action('admin_menu', 'remove_default_menu_items');
 
 
 // パンくずリスト
-// パンくずリスト
 function breadcrumb()
 {
     echo '<ul class="breadcrumb">';

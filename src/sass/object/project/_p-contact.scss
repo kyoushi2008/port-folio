@@ -384,8 +384,7 @@
   }
 }
 
-.confirm,
-.submit {
+.confirm {
   position: relative;
   font-size: myrem(20);
   font-weight: bold;
@@ -393,6 +392,26 @@
   color: $white;
   margin: 0 auto;
   padding: myrem(16) myrem(76) myrem(14) myrem(70);
+  background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  border: none;
+  border-radius: myrem(60);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  @include mq(md) {
+  }
+}
+
+.submit {
+  position: relative;
+  font-size: myrem(20);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: $white;
+  margin: 0 auto;
+  padding: myrem(16) myrem(106);
   background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
   border: none;
   border-radius: myrem(60);
@@ -428,7 +447,7 @@
   font-weight: bold;
   letter-spacing: 0.1em;
   color: $blue;
-  padding: myrem(14) myrem(92);
+  padding: myrem(14) myrem(126);
   background: $white;
   border: myrem(2) solid $blue;
   border-radius: myrem(60);
@@ -437,7 +456,7 @@
   justify-content: center;
   margin: auto;
   @include mq(md) {
-    padding: myrem(14) myrem(92);
+    padding: myrem(14) myrem(126);
   }
 }
 
@@ -478,7 +497,7 @@
 }
 .p-contact__confirm-text-message {
   font-size: myrem(16);
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.5;
   letter-spacing: 0.06em;
   color: $black2;
@@ -491,4 +510,90 @@
 .p-contact__confirm-textarea {
   white-space: pre-wrap;
   min-height: myrem(100);
+}
+//////////////////////////
+.p-contact__complete {
+  text-align: center;
+  padding: myrem(51) 0 myrem(27);
+  @include mq(md) {
+    padding: myrem(89) 0;
+  }
+}
+
+.p-contact__complete-title {
+  font-size: myrem(22);
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: $blue;
+  margin: 0 0 myrem(21) 0;
+  @include mq(md) {
+    font-size: myrem(32);
+    margin: 0 0 myrem(55) 0;
+  }
+}
+
+.p-contact__complete-text {
+  font-size: myrem(14);
+  font-weight: bold;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: $black2;
+  margin: 0 0 myrem(40) 0;
+  @include mq(md) {
+    font-size: myrem(16);
+    line-height: 1.75;
+    margin: 0 0 myrem(63) 0;
+  }
+}
+
+.p-contact__complete-text p {
+  margin: 0 0 myrem(3) 0;
+}
+
+.p-contact__complete-button {
+  display: flex;
+  justify-content: center;
+}
+
+.p-contact__complete-top-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: myrem(20);
+  font-weight: bold;
+  letter-spacing: .1em;
+  color: #104c93;
+  padding: myrem(14) myrem(92);
+  background: $white;
+  border: myrem(2) solid #104c93;
+  border-radius: myrem(60);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  @include mq(md) {
+    font-size: myrem(20);
+    padding: myrem(14) myrem(92);
+  }
+  }
+
+  .p-contact__complete-top-btn::after {
+    position: absolute;
+    content: "▶";
+    display: block;
+    font-size: myrem(15);
+    top: 50%;
+    right: myrem(70);
+    transform: translateY(-50%);
+    @include mq(md) {
+      right: myrem(70);
+  }
+}
+
+.wpcf7-response-output {
+  display: none !important;
+}
+
+.wpcf7-not-valid-tip {
+  display: none !important;
 }

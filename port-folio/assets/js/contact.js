@@ -1,8 +1,8 @@
 jQuery(function($) {
-  const $select = $('.choice');
-  const $trigger = $('.p-contact__select-trigger');
-  const $options = $('.p-contact__select-options');
-  const $optionItems = $('.p-contact__select-option');
+  var $select = $('.choice');
+  var $trigger = $('.p-contact__select-trigger');
+  var $options = $('.p-contact__select-options');
+  var $optionItems = $('.p-contact__select-option');
 
   // トリガークリックで開閉
   $trigger.on('click', function() {
@@ -10,7 +10,28 @@ jQuery(function($) {
     $options.toggleClass('active');
   });
 
+  // オプション選択
+  $optionItems.on('click', function() {
+    var value = $(this).data('value');
+    var text = $(this).text();
 
+    // 選択状態を更新
+    $optionItems.removeClass('selected');
+    $(this).addClass('selected');
+
+    // トリガーのテキストを更新
+    $trigger.text(text);
+
+    // Contact Form 7のselectに反映
+    $select.val(value);
+
+    // エラーを解除
+    $('.p-contact__item.is-select').find('.p-contact__error').remove();
+
+    // 閉じる
+    $trigger.removeClass('active');
+    $options.removeClass('active');
+  });
 
   // 外側クリックで閉じる
   $(document).on('click', function(e) {
@@ -20,9 +41,14 @@ jQuery(function($) {
     }
   });
 
+  // 入力欄クリック時のイベント伝播を防ぐ（Safari対策）
+  $('input, textarea').on('touchstart click', function(e) {
+    e.stopPropagation();
+  });
+
   // チェックボックスとconfirmボタンの制御
-  const $checkbox = $('.p-contact__acceptance input[type="checkbox"]');
-  const $confirm = $('.confirm');
+  var $checkbox = $('.p-contact__acceptance input[type="checkbox"]');
+  var $confirm = $('.confirm');
 
   // チェックボックスのクリックイベントを制御
   $checkbox.on('click', function(e) {
@@ -31,7 +57,7 @@ jQuery(function($) {
 
   $('.p-contact__acceptance label').on('click', function(e) {
     e.preventDefault();
-    const $checkbox = $(this).find('input[type="checkbox"]');
+    var $checkbox = $(this).find('input[type="checkbox"]');
     $checkbox.prop('checked', !$checkbox.prop('checked')).trigger('change');
   });
 
@@ -70,10 +96,11 @@ jQuery(function($) {
 
   // Enterキー押下時とフォーカスアウト時のバリデーション
   $('input[name="your-name"]').on('keypress blur', function(e) {
+    console.log('お名前バリデーション発火', e.type);
     if (e.type === 'keypress' && e.which !== 13) return;
     if (e.type === 'keypress') e.preventDefault();
 
-    const name = $(this).val().trim();
+    var name = $(this).val().trim();
     $(this).closest('.p-contact__item').find('.p-contact__error').remove();
 
     if (!name) {
@@ -89,7 +116,7 @@ jQuery(function($) {
     if (e.type === 'keypress' && e.which !== 13) return;
     if (e.type === 'keypress') e.preventDefault();
 
-    const furigana = $(this).val().trim();
+    var furigana = $(this).val().trim();
     $(this).closest('.p-contact__item').find('.p-contact__error').remove();
 
     if (!furigana) {
@@ -103,7 +130,7 @@ jQuery(function($) {
     if (e.type === 'keypress' && e.which !== 13) return;
     if (e.type === 'keypress') e.preventDefault();
 
-    const email = $(this).val().trim();
+    var email = $(this).val().trim();
     $(this).closest('.p-contact__item').find('.p-contact__error').remove();
 
     if (!email) {
@@ -113,31 +140,40 @@ jQuery(function($) {
     }
   });
 
-  // セレクト選択時にエラーを解除
-  $optionItems.on('click', function() {
-    const value = $(this).data('value');
-    const text = $(this).text();
-
-    // 選択状態を更新
-    $optionItems.removeClass('selected');
-    $(this).addClass('selected');
-
-    // トリガーのテキストを更新
-    $trigger.text(text);
-
-    // Contact Form 7のselectに反映
-    $select.val(value);
-
-    // エラーを解除
-    $('.p-contact__item.is-select').find('.p-contact__error').remove();
-
-    // 閉じる
-    $trigger.removeClass('active');
-    $options.removeClass('active');
-  });
-
   // ========== 確認画面機能 ==========
-  let formData = {};
+  var formData = {};
+
+  // 送信完了画面を表示する関数
+  function showCompleteScreen() {
+    // フォーム全体を非表示
+    $('form.wpcf7-form').hide();
+    $('.p-contact__wrapper').hide();
+    $('.p-contact__button-group').hide();
+    $('.wpcf7-response-output').hide();
+    $('.p-contact__confirm-title').hide();
+    $('.p-contact__confirm-text-message').hide();
+
+    // タイトルとパンくずを再表示
+    $('.c-title').css('display', '');
+    $('.p-breadcrumb').css('display', '');
+
+    // 完了メッセージを表示
+    $('.p-contact__content').append(
+      '<div class="p-contact__complete">' +
+        '<h2 class="p-contact__complete-title">送信が完了いたしました</h2>' +
+        '<div class="p-contact__complete-text">' +
+          '<p>お問い合わせいただきありがとうございます。</p>' +
+          '<p>お問い合わせを頂いた内容については、確認の上ご返信させていただきます。</p>' +
+        '</div>' +
+        '<div class="p-contact__complete-button">' +
+          '<a href="/" class="p-contact__complete-top-btn">TOPへ戻る</a>' +
+        '</div>' +
+      '</div>'
+    );
+
+    // ページトップへスクロール
+    $('html, body').animate({ scrollTop: 0 }, 400);
+  }
 
   // 確認画面へ遷移
   $('.confirm').on('click', function(e) {
@@ -147,17 +183,17 @@ jQuery(function($) {
     $('.p-contact__error').remove();
 
     // バリデーション
-    const inquiry = $select.val();
-    const name = $('input[name="your-name"]').val().trim();
-    const furigana = $('input[name="text-305"]').val().trim();
-    const email = $('input[name="your-email"]').val().trim();
+    var inquiry = $select.val();
+    var name = $('input[name="your-name"]').val().trim();
+    var furigana = $('input[name="text-305"]').val().trim();
+    var email = $('input[name="your-email"]').val().trim();
 
-    let hasError = false;
-    let firstErrorElement = null;
+    var hasError = false;
+    var firstErrorElement = null;
 
     // お問い合わせ内容
-    const validOptions = ['項目1', '項目2', '項目3'];
-    if (!inquiry || !validOptions.includes(inquiry)) {
+    var validOptions = ['項目1', '項目2', '項目3'];
+    if (!inquiry || validOptions.indexOf(inquiry) === -1) {
       if ($('.p-contact__item.is-select').find('.p-contact__error').length === 0) {
         $('.p-contact__item.is-select').append('<p class="p-contact__error">必須項目を選択してください。</p>');
       }
@@ -228,11 +264,14 @@ jQuery(function($) {
       $checkbox.prop('checked', false).trigger('change');
 
       setTimeout(function() {
-        const targetOffset = firstErrorElement.offset().top - 100;
+        var targetOffset = firstErrorElement.offset().top - 100;
         window.scrollTo(0, targetOffset);
       }, 50);
       return;
     }
+
+    // エラーメッセージを削除
+    $('.p-contact__error').remove();
 
     // 入力内容を保存
     formData = {
@@ -270,27 +309,27 @@ jQuery(function($) {
     );
 
     // お名前
-    $('input[name="your-name"]').replaceWith(
+    $('input[name="your-name"]').hide().after(
       '<div class="p-contact__confirm-text">' + formData.name + '</div>'
     );
 
     // ふりがな
-    $('input[name="text-305"]').replaceWith(
+    $('input[name="text-305"]').hide().after(
       '<div class="p-contact__confirm-text">' + formData.furigana + '</div>'
     );
 
     // 電話番号
-    $('input[name="tel-851"]').replaceWith(
+    $('input[name="tel-851"]').hide().after(
       '<div class="p-contact__confirm-text">' + (formData.tel || '未入力') + '</div>'
     );
 
     // メールアドレス
-    $('input[name="your-email"]').replaceWith(
+    $('input[name="your-email"]').hide().after(
       '<div class="p-contact__confirm-text">' + formData.email + '</div>'
     );
 
     // お問い合わせ内容
-    $('textarea[name="textarea-271"]').replaceWith(
+    $('textarea[name="textarea-271"]').hide().after(
       '<div class="p-contact__confirm-text p-contact__confirm-textarea">' + (formData.message || '未入力') + '</div>'
     );
 
@@ -302,7 +341,7 @@ jQuery(function($) {
     $('.p-contact__confirm').eq(0).hide(); // 入力画面用ボタンを非表示
 
     // 送信ボタンを戻るボタンと横並びにする
-    const $submitBtn = $('.p-contact__confirm').eq(1).find('.submit');
+    var $submitBtn = $('.p-contact__confirm').eq(1).find('.submit');
     $('.p-contact__confirm').eq(1).before(
       '<div class="p-contact__button-group">' +
         '<button type="button" class="p-contact__back-btn">戻る</button>' +
@@ -318,7 +357,29 @@ jQuery(function($) {
     // 送信ボタンのクリックイベントでフォーム送信
     $('.p-contact__button-group .submit').off('click').on('click', function(e) {
       e.preventDefault();
-      $(this).closest('form').submit();
+      e.stopPropagation();
+
+      // フォームを手動で送信
+      var form = $(this).closest('form')[0];
+      if (form) {
+        // Contact Form 7のAjax送信を実行
+        var submitData = new FormData(form);
+
+        $.ajax({
+          url: form.action,
+          type: 'POST',
+          data: submitData,
+          processData: false,
+          contentType: false,
+          success: function(response) {
+            console.log('送信成功');
+            showCompleteScreen();
+          },
+          error: function() {
+            console.log('送信失敗');
+          }
+        });
+      }
     });
 
     // ページトップへスクロール
@@ -329,6 +390,12 @@ jQuery(function($) {
   $(document).on('click', '.p-contact__back-btn', function() {
     location.reload();
   });
+
+  // Contact Form 7 送信完了時の処理
+  document.addEventListener('wpcf7mailsent', function(e) {
+    console.log('送信完了イベント発火');
+    showCompleteScreen();
+  }, false);
 
   // Contact Form 7のバリデーションイベントを無効化
   document.addEventListener('wpcf7invalid', function(e) {
@@ -344,7 +411,7 @@ jQuery(function($) {
   }, true);
 
   // Contact Form 7のエラーメッセージを削除
-  $(document).on('wpcf7invalid wpcf7spam wpcf7mailfailed', 'form.wpcf7-form', function(e) {
+  $(document).on('wpcf7invalid wpcf7spam wpcf7mailfailed wpcf7mailsent', 'form.wpcf7-form', function(e) {
     setTimeout(function() {
       $('.wpcf7-response-output').remove();
       $('.wpcf7-not-valid-tip').remove();
