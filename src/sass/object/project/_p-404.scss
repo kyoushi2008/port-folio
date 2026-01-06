@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.p-404 {
+  width: 100%;
+}
+
+.p-404__content {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: myrem(76) 0 0 0;
+  gap: myrem(22);
+  @include mq(md) {
+    padding: myrem(202) 0 0 0;
+    gap: myrem(44);
+  }
+}
+
+.p-404__lead {
+  font-family: $font-sub;
+  font-size: myrem(24);
+  font-weight: 600;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.05em;
+  color: $blue;
+  @include mq(md) {
+    font-size: myrem(60);
+    line-height: 1;
+  }
+}
+
+.p-404__text {
+  font-size: myrem(14);
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  @include mq(md) {
+    font-size: myrem(24);
+    line-height: 1.7;
+  }
+}
+
+.p-404__btn {
+  width: 100%;
+  margin: myrem(61) 0 myrem(59) 0;
+  @include mq(md) {
+  margin: myrem(47) 0 myrem(110) 0;
+}
+}

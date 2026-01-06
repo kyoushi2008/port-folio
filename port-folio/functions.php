@@ -40,6 +40,12 @@ function my_script_init()
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', "", "1.0.1");
 
+	// Simplebar CSS
+	wp_enqueue_style('simplebar', 'https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css', array(), null);
+
+	// Simplebar JS
+	wp_enqueue_script('simplebar', 'https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js', array(), null, true);
+
 	// Noto Sans JP
 	wp_enqueue_style('noto-sans-jp', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap', array(), null);
 
@@ -53,6 +59,7 @@ function my_script_init()
 	wp_enqueue_style('my', get_template_directory_uri() . '/assets/css/styles.min.css', array(), '1.0.1', 'all');
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array('jquery'), '1.0.1', true);
 	wp_enqueue_script('my', get_template_directory_uri() . '/assets/js/script.min.js', array('jquery'), '1.0.1', true);
+	wp_enqueue_script('contact', get_template_directory_uri() . '/assets/js/contact.min.js', array('jquery'), '1.0.1', true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
@@ -182,121 +189,122 @@ add_action('admin_menu', 'remove_default_menu_items');
 
 
 // パンくずリスト
-// パンくずリスト
 function breadcrumb()
 {
     echo '<ul class="breadcrumb">';
-    $home = '<li class="breadcrumb-item"><a href="' . get_bloginfo('url') . '">TOP</a></li><span class="breadcrumb-separator"> / </span>';
-    echo $home;
 
-    if (is_front_page()) {
-        echo "</ul>";
+    // TOP
+    echo '<li class="breadcrumb-item"><a href="' . home_url() . '">TOP</a></li>';
+    echo '<span class="breadcrumb-separator"> / </span>';
+
+    // 1. 固定ページ
+    if (is_page()) {
+        $slug = basename(get_permalink());
+        echo '<li class="breadcrumb-item active">' . strtoupper($slug) . '</li>';
+        echo '</ul>';
         return;
-    } else if (is_single()) {
-        $post_type = get_post_type();
-
-        // カスタム投稿タイプの場合
-        if ($post_type !== 'post') {
-            $archive_link = get_post_type_archive_link($post_type);
-            $post_type_obj = get_post_type_object($post_type);
-
-            if ($archive_link && $post_type_obj) {
-                echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . esc_html($post_type_obj->labels->name) . '</a></li><span class="breadcrumb-separator"> / </span>';
-            }
-
-            // タクソノミーを取得して表示
-            $taxonomies = get_object_taxonomies($post_type);
-            if (!empty($taxonomies)) {
-                $terms = get_the_terms(get_the_ID(), $taxonomies[0]);
-                if ($terms && !is_wp_error($terms)) {
-                    $term = array_shift($terms);
-                    echo '<li class="breadcrumb-item"><a href="' . get_term_link($term) . '">' . esc_html($term->name) . '</a></li><span class="breadcrumb-separator"> / </span>';
-                }
-            }
-
-            the_title('<li class="breadcrumb-item active">', '</li>');
-
-        } else {
-            // デフォルトの投稿の場合
-            $categories = get_the_category();
-            if (!empty($categories)) {
-                $current_cat = $categories[0];
-                $cat_list = array();
-
-                while ($current_cat->parent != 0) {
-                    $cat_link = get_category_link($current_cat->term_id);
-                    array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . $cat_link . '">' . esc_html($current_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
-                    $current_cat = get_category($current_cat->parent);
-                }
-                array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
-                echo implode('', $cat_list);
-            }
-            the_title('<li class="breadcrumb-item active">', '</li>');
-        }
-
-    } else if (is_page()) {
-        // 固定ページ
-        $parent_id = wp_get_post_parent_id(get_the_ID());
-        $page_list = array();
-
-        while ($parent_id != 0) {
-            $page = get_post($parent_id);
-            $page_link = get_permalink($page->ID);
-            array_unshift($page_list, '<li class="breadcrumb-item"><a href="' . $page_link . '">' . esc_html($page->post_title) . '</a></li><span class="breadcrumb-separator"> / </span>');
-            $parent_id = wp_get_post_parent_id($parent_id);
-        }
-        echo implode('', $page_list);
-        the_title('<li class="breadcrumb-item active">', '</li>');
-
-    } else if (is_post_type_archive()) {
-        // カスタム投稿タイプのアーカイブ
-        $post_type_obj = get_queried_object();
-        echo '<li class="breadcrumb-item active">' . esc_html($post_type_obj->labels->name) . '</li>';
-
-    } else if (is_tax()) {
-        // タクソノミーアーカイブ
-        $term = get_queried_object();
-        $post_type = get_taxonomy($term->taxonomy)->object_type[0];
-        $archive_link = get_post_type_archive_link($post_type);
-        $post_type_obj = get_post_type_object($post_type);
-
-        if ($archive_link && $post_type_obj) {
-            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . esc_html($post_type_obj->labels->name) . '</a></li><span class="breadcrumb-separator"> / </span>';
-        }
-        echo '<li class="breadcrumb-item active">' . esc_html($term->name) . '</li>';
-
-    } else if (is_category()) {
-        // カテゴリーページ
-        $current_cat = get_queried_object();
-        $cat_list = array();
-
-        $temp_cat = $current_cat;
-        while ($temp_cat->parent != 0) {
-            $cat_link = get_category_link($temp_cat->term_id);
-            array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . $cat_link . '">' . esc_html($temp_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
-            $temp_cat = get_category($temp_cat->parent);
-        }
-
-        if ($temp_cat->term_id != $current_cat->term_id) {
-            array_unshift($cat_list, '<li class="breadcrumb-item"><a href="' . get_category_link($temp_cat->term_id) . '">' . esc_html($temp_cat->name) . '</a></li><span class="breadcrumb-separator"> / </span>');
-        }
-
-        echo implode('', $cat_list);
-        echo '<li class="breadcrumb-item active">' . esc_html($current_cat->name) . '</li>';
-
-    } else if (is_tag()) {
-        echo '<li class="breadcrumb-item active">#' . single_tag_title('', false) . '</li>';
-
-    } else if (is_404()) {
-        echo '<li class="breadcrumb-item active">ページが見つかりません</li>';
-
-    } else if (is_search()) {
-        echo '<li class="breadcrumb-item active">「' . esc_html(get_search_query()) . '」の検索結果</li>';
-
-    } else if (is_archive()) {
-        echo '<li class="breadcrumb-item active">' . post_type_archive_title('', false) . '</li>';
     }
 
-    echo "</ul>";
+    // 2. 月別アーカイブ判定 (NEWS)
+    // get_post_type() を併用して、カスタム投稿 news のアーカイブであることを確実に判定します
+    if (is_date() && get_post_type() === 'news') {
+        echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link('news') . '">NEWS</a></li>';
+        echo '<span class="breadcrumb-separator"> / </span>';
+
+        $y = get_query_var('year');
+        $m = get_query_var('monthnum');
+        echo '<li class="breadcrumb-item active">' . esc_html($y) . '年' . esc_html($m) . '月</li>';
+
+        echo '</ul>';
+        return;
+    }
+
+    // 3. カテゴリー判定 (news-category)
+    if (is_tax('news-category')) {
+        echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link('news') . '">NEWS</a></li>';
+        echo '<span class="breadcrumb-separator"> / </span>';
+        echo '<li class="breadcrumb-item active">' . single_term_title('', false) . '</li>';
+        echo '</ul>';
+        return;
+    }
+
+    // 4. カスタム投稿タイプ「一覧」判定
+    $custom_types = ['news', 'works', 'voice'];
+    foreach ($custom_types as $type) {
+        if (is_post_type_archive($type)) {
+            echo '<li class="breadcrumb-item active">' . strtoupper($type) . '</li>';
+            echo '</ul>';
+            return;
+        }
+    }
+
+    // 5. 個別投稿ページ
+    foreach ($custom_types as $type) {
+        if (is_singular($type)) {
+            $post_type_obj = get_post_type_object($type);
+            $archive_link = get_post_type_archive_link($type);
+            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';
+            echo '<span class="breadcrumb-separator"> / </span>';
+            echo '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+            echo '</ul>';
+            return;
+        }
+    }
+
+    echo '</ul>';
 }
+
 ///////////////////////////////////////////////////////////////////////////////////
+// NEWS カスタム投稿タイプ
+function create_post_type_news() {
+    register_post_type('news', array(
+        'label' => 'NEWS',
+        'public' => true,
+        'has_archive' => 'news',
+        'rewrite' => array(
+            'slug' => 'news',
+            'with_front' => false,
+        ),
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'show_in_rest' => true,
+    ));
+}
+add_action('init', 'create_post_type_news');
+
+// NEWS カテゴリー（タクソノミー）
+function create_news_taxonomy() {
+    register_taxonomy(
+        'news-category',
+        'news',
+        array(
+            'label' => 'NEWSカテゴリー',
+            'hierarchical' => true,
+            'rewrite' => array( 'slug' => 'news-category', 'with_front' => false, ),
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_news_taxonomy');
+
+/**
+ * カスタム投稿 news の月別アーカイブを有効にするリライトルール
+ */
+function add_news_archive_rewrite_rules() {
+    add_rewrite_rule(
+        'news/([0-9]{4})/([0-9]{1,2})/?$',
+        'index.php?post_type=news&year=$matches[1]&monthnum=$matches[2]',
+        'top'
+    );
+}
+add_action('init', 'add_news_archive_rewrite_rules');
+
+add_filter('template_include', function($template) {
+    // news-categoryタクソノミーを表示中なら
+    if ( is_tax('news-category') ) {
+        $archive_template = locate_template(array('archive-news.php'));
+        if ( $archive_template ) {
+            return $archive_template;
+        }
+    }
+    return $template;
+}, 99);

@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.c-pagination {
+  margin-top: myrem(40) 0 0 0;
+  @include mq(md) {
+    margin: myrem(40) 0 0 0;
+  }
+}
+
+.c-pagination .page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: myrem(16);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c-pagination .page-numbers li {
+  display: block;
+}
+
+.c-pagination .page-numbers .page-numbers {
+  font-size: myrem(20);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: myrem(40);
+  height: myrem(40);
+  border: myrem(2) solid $blue;
+  color: $blue;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.c-pagination .page-numbers .page-numbers:hover {
+  background: $blue;
+  color: $white;
+}
+
+.c-pagination .page-numbers .page-numbers.current {
+  font-size: myrem(20);
+  color: $white;
+  background: $blue;
+  pointer-events: none;
+}
+
+.c-pagination .page-numbers .page-numbers.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
+.c-pagination .page-numbers .page-numbers.disabled:hover {
+  background-color: transparent;
+  color: $blue;
+}
