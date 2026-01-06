@@ -41,13 +41,17 @@
 </section>
 
 <!-- section works -->
-<section class="p-top-works l-top-works">
-  <div class="p-top-works__cotent">
+<!-- <section class="p-top-works l-top-works"> -->
     <!-- タイトル -->
-    <div class="c-title">
+    <!-- <div class="c-title">
       <h2 class="c-title--l">WORKS</h2>
       <p class="c-title--s">実績</p>
     </div>
   </div>
-</section>
+</section> -->
+
+
+
+<!-- section news -->
+<?php get_template_part('template/top-news'); ?>
 <?php get_footer(); ?>

@@ -5,7 +5,7 @@
         <div class="p-archive-news__inner l-inner">
             <div class="c-title">
                 <h2 class="c-title--l c-title--lp">NEWS</h2>
-                <p class="c-title--s">お知らせ</p>
+                <p class="c-title--s">お知らせ：<?php single_term_title(); // カテゴリー名を表示 ?></p>
             </div>
             <div class="p-breadcrumb">
                 <?php breadcrumb(); ?>
@@ -14,32 +14,9 @@
             <div class="p-archive-news__content">
                 <div class="p-archive-news__content-wrapper">
                     <?php
-                    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-
-                    // 一覧ページはシンプルに「news」を降順で出すだけ
-                    $args = array(
-                        'post_type'      => 'news',
-                        'posts_per_page' => 10,
-                        'orderby'        => 'date',
-                        'order'          => 'DESC',
-                        'paged'          => $paged,
-                    );
-
-                    // 4. 未分類フィルター（これだけはURL引数なので一覧ページに残しておきます）
-                    if (isset($_GET['uncategorized']) && $_GET['uncategorized'] == '1') {
-                        $args['tax_query'] = array(
-                            array(
-                                'taxonomy' => 'news-category',
-                                'operator' => 'NOT EXISTS',
-                            ),
-                        );
-                    }
-
-                    $news_query = new WP_Query($args);
-
-                    if ($news_query->have_posts()) : ?>
+                    if (have_posts()) : ?>
                         <ul class="p-archive-news__list">
-                            <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+                            <?php while (have_posts()) : the_post(); ?>
                                 <li class="p-archive-news__item">
                                     <a href="<?php the_permalink(); ?>" class="p-archive-news__item-link">
                                         <div class="p-archive-news__item-meta">
@@ -65,18 +42,14 @@
                             <?php endwhile; ?>
                         </ul>
                     <?php else : ?>
-                        <p>現在お知らせはありません。</p>
+                        <p>このカテゴリーには現在お知らせはありません。</p>
                     <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
                 </div>
                 <?php get_template_part('template/sideber-news'); ?>
             </div>
 
             <div class="p-archive-news__pagination">
-                <?php
-                set_query_var('query', $news_query);
-                get_template_part('template/pagination');
-                ?>
+                <?php get_template_part('template/pagination'); ?>
             </div>
         </div>
     </div>

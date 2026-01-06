@@ -43,7 +43,7 @@
                             foreach ($months as $m) {
                                 $year   = $m->year;
                                 $month  = $m->month;
-                                $url    = get_month_link($year, $month);
+                                $url    = home_url("/news/{$year}/{$month}/");
 
                                 echo '<li class="p-news__archive-item">';
                                 echo '<a href="' . esc_url($url) . '" class="p-news__archive-item-link">';
@@ -55,4 +55,3 @@
                         </ul>
                     </div>
                 </aside>
-

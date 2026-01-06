@@ -191,51 +191,67 @@ add_action('admin_menu', 'remove_default_menu_items');
 // パンくずリスト
 function breadcrumb()
 {
-	echo '<ul class="breadcrumb">';
+    echo '<ul class="breadcrumb">';
 
-	// TOP
-	echo '<li class="breadcrumb-item"><a href="' . home_url() . '">TOP</a></li>';
-	echo '<span class="breadcrumb-separator"> / </span>';
+    // TOP
+    echo '<li class="breadcrumb-item"><a href="' . home_url() . '">TOP</a></li>';
+    echo '<span class="breadcrumb-separator"> / </span>';
 
-	// 固定ページ → スラッグ表示
-	if (is_page()) {
-		$slug = basename(get_permalink());
-		echo '<li class="breadcrumb-item active">' . strtoupper($slug) . '</li>';
-		echo '</ul>';
-		return;
-	}
+    // 1. 固定ページ
+    if (is_page()) {
+        $slug = basename(get_permalink());
+        echo '<li class="breadcrumb-item active">' . strtoupper($slug) . '</li>';
+        echo '</ul>';
+        return;
+    }
 
-	// カスタム投稿タイプ一覧（news / works / voice）
-	$custom_types = ['news', 'works', 'voice'];
+    // 2. 月別アーカイブ判定 (NEWS)
+    // get_post_type() を併用して、カスタム投稿 news のアーカイブであることを確実に判定します
+    if (is_date() && get_post_type() === 'news') {
+        echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link('news') . '">NEWS</a></li>';
+        echo '<span class="breadcrumb-separator"> / </span>';
 
-	foreach ($custom_types as $type) {
-		if (is_post_type_archive($type)) {
-			echo '<li class="breadcrumb-item active">' . strtoupper($type) . '</li>';
-			echo '</ul>';
-			return;
-		}
-	}
+        $y = get_query_var('year');
+        $m = get_query_var('monthnum');
+        echo '<li class="breadcrumb-item active">' . esc_html($y) . '年' . esc_html($m) . '月</li>';
 
-	// single（news / works / voice）
-	foreach ($custom_types as $type) {
-		if (is_singular($type)) {
+        echo '</ul>';
+        return;
+    }
 
-			// 投稿タイプのスラッグを表示
-			$post_type_obj = get_post_type_object($type);
-			$archive_link = get_post_type_archive_link($type);
+    // 3. カテゴリー判定 (news-category)
+    if (is_tax('news-category')) {
+        echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link('news') . '">NEWS</a></li>';
+        echo '<span class="breadcrumb-separator"> / </span>';
+        echo '<li class="breadcrumb-item active">' . single_term_title('', false) . '</li>';
+        echo '</ul>';
+        return;
+    }
 
-			echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';
-			echo '<span class="breadcrumb-separator"> / </span>';
+    // 4. カスタム投稿タイプ「一覧」判定
+    $custom_types = ['news', 'works', 'voice'];
+    foreach ($custom_types as $type) {
+        if (is_post_type_archive($type)) {
+            echo '<li class="breadcrumb-item active">' . strtoupper($type) . '</li>';
+            echo '</ul>';
+            return;
+        }
+    }
 
-			// 投稿タイトル
-			echo '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+    // 5. 個別投稿ページ
+    foreach ($custom_types as $type) {
+        if (is_singular($type)) {
+            $post_type_obj = get_post_type_object($type);
+            $archive_link = get_post_type_archive_link($type);
+            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';
+            echo '<span class="breadcrumb-separator"> / </span>';
+            echo '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+            echo '</ul>';
+            return;
+        }
+    }
 
-			echo '</ul>';
-			return;
-		}
-	}
-
-	echo '</ul>';
+    echo '</ul>';
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -263,10 +279,32 @@ function create_news_taxonomy() {
         array(
             'label' => 'NEWSカテゴリー',
             'hierarchical' => true,
-            'rewrite' => array('slug' => 'news-category'),
+            'rewrite' => array( 'slug' => 'news-category', 'with_front' => false, ),
             'show_in_rest' => true,
         )
     );
 }
 add_action('init', 'create_news_taxonomy');
 
+/**
+ * カスタム投稿 news の月別アーカイブを有効にするリライトルール
+ */
+function add_news_archive_rewrite_rules() {
+    add_rewrite_rule(
+        'news/([0-9]{4})/([0-9]{1,2})/?$',
+        'index.php?post_type=news&year=$matches[1]&monthnum=$matches[2]',
+        'top'
+    );
+}
+add_action('init', 'add_news_archive_rewrite_rules');
+
+add_filter('template_include', function($template) {
+    // news-categoryタクソノミーを表示中なら
+    if ( is_tax('news-category') ) {
+        $archive_template = locate_template(array('archive-news.php'));
+        if ( $archive_template ) {
+            return $archive_template;
+        }
+    }
+    return $template;
+}, 99);
