@@ -40,7 +40,7 @@ function my_script_init()
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', "", "1.0.1");
 
-    // Simplebar CSS
+	// Simplebar CSS
 	wp_enqueue_style('simplebar', 'https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css', array(), null);
 
 	// Simplebar JS
@@ -59,7 +59,7 @@ function my_script_init()
 	wp_enqueue_style('my', get_template_directory_uri() . '/assets/css/styles.min.css', array(), '1.0.1', 'all');
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array('jquery'), '1.0.1', true);
 	wp_enqueue_script('my', get_template_directory_uri() . '/assets/js/script.min.js', array('jquery'), '1.0.1', true);
-    wp_enqueue_script('contact', get_template_directory_uri() . '/assets/js/contact.min.js', array('jquery'), '1.0.1', true);
+	wp_enqueue_script('contact', get_template_directory_uri() . '/assets/js/contact.min.js', array('jquery'), '1.0.1', true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
@@ -189,52 +189,84 @@ add_action('admin_menu', 'remove_default_menu_items');
 
 
 // パンくずリスト
-function breadcrumb() {
-    echo '<ul class="breadcrumb">';
+function breadcrumb()
+{
+	echo '<ul class="breadcrumb">';
 
-    // TOP
-    echo '<li class="breadcrumb-item"><a href="' . home_url() . '">TOP</a></li>';
-    echo '<span class="breadcrumb-separator"> / </span>';
+	// TOP
+	echo '<li class="breadcrumb-item"><a href="' . home_url() . '">TOP</a></li>';
+	echo '<span class="breadcrumb-separator"> / </span>';
 
-    // 固定ページ → スラッグ表示
-    if (is_page()) {
-        $slug = basename(get_permalink());
-        echo '<li class="breadcrumb-item active">' . strtoupper($slug) . '</li>';
-        echo '</ul>';
-        return;
-    }
+	// 固定ページ → スラッグ表示
+	if (is_page()) {
+		$slug = basename(get_permalink());
+		echo '<li class="breadcrumb-item active">' . strtoupper($slug) . '</li>';
+		echo '</ul>';
+		return;
+	}
 
-    // カスタム投稿タイプ一覧（news / works / voice）
-    $custom_types = ['news', 'works', 'voice'];
+	// カスタム投稿タイプ一覧（news / works / voice）
+	$custom_types = ['news', 'works', 'voice'];
 
-    foreach ($custom_types as $type) {
-        if (is_post_type_archive($type)) {
-            echo '<li class="breadcrumb-item active">' . strtoupper($type) . '</li>';
-            echo '</ul>';
-            return;
-        }
-    }
+	foreach ($custom_types as $type) {
+		if (is_post_type_archive($type)) {
+			echo '<li class="breadcrumb-item active">' . strtoupper($type) . '</li>';
+			echo '</ul>';
+			return;
+		}
+	}
 
-    // single（news / works / voice）
-    foreach ($custom_types as $type) {
-        if (is_singular($type)) {
+	// single（news / works / voice）
+	foreach ($custom_types as $type) {
+		if (is_singular($type)) {
 
-            // 投稿タイプのスラッグを表示
-            $post_type_obj = get_post_type_object($type);
-            $archive_link = get_post_type_archive_link($type);
+			// 投稿タイプのスラッグを表示
+			$post_type_obj = get_post_type_object($type);
+			$archive_link = get_post_type_archive_link($type);
 
-            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';
-            echo '<span class="breadcrumb-separator"> / </span>';
+			echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';
+			echo '<span class="breadcrumb-separator"> / </span>';
 
-            // 投稿タイトル
-            echo '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+			// 投稿タイトル
+			echo '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
 
-            echo '</ul>';
-            return;
-        }
-    }
+			echo '</ul>';
+			return;
+		}
+	}
 
-    echo '</ul>';
+	echo '</ul>';
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
+// NEWS カスタム投稿タイプ
+function create_post_type_news() {
+    register_post_type('news', array(
+        'label' => 'NEWS',
+        'public' => true,
+        'has_archive' => 'news',
+        'rewrite' => array(
+            'slug' => 'news',
+            'with_front' => false,
+        ),
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'show_in_rest' => true,
+    ));
+}
+add_action('init', 'create_post_type_news');
+
+// NEWS カテゴリー（タクソノミー）
+function create_news_taxonomy() {
+    register_taxonomy(
+        'news-category',
+        'news',
+        array(
+            'label' => 'NEWSカテゴリー',
+            'hierarchical' => true,
+            'rewrite' => array('slug' => 'news-category'),
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_news_taxonomy');
+

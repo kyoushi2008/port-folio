@@ -40,7 +40,7 @@
   height: myrem(30);
   border-radius: 50%;
   background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
-  transition: width 0.3s ease, height 0.3s ease;
+  transition: transform 0.3s ease;
   @include mq(md) {
     width: myrem(42);
     height: myrem(42);
@@ -50,8 +50,9 @@
 .c-btn__link-n:hover .c-btn--circle,
 .c-btn__link:hover .c-btn--circle {
   @include mq(md) {
-    width: myrem(50);
-    height: myrem(50);
+    // width: myrem(50);
+    // height: myrem(50);
+    transform: scale(1.19);
   }
 }
 

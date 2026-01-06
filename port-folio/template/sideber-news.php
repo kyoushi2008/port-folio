@@ -1,4 +1,3 @@
-<?php get_header(); ?>
 
 <aside class="p-news__sidebar">
                     <!-- category -->
@@ -57,4 +56,3 @@
                     </div>
                 </aside>
 
-<?php get_footer(); ?>

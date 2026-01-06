@@ -8,7 +8,7 @@
   width: inherit;
   padding: myrem(79) 0 0 0;
   @include mq(md) {
-    padding: myrem(106) 0 0 0;
+    padding: myrem(106) 0 myrem(109) 0;
   }
 }
 
@@ -19,7 +19,7 @@
   padding: myrem(41) 0 myrem(71) 0;
   @include mq(md) {
     flex-direction: row;
-    padding: myrem(90) 0 myrem(111) 0;
+    padding: myrem(90) 0 myrem(77) 0;
   }
 }
 
@@ -95,4 +95,13 @@
     font-size: myrem(16);
     line-height: 1.38;
   }
+}
+
+// ページネーション
+.p-archive-news__pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+@include mq(md) {
+}
 }

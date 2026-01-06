@@ -1,4 +1,3 @@
-<?php get_header(); ?>
 
 <div class="p-footer-cta">
     <a href="<?php echo get_permalink( get_page_by_path('contact') ); ?>" class="p-footer-cta__contact">
@@ -14,5 +13,3 @@
         </div>
     </a>
 </div>
-
-<?php get_footer(); ?>

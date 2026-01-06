@@ -67,29 +67,25 @@
                                         </div>
                                         <p class="p-archive-news__item-title">
                                             <?php the_title(); ?>
-                                            </p>
+                                        </p>
                                     </a>
                                 </li>
                             <?php endwhile; ?>
                         </ul>
-                        <!-- ページネーション -->
-                        <div class="p-archive-news__pagination">
-                            <?php
-                            echo paginate_links(array(
-                                'total'     => $news_query->max_num_pages,
-                                'current'   => $paged,
-                                'prev_text' => '<',
-                                'next_text' => '>',
-                            ));
-                            ?>
+                        <?php else : ?>
+                            <p>現在お知らせはありません。</p>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
                         </div>
-                    <?php else : ?>
-                        <p>現在お知らせはありません。</p>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
-                </div>
-                <?php get_template_part('template/sideber-news'); ?>
-            </div>
+                        <?php get_template_part('template/sideber-news'); ?>
+                    </div>
+                    <!-- ページネーション -->
+                    <div class="p-archive-news__pagination">
+                        <?php
+                        set_query_var('query', $news_query);
+                        get_template_part('template/pagination');
+                        ?>
+                    </div>
         </div>
     </div>
 </section>
