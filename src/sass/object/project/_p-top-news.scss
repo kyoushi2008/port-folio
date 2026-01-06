@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.p-top-news {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+  }
+}
+
+.p-top-news__content {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: myrem(58) 0 myrem(60);
+  @include mq(md) {
+    flex-direction: row;
+    padding: myrem(100) 0;
+  }
+}
+
+.p-top-news__title-wrapper {
+  display: flex;
+  flex-direction: column;
+@include mq(md) {
+  width: calc(310 / 1300 * 100%);
+  gap: myrem(44);
+}
+}
+
+.p-top-news__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(25);
+  margin: myrem(39) 0 myrem(31) 0;
+  @include mq(md) {
+    width: calc(990 / 1300 * 100%);
+    gap: myrem(20);
+    padding: myrem(9) myrem(30) 0 0;
+    margin: 0;
+  }
+}
+
+.p-top-news__item {
+  width: 100%;
+}
+
+.p-top-news__item-link {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(10);
+  border-bottom: 1px solid #959595;
+  padding: 0 0 myrem(18) 0;
+  @include mq(md) {
+    gap: myrem(13);
+    padding: 0 0 myrem(20) 0;
+  }
+}
+
+.p-top-news__item-meta {
+  width: inherit;
+  display: flex;
+  gap: myrem(15);
+  @include mq(md) {
+    gap: myrem(20);
+  }
+}
+
+.p-top-news__item-date {
+  font-size: myrem(16);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  align-content: center;
+  @include mq(md) {
+
+  }
+}
+.p-top-news__item-cat {
+  font-family: $font-tertiary;
+  font-size: myrem(14);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0em;
+  color: $white;
+  display: inline-block;
+  background: $blue;
+  border-radius: myrem(15);
+  padding: myrem(7) myrem(14) myrem(9) myrem(14);
+  @include mq(md) {
+    padding: myrem(9) myrem(11) myrem(7) myrem(11);
+  }
+}
+
+.p-top-news__item-title {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.74;
+  letter-spacing: 0.06em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  @include mq(md) {
+    line-height: 1.38;
+    -webkit-line-clamp: 1;
+  }
+}
+
+.p-top-news__btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -19,3 +19,27 @@
     margin-top: myrem(80);
   }
 }
+.l-404 {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}
+.l-contact {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}
+.l-single-news {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}
+.l-archive-news {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}

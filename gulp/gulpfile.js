@@ -156,11 +156,29 @@ const jsCompress = (done) => {
   done();
 };
 
+const jsContactCompress = (done) => {
+  src(`${srcBase}/js/contact.js`)
+    .pipe(plumber({
+      errorHandler: notify.onError('Error:<%= error.message %>')
+    }))
+    .pipe(dest(distPath.js))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(distPath.js))
+    .pipe(notify({
+      message: 'contact.jsをコンパイルして圧縮',
+      onLast: true
+    }));
+  done();
+};
+
 // ファイルの変更を検知
 const watchFiles = (done) => {
   watch(srcPath.css, series(cssSass, browserSyncReload));
   watch(srcPath.img, series(imgImagemin, browserSyncReload));
-  watch(srcPath.js, series(jsCompress, browserSyncReload)); // script.js の変更を監視
+  // watch(srcPath.js, series(jsCompress, browserSyncReload)); // script.js の変更を監視
+  watch(`${srcBase}/js/script.js`, series(jsCompress, browserSyncReload));
+  watch(`${srcBase}/js/contact.js`, series(jsContactCompress, browserSyncReload));
   watch(srcPath.jsUnminified, series(jsCopy, browserSyncReload)); // 'swiper-bundle.min.js'の変更を監視
   watch(distPath.php, series(browserSyncReload));
   done();
@@ -179,4 +197,4 @@ const clean = (done) => {
 };
 
 // 実行
-exports.default = series(clean, imgImagemin, cssSass, parallel(jsCompress, jsCopy), parallel(watchFiles, browserSyncFunc));
+exports.default = series(clean, imgImagemin, cssSass, parallel(jsCompress, jsContactCompress, jsCopy), parallel(watchFiles, browserSyncFunc));

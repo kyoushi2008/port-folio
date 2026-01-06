@@ -11,7 +11,8 @@
     background: transparent;
     display: flex;
     align-items: center;
-    height: myrem(80);
+    // height: myrem(80);
+    height: vw(1440, 80);
   }
 }
 

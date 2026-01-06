@@ -188,7 +188,8 @@
 
 .slide-item {
   flex-shrink: 0;
-  height: myrem(187);
+  // height: myrem(187);
+  height: vw(375, 187);
   width: auto;
   overflow: hidden;
   @include mq(md) {
