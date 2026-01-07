@@ -5189,6 +5189,64 @@ body.active {
 .p-top-service__scroll-text {
   display: inline-block;
 }
+.p-top-service__scroll-row--1 .p-top-service__scroll-inner {
+  -webkit-animation: scroll 30s linear infinite;
+          animation: scroll 30s linear infinite;
+}
+
+.p-top-service__scroll-row--2 .p-top-service__scroll-inner {
+  animation: scroll 35s linear infinite reverse;
+}
+
+.p-top-service__scroll-row--3 .p-top-service__scroll-inner {
+  -webkit-animation: scroll 30s linear infinite;
+          animation: scroll 30s linear infinite;
+}
+
+.p-top-service__scroll-row:hover .p-top-service__scroll-inner {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+.p-top-service__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8rem;
+  pointer-events: none;
+  z-index: 20;
+}
+.p-top-service__fade--left {
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#1e3a8a), to(transparent));
+  background: linear-gradient(to right, #1e3a8a, transparent);
+}
+.p-top-service__fade--right {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#1e3a8a), to(transparent));
+  background: linear-gradient(to left, #1e3a8a, transparent);
+}
 .u-desktop {
   display: none;
 }

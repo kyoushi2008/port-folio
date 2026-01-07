@@ -28,16 +28,11 @@
 @include mq(md) {}
 }
 
-.p-top-service__scroll-row--1 {
-@include mq(md) {}
-}
-
 .p-top-service__scroll-inner {
   color: $white;
   display: flex;
   gap: 2rem;
   animation: scroll 30s linear infinite;
-
 @include mq(md) {}
 }
 
@@ -46,22 +41,50 @@
 @include mq(md) {}
 }
 
-.p-top-service__scroll-row--2 {
-@include mq(md) {}
+.p-top-service__scroll-row--1 .p-top-service__scroll-inner {
+  animation: scroll 30s linear infinite;
 }
 
-.p-top-service__scroll-row--3 {
-@include mq(md) {}
+.p-top-service__scroll-row--2 .p-top-service__scroll-inner {
+  animation: scroll 35s linear infinite reverse;
+}
+
+.p-top-service__scroll-row--3 .p-top-service__scroll-inner {
+  animation: scroll 30s linear infinite;
+}
+
+// ポーズ
+.p-top-service__scroll-row:hover .p-top-service__scroll-inner {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .p-top-service__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8rem;
+  pointer-events: none;
+  z-index: 20;
 @include mq(md) {}
 }
 
 .p-top-service__fade--left {
+  left: 0;
+  background: linear-gradient(to right, #1e3a8a, transparent);
 @include mq(md) {}
 }
 
 .p-top-service__fade--right {
+  right: 0;
+  background: linear-gradient(to left, #1e3a8a, transparent);
 @include mq(md) {}
 }
