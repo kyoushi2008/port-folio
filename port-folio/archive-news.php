@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<?php
+// ★ タクソノミー（news-category）の場合は taxonomy-news-category.php を使う
+if (is_tax('news-category')) {
+    include get_template_directory() . '/taxonomy-news-category.php';
+    return;
+}
+?>
+
 <section class="p-archive-news l-archive-news">
     <div class="p-archive-news__container">
         <div class="p-archive-news__inner l-inner">
@@ -16,7 +24,7 @@
                     <?php
                     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-                    // 一覧ページはシンプルに「news」を降順で出すだけ
+                    // 一覧ページは「news」を降順で出す
                     $args = array(
                         'post_type'      => 'news',
                         'posts_per_page' => 10,
@@ -25,7 +33,20 @@
                         'paged'          => $paged,
                     );
 
-                    // 4. 未分類フィルター（これだけはURL引数なので一覧ページに残しておきます）
+                    // ★ 月別アーカイブの場合
+                    if (is_date()) {
+                        $year = get_query_var('year');
+                        $monthnum = get_query_var('monthnum');
+
+                        if ($year) {
+                            $args['year'] = $year;
+                        }
+                        if ($monthnum) {
+                            $args['monthnum'] = $monthnum;
+                        }
+                    }
+
+                    // 未分類フィルター（これだけはURL引数なので一覧ページに残す）
                     if (isset($_GET['uncategorized']) && $_GET['uncategorized'] == '1') {
                         $args['tax_query'] = array(
                             array(
