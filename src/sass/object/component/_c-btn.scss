@@ -19,6 +19,11 @@
     gap: myrem(12);
   }
 }
+.c-btn__link--w {
+  color: $white;
+  @include mq(md) {
+  }
+}
 .c-btn__link-n {
   font-size: myrem(16);
   font-weight: bold;
@@ -46,12 +51,16 @@
     height: myrem(42);
   }
 }
+.c-btn--circle--w {
+  background: $white;
+  @include mq(md) {
+  }
+}
 
 .c-btn__link-n:hover .c-btn--circle,
-.c-btn__link:hover .c-btn--circle {
+.c-btn__link:hover .c-btn--circle,
+.c-btn__link-w:hover .c-btn--circle--w {
   @include mq(md) {
-    // width: myrem(50);
-    // height: myrem(50);
     transform: scale(1.19);
   }
 }
@@ -70,6 +79,11 @@
   @include mq(md) {
     width: myrem(13);
     height: myrem(16);
+  }
+}
+.c-btn--circle--w::before {
+  background: $blue;
+  @include mq(md) {
   }
 }
 

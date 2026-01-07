@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.p-top-profile {
+  width: 100%;
+}
+
+.p-top-profile__link {
+  width: 100%;
+}
+
+.p-top-profile__content {
+  width: inherit;
+  aspect-ratio: 375 / 268;
+  background-image: url("../images/top/top-profile-sp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  @include mq(md) {
+    aspect-ratio: 1240 / 343;
+    background-image: url("../images/top/top-profile-pc.png");
+    margin-inline: auto;
+    width: calc(1240 / 1440 * 100%);
+    justify-content: flex-start;
+    padding: 0 0 0 myrem(135);
+  }
+}
+
+.p-top-profile__title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: myrem(10);
+  @include mq(md) {
+    align-items: flex-start;
+    gap: myrem(20);
+    margin: myrem(9) 0 0 0;
+  }
+}
+
+.p-top-profile__title {
+  gap: myrem(6);
+  @include mq(md) {
+    gap: 0;
+  }
+}
+
+.p-top-profile__text {
+  font-family: $font-tertiary;
+  font-size: myrem(14);
+  font-weight: bold;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  color: $white;
+  text-align: center;
+  padding-inline: myrem(20);
+  @include mq(md) {
+    font-size: myrem(16);
+    line-height: 1.7;
+    text-align: left;
+    padding: 0 0 0 myrem(5);
+  }
+}

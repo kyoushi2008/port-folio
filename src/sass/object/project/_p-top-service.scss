@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-top-service {
+  width: 100%;
+@include mq(md) {}
+}
+
+.p-top-service__content {
+  width: inherit;
+  background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+@include mq(md) {}
+}
+
+.p-top-sercive__title-group {
+  width: inherit;
+  display: flex;
+@include mq(md) {}
+}
+
+// テキストアニメーション
+.p-top-service__scroll-area {
+  overflow: hidden;
+@include mq(md) {}
+}
+
+.p-top-service__scroll-row {
+  display: flex;
+@include mq(md) {}
+}
+
+.p-top-service__scroll-row--1 {
+@include mq(md) {}
+}
+
+.p-top-service__scroll-inner {
+  color: $white;
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+
+@include mq(md) {}
+}
+
+.p-top-service__scroll-text {
+  display: inline-block;
+@include mq(md) {}
+}
+
+.p-top-service__scroll-row--2 {
+@include mq(md) {}
+}
+
+.p-top-service__scroll-row--3 {
+@include mq(md) {}
+}
+
+.p-top-service__fade {
+@include mq(md) {}
+}
+
+.p-top-service__fade--left {
+@include mq(md) {}
+}
+
+.p-top-service__fade--right {
+@include mq(md) {}
+}
