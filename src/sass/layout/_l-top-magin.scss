@@ -43,3 +43,9 @@
     margin-top: myrem(80);
   }
 }
+.l-top-profile {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}

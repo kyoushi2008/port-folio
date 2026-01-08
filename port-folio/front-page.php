@@ -53,65 +53,117 @@
 <!-- section service -->
 <section class="p-top-service l-top-service">
   <div class="p-top-service__content">
-    <div class="p-top-sercive__title-group">
-      <!-- 白タイトル -->
-      <div class="c-title">
-        <h2 class="c-title--l c-title--wl">SERVICE</h2>
-        <p class="c-title--s c-title--ws">サービス</p>
-      </div>
-      <div class="c-btn">
-        <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link c-btn__link--w">Read more<span class="c-btn--circle c-btn--circle--w"></span></a>
+    <div class="p-top-service__inner l-inner">
+      <div class="p-top-sercive__title-group">
+        <!-- 白タイトル -->
+        <div class="c-title">
+          <h2 class="c-title--l c-title--wl">SERVICE</h2>
+          <p class="c-title--s c-title--ws">サービス</p>
+        </div>
+        <div class="c-btn p-top-service__btn">
+          <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link c-btn__link--w">Read more<span class="c-btn--circle c-btn--circle--w"></span></a>
+        </div>
       </div>
     </div>
 
-      <div class="p-top-service__scroll-area">
-        <!-- First Row -->
-        <div class="p-top-service__scroll-row p-top-service__scroll-row--1">
-          <div class="p-top-service__scroll-inner">
-            <span class="p-top-service__scroll-text">対応ソフトは？</span>
-            <span class="p-top-service__scroll-text">得意分野は？</span>
-            <span class="p-top-service__scroll-text">Figmaも対応</span>
-            <span class="p-top-service__scroll-text">WordPressも大丈夫？</span>
-            <span class="p-top-service__scroll-text">PHPのフォームは作れる？</span>
-            <span class="p-top-service__scroll-text">対応ソフトは？</span>
-            <span class="p-top-service__scroll-text">得意分野は？</span>
-            <span class="p-top-service__scroll-text">Figmaも対応</span>
-            <span class="p-top-service__scroll-text">WordPressも大丈夫？</span>
-            <span class="p-top-service__scroll-text">PHPのフォームは作れる？</span>
-          </div>
-        </div>
-
-        <!-- Second Row - Reverse Direction -->
-        <div class="p-top-service__scroll-row p-top-service__scroll-row--2">
-          <div class="p-top-service__scroll-inner">
-            <span class="p-top-service__scroll-text">Figmaも対応できてる？</span>
-            <span class="p-top-service__scroll-text">対応ソフトは？</span>
-            <span class="p-top-service__scroll-text">得意分野は？</span>
-            <span class="p-top-service__scroll-text">WordPressも大丈夫？</span>
-            <span class="p-top-service__scroll-text">Figmaも対応できてる？</span>
-            <span class="p-top-service__scroll-text">対応ソフトは？</span>
-            <span class="p-top-service__scroll-text">得意分野は？</span>
-            <span class="p-top-service__scroll-text">WordPressも大丈夫？</span>
-          </div>
-        </div>
-
-        <!-- Third Row -->
-        <div class="p-top-service__scroll-row p-top-service__scroll-row--3">
-          <div class="p-top-service__scroll-inner">
-            <span class="p-top-service__scroll-text">対応ソフトは？</span>
-            <span class="p-top-service__scroll-text">得意分野は？</span>
-            <span class="p-top-service__scroll-text">Figmaも対応</span>
-            <span class="p-top-service__scroll-text">WordPressも大丈夫？</span>
-            <span class="p-top-service__scroll-text">PHPのフォームは作れる？</span>
-            <span class="p-top-service__scroll-text">対応ソフトは？</span>
-            <span class="p-top-service__scroll-text">得意分野は？</span>
-            <span class="p-top-service__scroll-text">Figmaも対応</span>
-            <span class="p-top-service__scroll-text">WordPressも大丈夫？</span>
-            <span class="p-top-service__scroll-text">PHPのフォームは作れる？</span>
-          </div>
+    <div class="p-top-service__scroll-area">
+      <!-- no.1 -->
+      <div class="p-top-service__scroll-row p-top-service__scroll-row--1">
+        <div class="p-top-service__scroll-inner">
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text30">Figmaも対応</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text34">Figmaも対応</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
         </div>
       </div>
 
+      <!-- no.2 -->
+      <div class="p-top-service__scroll-row p-top-service__scroll-row--2">
+        <div class="p-top-service__scroll-inner">
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text34 p-top-service__scroll-text70">Figmaも対応</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text30 p-top-service__scroll-text70">Figmaも対応</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+        </div>
+      </div>
+
+      <!-- no.3 -->
+      <div class="p-top-service__scroll-row p-top-service__scroll-row--3">
+        <div class="p-top-service__scroll-inner">
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text30 p-top-service__scroll-text70">Figmaも対応</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text34 p-top-service__scroll-text70">Figmaも対応</span>
+        </div>
+      </div>
+
+      <!-- no.4 -->
+      <div class="p-top-service__scroll-row p-top-service__scroll-row--4 u-mobile">
+        <div class="p-top-service__scroll-inner">
+          <span class="p-top-service__scroll-text30 p-top-service__scroll-text70">Figmaも対応</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text34 p-top-service__scroll-text70">Figmaも対応</span>
+        </div>
+      </div>
+
+      <!-- no.5 -->
+      <div class="p-top-service__scroll-row p-top-service__scroll-row--5 u-mobile">
+        <div class="p-top-service__scroll-inner">
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text30">Figmaも対応</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text34">Figmaも対応</span>
+        </div>
+      </div>
+
+      <!-- no.6 -->
+      <div class="p-top-service__scroll-row p-top-service__scroll-row--6 u-mobile">
+        <div class="p-top-service__scroll-inner">
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text30">Figmaも対応</span>
+          <span class="p-top-service__scroll-text30">WordPressも大丈夫？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text30">得意分野は？</span>
+          <span class="p-top-service__scroll-text40">PHPのフォームは作れる？</span>
+          <span class="p-top-service__scroll-text40">対応ソフトは？</span>
+          <span class="p-top-service__scroll-text34">Figmaも対応</span>
+        </div>
+      </div>
+
+    </div>
     <div class="p-top-service__fade p-top-service__fade--left"></div>
     <div class="p-top-service__fade p-top-service__fade--right"></div>
   </div>

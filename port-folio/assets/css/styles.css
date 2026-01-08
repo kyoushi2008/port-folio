@@ -210,6 +210,15 @@ button {
   }
 }
 
+.l-top-profile {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .l-top-profile {
+    margin-top: 5rem;
+  }
+}
+
 .breadcrumb {
   width: 100%;
   display: -webkit-box;
@@ -5071,6 +5080,7 @@ body.active {
 
 .p-top-profile {
   width: 100%;
+  display: block;
 }
 
 .p-top-profile__link {
@@ -5159,19 +5169,88 @@ body.active {
   width: 100%;
 }
 .p-top-service__content {
+  position: relative;
   width: inherit;
   background: -webkit-gradient(linear, left top, left bottom, from(#104c93), color-stop(41%, #104c93), to(#0e2d52));
   background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  padding: 0 0 4.25rem 0;
+}
+@media screen and (min-width: 768px) {
+  .p-top-service__content {
+    padding: 0 0 1.75rem 0;
+  }
+}
+
+.p-top-service__content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top/top-service.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  height: 100%;
 }
 .p-top-sercive__title-group {
   width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+  padding: 3.4375rem 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .p-top-sercive__title-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.875rem;
+    padding: 5.1875rem 0 0 0;
+  }
+}
+
+.p-top-service__btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .p-top-service__btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 0 0 10.625rem;
+  }
+}
+
 .p-top-service__scroll-area {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3125rem;
+  margin: 1.875rem 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .p-top-service__scroll-area {
+    gap: 0.9375rem;
+    margin: 0.9375rem 0 0 0;
+  }
+}
+
 .p-top-service__scroll-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5182,25 +5261,99 @@ body.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 2rem;
   -webkit-animation: scroll 30s linear infinite;
           animation: scroll 30s linear infinite;
 }
-.p-top-service__scroll-text {
-  display: inline-block;
+@media screen and (min-width: 768px) {
+  .p-top-service__scroll-inner {
+    padding: 0 0 1.25rem 0;
+  }
 }
+
+.p-top-service__scroll-text30 {
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  opacity: 0.5;
+  display: inline-block;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .p-top-service__scroll-text30 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+}
+
+.p-top-service__scroll-text34 {
+  font-size: 2.125rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  opacity: 0.5;
+  display: inline-block;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .p-top-service__scroll-text34 {
+    font-size: 5.4375rem;
+    font-weight: 800;
+  }
+}
+
+.p-top-service__scroll-text40 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  opacity: 0.5;
+  display: inline-block;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .p-top-service__scroll-text40 {
+    font-weight: 800;
+    font-size: 6.125rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-top-service__scroll-text70 {
+    font-size: 4.375rem;
+    font-weight: 800;
+  }
+}
+
 .p-top-service__scroll-row--1 .p-top-service__scroll-inner {
-  -webkit-animation: scroll 30s linear infinite;
-          animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 65s linear infinite;
+          animation: scroll 65s linear infinite;
 }
 
 .p-top-service__scroll-row--2 .p-top-service__scroll-inner {
-  animation: scroll 35s linear infinite reverse;
+  animation: scroll 45s linear infinite reverse;
 }
 
 .p-top-service__scroll-row--3 .p-top-service__scroll-inner {
-  -webkit-animation: scroll 30s linear infinite;
-          animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+}
+
+.p-top-service__scroll-row--4 .p-top-service__scroll-inner {
+  animation: scroll 70s linear infinite reverse;
+}
+
+.p-top-service__scroll-row--5 .p-top-service__scroll-inner {
+  -webkit-animation: scroll 65s linear infinite;
+          animation: scroll 65s linear infinite;
+}
+
+.p-top-service__scroll-row--6 .p-top-service__scroll-inner {
+  animation: scroll 90s linear infinite reverse;
 }
 
 .p-top-service__scroll-row:hover .p-top-service__scroll-inner {
@@ -5233,19 +5386,19 @@ body.active {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 8rem;
+  width: 8.125rem;
   pointer-events: none;
   z-index: 20;
 }
 .p-top-service__fade--left {
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#1e3a8a), to(transparent));
-  background: linear-gradient(to right, #1e3a8a, transparent);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(30, 58, 138, .3)), to(transparent));
+  background: linear-gradient(to right, rgba(30, 58, 138, .3), transparent);
 }
 .p-top-service__fade--right {
   right: 0;
-  background: -webkit-gradient(linear, right top, left top, from(#1e3a8a), to(transparent));
-  background: linear-gradient(to left, #1e3a8a, transparent);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(30, 58, 138, .3)), to(transparent));
+  background: linear-gradient(to left, rgba(30, 58, 138, .3), transparent);
 }
 .u-desktop {
   display: none;
