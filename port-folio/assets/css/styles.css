@@ -211,7 +211,7 @@ button {
 }
 
 .l-top-profile {
-  margin-top: 3.75rem;
+  margin-top: 0;
 }
 @media screen and (min-width: 768px) {
   .l-top-profile {
@@ -4922,6 +4922,76 @@ body.active {
   }
 }
 
+.p-top-message {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-top-message {
+    width: 72.9166666667%;
+  }
+}
+
+.p-top-message__container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-top-message__inner {
+    padding-right: 20px;
+  }
+}
+
+.p-top-message__content {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-top-message__content {
+    padding: 7rem 0 0 0;
+  }
+}
+
+.p-top__message__content-group {
+  width: inherit;
+}
+.p-top-message__box-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.6666666667;
+  letter-spacing: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  .p-top-message__box-title {
+    font-size: 2.125rem;
+    font-weight: 800;
+    line-height: 1.5882352941;
+    margin: 0 0 0 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-top-message__label {
+    line-height: 1;
+    padding: 7px 0px 12px 9px;
+  }
+}
+
+.p-top-message__box-text {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.6666666667;
+  letter-spacing: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  .p-top-message__box-text {
+    font-size: 2.125rem;
+    font-weight: 800;
+    line-height: 1.5882352941;
+    margin: 46px 0 0 8px;
+  }
+}
+
+.p-top-message__image img {
+  width: 100%;
+}
 .p-top-news {
   display: -webkit-box;
   display: -ms-flexbox;

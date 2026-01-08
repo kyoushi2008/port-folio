@@ -47,7 +47,7 @@ function my_script_init()
     wp_enqueue_script('simplebar', 'https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js', array(), null, true);
 
     // Noto Sans JP
-    wp_enqueue_style('noto-sans-jp', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap', array(), null);
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap', array(), null);
 
     // Open Sans
     wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/cey3kvu.css', array(), null);

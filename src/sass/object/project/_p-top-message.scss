@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.p-top-message {
+  width: 100%;
+  @include mq(md) {
+    width: calc(1050 / 1440 * 100%);
+  }
+}
+
+.p-top-message__container {
+  width: 100%;
+  @include mq(md) {
+  }
+}
+
+.p-top-message__inner {
+  @include mq(md) {
+    padding-right: 20px;
+  }
+}
+
+.p-top-message__content {
+  width: 100%;
+  @include mq(md) {
+    padding: myrem(112) 0 0 0;
+  }
+}
+
+.p-top__message__content-group {
+  width: inherit;
+  @include mq(md) {
+  }
+}
+
+.p-top-message__box {
+  @include mq(md) {
+  }
+}
+
+.p-top-message__box-title {
+  font-size: myrem(18);
+  font-weight: bold;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.1em;
+  @include mq(md) {
+    font-size: myrem(34);
+    font-weight: 800;
+    line-height: calc(54 / 34);
+    margin: 0 0 0 8px;
+  }
+}
+
+.p-top-message__label {
+  @include mq(md) {
+    line-height: 1;
+    padding: 7px 0px 12px 9px;
+  }
+}
+
+.p-top-message__box-text {
+  font-size: myrem(18);
+  font-weight: bold;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.1em;
+  @include mq(md) {
+    font-size: myrem(34);
+    font-weight: 800;
+    line-height: calc(54 / 34);
+    margin: 46px 0 0 8px;
+  }
+}
+
+.p-top-message__image {
+  @include mq(md) {
+  }
+}
+.p-top-message__image img {
+  width: 100%;
+  @include mq(md) {
+  }
+}

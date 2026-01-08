@@ -50,6 +50,39 @@
   </div>
 </section> -->
 
+<!-- section message -->
+<section class="p-top-message">
+  <div class="p-top-message__container">
+    <div class="p-top-message__inner l-inner">
+      <div class="p-top-message__content">
+        <div class="p-top__message__content-group">
+          <div class="p-top-message__box">
+            <h3 class="p-top-message__box-title">丁寧な作業とコミュニケーションで</h3>
+            <!-- ラベル -->
+            <span class="c-label p-top-message__label">ハイクオリティなコードを納品。</span>
+            <p class="p-top-message__box-text">ここにテキストここにテキストここにテキスト</p>
+          </div>
+          <div class="p-top-message__box">
+            <h3 class="p-top-message__box-title">ここにテキストここにテキスト</h3>
+            <!-- ラベル -->
+            <span class="c-label p-top-message__label">ここにテキストここにテキスト</span>
+            <p class="p-top-message__box-text">ここにテキストここにテキストここにテキスト ここにテキストここにテキスト</p>
+          </div>
+          <div class="p-top-message__box">
+            <h3 class="p-top-message__box-title">ここにテキストここにテキスト</h3>
+            <!-- ラベル -->
+            <span class="c-label p-top-message__label">ここにテキスト</span>
+          </div>
+            <picture class="p-top-message__image">
+                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp01.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc01.png" alt="message" loading="lazy">
+            </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- section service -->
 <section class="p-top-service l-top-service">
   <div class="p-top-service__content">
