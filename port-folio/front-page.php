@@ -55,28 +55,57 @@
   <div class="p-top-message__container">
     <div class="p-top-message__inner l-inner">
       <div class="p-top-message__content">
-        <div class="p-top__message__content-group">
+        <div class="p-top-message__content-group">
           <div class="p-top-message__box">
             <h3 class="p-top-message__box-title">丁寧な作業とコミュニケーションで</h3>
             <!-- ラベル -->
             <span class="c-label p-top-message__label">ハイクオリティなコードを納品。</span>
-            <p class="p-top-message__box-text">ここにテキストここにテキストここにテキスト</p>
+            <p class="p-top-message__box-text">ここにテキストここにテキストここにテキスト<br class="u-mobile">ここにテキストここにテキスト</p>
           </div>
           <div class="p-top-message__box">
-            <h3 class="p-top-message__box-title">ここにテキストここにテキスト</h3>
             <!-- ラベル -->
             <span class="c-label p-top-message__label">ここにテキストここにテキスト</span>
-            <p class="p-top-message__box-text">ここにテキストここにテキストここにテキスト ここにテキストここにテキスト</p>
+            <p class="p-top-message__box-text">ここにテキストここにテキストここにテキスト<br class="u-mobile">ここにテキストここにテキスト</p>
+            <p class="p-top-message__box-text">ここにテキストここにテキスト</p>
           </div>
           <div class="p-top-message__box">
-            <h3 class="p-top-message__box-title">ここにテキストここにテキスト</h3>
             <!-- ラベル -->
             <span class="c-label p-top-message__label">ここにテキスト</span>
           </div>
-            <picture class="p-top-message__image">
-                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp01.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc01.png" alt="message" loading="lazy">
+          <picture class="p-top-message__image">
+            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp01.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc01.png" alt="message" loading="lazy">
+          </picture>
+        </div>
+        <div class="p-top-message__content-group">
+          <div class="p-top-message__title-group">
+            <!-- タイトル -->
+            <div class="c-title">
+              <h2 class="c-title--l">MESSAGE</h2>
+              <p class="c-title--s">メッセージ</p>
+              <h3 class="p-top-message__box-title p-top-message__box-title02 u-desktop">丁寧な作業とコミュニケーションで</h3>
+              <!-- ラベル -->
+              <span class="c-label p-top-message__label u-desktop">ハイクオリティなコードを納品。</span>
+            </div>
+            <!-- ボタンroboto -->
+            <div class="c-btn p-top-message__btn u-desktop">
+              <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+            </div>
+          </div>
+          <div class="p-top-message__img-group">
+            <picture class="p-top-message__image02">
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp02.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc02.png" alt="message" loading="lazy">
             </picture>
+            <picture class="p-top-message__image03">
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp03.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc03.png" alt="message" loading="lazy">
+            </picture>
+            <picture class="p-top-message__image04">
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp04.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc04.png" alt="message" loading="lazy">
+            </picture>
+          </div>
         </div>
       </div>
     </div>
