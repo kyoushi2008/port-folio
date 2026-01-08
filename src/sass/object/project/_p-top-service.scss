@@ -2,8 +2,6 @@
 
 .p-top-service {
   width: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-top-service__content {
@@ -24,8 +22,6 @@
   background-size: cover;
   width: inherit;
   height: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-top-sercive__title-group {
@@ -66,8 +62,6 @@
 
 .p-top-service__scroll-row {
   display: flex;
-  @include mq(md) {
-  }
 }
 
 .p-top-service__scroll-inner {
@@ -168,20 +162,14 @@
   width: myrem(130);
   pointer-events: none;
   z-index: 20;
-  @include mq(md) {
-  }
 }
 
 .p-top-service__fade--left {
   left: 0;
   background: linear-gradient(to right, rgba(30, 58, 138, 0.3), transparent);
-  @include mq(md) {
-  }
 }
 
 .p-top-service__fade--right {
   right: 0;
   background: linear-gradient(to left, rgba(30, 58, 138, 0.3), transparent);
-  @include mq(md) {
-  }
 }

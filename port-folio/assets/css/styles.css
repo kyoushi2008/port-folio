@@ -5168,6 +5168,7 @@ body.active {
 .p-top-service {
   width: 100%;
 }
+
 .p-top-service__content {
   position: relative;
   width: inherit;
@@ -5191,6 +5192,7 @@ body.active {
   width: inherit;
   height: 100%;
 }
+
 .p-top-sercive__title-group {
   width: inherit;
   display: -webkit-box;
@@ -5256,6 +5258,7 @@ body.active {
   display: -ms-flexbox;
   display: flex;
 }
+
 .p-top-service__scroll-inner {
   color: #fff;
   display: -webkit-box;
@@ -5390,16 +5393,19 @@ body.active {
   pointer-events: none;
   z-index: 20;
 }
+
 .p-top-service__fade--left {
   left: 0;
   background: -webkit-gradient(linear, left top, right top, from(rgba(30, 58, 138, .3)), to(transparent));
   background: linear-gradient(to right, rgba(30, 58, 138, .3), transparent);
 }
+
 .p-top-service__fade--right {
   right: 0;
   background: -webkit-gradient(linear, right top, left top, from(rgba(30, 58, 138, .3)), to(transparent));
   background: linear-gradient(to left, rgba(30, 58, 138, .3), transparent);
 }
+
 .u-desktop {
   display: none;
 }
