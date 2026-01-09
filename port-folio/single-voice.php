@@ -109,7 +109,67 @@
                 </div>
             </div>
         </div>
-    </div>
+
+
+
+        <section class="p-single-related-voice">
+    <?php
+    /**
+     * 【解説】詳細ページでは WP_Query を使います。
+     * 表示中の記事を除外し、最新の6件を取得する設定です。
+     */
+    $args = array(
+        'post_type'      => 'voice',
+        'posts_per_page' => 6,
+        'post__not_in'   => array(get_the_ID()), // 今見ている記事は出さない
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    );
+    $slider_query = new WP_Query($args);
+
+    if ($slider_query->have_posts()) : ?>
+
+        <div class="swiper js-voice-slider p-common-voice-slider">
+            <div class="swiper-wrapper">
+
+                <?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
+                    <div class="swiper-slide p-common-voice-slider__item">
+
+                        <div class="p-archive-voice__card">
+                            <div class="p-archive-voice__card-image">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'voice-card-pc'); ?>">
+                                        <img src="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'voice-card-sp'); ?>" alt="<?php the_title_attribute(); ?>">
+                                    </picture>
+                                <?php endif; ?>
+
+                                <?php
+                                $terms = get_the_terms(get_the_ID(), 'voice-category');
+                                if ($terms && !is_wp_error($terms)) :
+                                    $term = array_shift($terms); ?>
+                                    <span class="p-archive-voice__card-category"><?php echo esc_html($term->name); ?></span>
+                                <?php endif; ?>
+
+                                <div class="p-archive-voice__card-title-wrapper">
+                                    <h2 class="p-archive-voice__card-title"><?php the_title(); ?></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                <?php endwhile; ?>
+
+            </div>
+
+            <div class="swiper-button-prev js-voice-slider-prev"></div>
+            <div class="swiper-button-next js-voice-slider-next"></div>
+        </div>
+
+    <?php
+    wp_reset_postdata(); // 独自クエリを使った後は必ずリセット
+    endif;
+    ?>
 </section>
 
 <?php get_footer(); ?>

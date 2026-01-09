@@ -332,3 +332,23 @@ if (window.innerWidth < 768) {
     },
   });
 }
+
+
+//
+const voiceSlider = new Swiper('.js-voice-slider', {
+    loop: true,
+    slidesPerView: 1.2, // スマホで端が見える状態
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.js-voice-slider-next',
+        prevEl: '.js-voice-slider-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 4, // PCで3列表示
+            centeredSlides: false,
+            spaceBetween: 25
+        }
+    }
+});

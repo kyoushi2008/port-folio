@@ -342,3 +342,26 @@ add_action('init', 'create_post_type_voice');
 add_image_size('voice-card-sp', 335, 226, true); // SP
 add_image_size('voice-card-pc', 410, 278, true); // PC
 
+
+// アーカイブページごとに表示件数を個別に制御する（404エラー防止策）
+function my_pre_get_posts($query) {
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+
+    // 1. VOICE (6件)
+    if ( is_post_type_archive('voice') || is_tax('voice-category') ) {
+        $query->set( 'posts_per_page', 6 );
+    }
+
+    // 2. WORKS (3件)
+    if ( is_post_type_archive('works') || is_tax('works_category') ) {
+        $query->set( 'posts_per_page', 3 );
+    }
+
+    // 3. NEWS (10件)
+    if ( is_post_type_archive('news') || is_tax('news-category') || (is_post_type_archive('news') && is_date()) ) {
+        $query->set( 'posts_per_page', 10 );
+    }
+}
+add_action( 'pre_get_posts', 'my_pre_get_posts' );
