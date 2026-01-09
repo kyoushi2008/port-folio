@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.p-archive-voice {
+  width: 100%;
+  @include mq(md) {
+  }
+}
+
+.p-archive-voice__container {
+  width: inherit;
+  padding: myrem(79) 0 0 0;
+  @include mq(md) {
+    padding: myrem(105) 0 0 0;
+  }
+}
+
+.p-archive-voice__content {
+  width: inherit;
+  padding: myrem(61) 0 myrem(100) 0;
+  @include mq(md) {
+    padding: myrem(29) 0 myrem(108) 0;
+  }
+}
+
+.p-archive-voice__card-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: myrem(87);
+  margin: myrem(58) 0 0 0;
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: myrem(25);
+    margin: myrem(98) 0 0 0;
+    row-gap: myrem(99);
+  }
+}
+
+.p-archive-voice__card-item {
+  width: 100%;
+}
+
+.p-archive-voice__card {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  @include mq(md) {
+  }
+}
+
+.p-archive-voice__card-image {
+  position: relative;
+  width: 100%;
+  @include mq(md) {
+  }
+}
+
+.p-archive-voice__card-image img {
+  width: 100%;
+  aspect-ratio: 335 / 226;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 410 / 278;
+  }
+}
+
+.p-archive-voice__card-category {
+  position: absolute;
+  font-size: myrem(14);
+  font-weight: 800;
+  background: $blue;
+  color: $white;
+  top: 0;
+  right: 0;
+  padding: myrem(3) myrem(12);
+  @include mq(md) {
+    font-size: myrem(14);
+    padding: myrem(5) myrem(15);
+  }
+}
+
+.p-archive-voice__card-title-wrapper {
+  position: absolute;
+  width: 90%;
+  background: $white;
+  height: myrem(100);
+  display: flex;
+  align-items: center;
+  bottom: myrem(-71);
+  left: myrem(-1);
+  z-index: 1;
+  padding: myrem(10);
+  @include mq(md) {
+    width: 88%;
+    bottom: myrem(-59);
+    left: myrem(-1);
+  }
+}
+
+.p-archive-voice__card-title {
+  font-size: myrem(16);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  color: $black2;
+  @include mq(md) {
+    font-size: myrem(16);
+  }
+}
+
+.p-archive-voice__pagination {
+  margin: myrem(145) 0 0 0;
+@include mq(md) {
+  margin: myrem(144) 0 0 0;
+}
+}

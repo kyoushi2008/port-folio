@@ -53,7 +53,7 @@ function my_script_init()
     wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/cey3kvu.css', array(), null);
 
     // Roboto
-    wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap', array(), null);
+    wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap', array(), null);
 
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '1.0.1', 'all');
     wp_enqueue_style('my', get_template_directory_uri() . '/assets/css/styles.min.css', array(), '1.0.1', 'all');
@@ -320,5 +320,25 @@ add_filter('template_include', function ($template) {
     return $template;
 }, 99);
 
-// サムネイル
+/////////////////////// voice カスタム投稿
+function create_post_type_voice()
+{
+    register_post_type('voice', array(
+        'label' => 'VOICE',
+        'public' => true,
+        'has_archive' => 'voice',
+        'rewrite' => array(
+            'slug' => 'voice',
+            'with_front' => false,
+        ),
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'show_in_rest' => true,
+    ));
+}
+add_action('init', 'create_post_type_voice');
+
+
+// サムネイル voicw
+add_image_size('voice-card-sp', 335, 226, true); // SP
+add_image_size('voice-card-pc', 410, 278, true); // PC
 
