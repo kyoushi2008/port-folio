@@ -299,3 +299,36 @@ $(function () {
   observer.observe(document.querySelector(".price-number--j"));
   observer.observe(document.querySelector(".price-number"));
 });
+
+
+////////// single-voice swiper
+if (window.innerWidth < 768) {
+  // 上のSwiper
+  const swiperTop = new Swiper('.p-single-voice__swiper-top', {
+    loop: true,
+    loopedSlides: 2,
+    slidesPerView: 'auto',
+    spaceBetween: 25,
+    speed: 10000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+
+  // 下のSwiper
+  const swiperBottom = new Swiper('.p-single-voice__swiper-bottom', {
+    loop: true,
+    loopedSlides: 2,
+    slidesPerView: 'auto',
+    spaceBetween: 25,
+    speed: 10000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      reverseDirection: true,
+      disableOnInteraction: false,
+    },
+  });
+}

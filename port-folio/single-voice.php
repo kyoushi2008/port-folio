@@ -34,11 +34,59 @@
                             <p class="p-single-voice__content-text">ここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入るここにテキスト入る</p>
                         </div>
                         <div class="p-single-voice__image-group">
-                            <picture class="p-single-voice__image02">
+                            <!-- sp用 -->
+                            <!-- 上のSwiper -->
+                            <div class="swiper p-single-voice__swiper-top u-mobile">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture class="p-single-voice__image02">
+                                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp04.png">
+                                            <img src="<?php echo $img_path; ?>voice-image-pc04.png" alt="voice-image" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture class="p-single-voice__image02">
+                                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp04.png">
+                                            <img src="<?php echo $img_path; ?>voice-image-pc04.png" alt="voice-image" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture class="p-single-voice__image02">
+                                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp04.png">
+                                            <img src="<?php echo $img_path; ?>voice-image-pc04.png" alt="voice-image" loading="lazy">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 下のSwiper -->
+                            <div class="swiper p-single-voice__swiper-bottom u-mobile">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture class="p-single-voice__image03">
+                                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp05.png">
+                                            <img src="<?php echo $img_path; ?>voice-image-pc05.png" alt="voice-image" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture class="p-single-voice__image03">
+                                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp05.png">
+                                            <img src="<?php echo $img_path; ?>voice-image-pc05.png" alt="voice-image" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture class="p-single-voice__image03">
+                                            <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp05.png">
+                                            <img src="<?php echo $img_path; ?>voice-image-pc05.png" alt="voice-image" loading="lazy">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pc用 -->
+                            <picture class="p-single-voice__image02 u-desktop">
                                 <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp04.png">
                                 <img src="<?php echo $img_path; ?>voice-image-pc04.png" alt="voice-image" loading="lazy">
                             </picture>
-                            <picture class="p-single-voice__image03">
+                            <picture class="p-single-voice__image03 u-desktop">
                                 <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp05.png">
                                 <img src="<?php echo $img_path; ?>voice-image-pc05.png" alt="voice-image" loading="lazy">
                             </picture>
@@ -50,10 +98,12 @@
                         <source media="(max-width: 767px)" srcset="<?php echo $img_path; ?>voice-image-sp03.png">
                         <img src="<?php echo $img_path; ?>voice-image-pc03.png" alt="single-voice" loading="lazy">
                     </picture>
-                    <p class="p-single-voice__content-person-company">株式会社&thinsp;XXXXXX</p>
-                    <p class="p-single-voice__content-person-name">代表&thinsp;田中&thinsp;太郎</p>
+                    <p class="p-single-voice__content-person-company u-desktop">株式会社&thinsp;XXXXXX</p>
+                    <p class="p-single-voice__content-person-name u-desktop">代表&thinsp;田中&thinsp;太郎</p>
+                    <p class="p-single-voice__content-person-name u-mobile">田中&thinsp;太郎</p>
+                    <p class="p-single-voice__content-person-spell u-mobile">Tanaka&thinsp;Tarou</p>
                     <!-- ボタン -->
-                    <div class="c-btn p-single-voice__btn">
+                    <div class="c-btn p-single-voice__btn u-desktop">
                         <a href="<?php echo home_url('/voice/'); ?>" class="c-btn__link-n">一覧に戻る<span class="c-btn--circle"></span></a>
                     </div>
                 </div>
@@ -61,7 +111,5 @@
         </div>
     </div>
 </section>
-
-<?php get_footer(); ?>
 
 <?php get_footer(); ?>
