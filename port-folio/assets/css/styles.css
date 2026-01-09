@@ -219,6 +219,15 @@ button {
   }
 }
 
+.l-single-voice {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .l-single-voice {
+    margin-top: 5rem;
+  }
+}
+
 .breadcrumb {
   width: 100%;
   display: -webkit-box;
@@ -4915,6 +4924,22 @@ body.active {
   }
 }
 
+/* SP版のメイン画像 */
+.p-voice-visual img {
+  aspect-ratio: 375/230;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* 比率を維持したまま、枠いっぱいに広げてはみ出しをカット */
+  -o-object-position: center;
+     object-position: center; /* 中央を基準に切り抜く */
+}
+
+/* PC版（メディアクエリで切り替え） */
+@media (min-width: 768px) {
+  .p-voice-visual img {
+    height: 480px; /* PC版のデザイン通りの高さ */
+  }
+}
 .p-test {
   color: red;
   font-size: 1.5625rem;

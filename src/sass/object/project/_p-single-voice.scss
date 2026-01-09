@@ -1,0 +1,17 @@
+@use "global" as *;
+
+/* SP版のメイン画像 */
+.p-voice-visual img {
+  aspect-ratio: 375 /230;
+    width: 100%;
+    // height: 272px; /* デザイン通りの高さを指定 */
+    object-fit: cover; /* 比率を維持したまま、枠いっぱいに広げてはみ出しをカット */
+    object-position: center; /* 中央を基準に切り抜く */
+}
+
+/* PC版（メディアクエリで切り替え） */
+@media (min-width: 768px) {
+    .p-voice-visual img {
+        height: 480px; /* PC版のデザイン通りの高さ */
+    }
+}
