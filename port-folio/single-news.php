@@ -27,7 +27,8 @@
                             </span>
                         </div>
                     </div>
-                    <div class="p-single-news__body"><?php the_content(); ?>
+                    <div class="p-single-news__body">
+                        <?php the_content(); ?>
                         <!-- ボタン -->
                         <div class="c-btn p-single-news__btn">
                             <a href="<?php echo home_url('/news/'); ?>" class="c-btn__link-n">一覧に戻る<span class="c-btn--circle"></span></a>
