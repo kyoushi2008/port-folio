@@ -334,10 +334,10 @@ if (window.innerWidth < 768) {
 }
 
 
-//
+// voice詳細ページ下swiper
 const voiceSlider = new Swiper('.js-voice-slider', {
-    loop: true,
-    slidesPerView: 1.2, // スマホで端が見える状態
+    loop: false,
+    slidesPerView: 'auto',
     spaceBetween: 20,
     centeredSlides: true,
     navigation: {
@@ -346,9 +346,9 @@ const voiceSlider = new Swiper('.js-voice-slider', {
     },
     breakpoints: {
         768: {
-            slidesPerView: 4, // PCで3列表示
+            slidesPerView: 'auto',
             centeredSlides: false,
-            spaceBetween: 25
+            spaceBetween: 50
         }
     }
 });

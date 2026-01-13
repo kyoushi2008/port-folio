@@ -2,8 +2,6 @@
 
 .p-single-voice {
   width: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-single-voice__container {
@@ -43,11 +41,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 65px;
+  gap: myrem(65);
   @include mq(md) {
     width: calc(980 / 1300 * 100%);
     gap: myrem(91);
-    padding: 0 30px 0 0;
+    padding: 0 myrem(30) 0 0;
   }
 }
 
@@ -63,13 +61,13 @@
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0em;
-  margin: 0 0 8px 0;
+  margin: 0 0 myrem(8) 0;
   @include mq(md) {
     font-size: myrem(34);
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: 0.1em;
-    margin: 0 0 9px 10px;
+    margin: 0 0 myrem(9) myrem(10);
   }
 }
 
@@ -77,10 +75,10 @@
   width: inherit;
   display: flex;
   flex-direction: column;
-  gap: 26px;
-  margin: 20px 0 0;
+  gap: myrem(26);
+  margin: myrem(20) 0 0;
   @include mq(md) {
-    gap: 28px;
+    gap: myrem(28);
   }
 }
 
@@ -90,8 +88,6 @@
   line-height: calc(28 / 16);
   letter-spacing: 0.1em;
   color: $black2;
-  @include mq(md) {
-  }
 }
 
 .p-single-voice__image01 {
@@ -106,8 +102,6 @@
 
 .p-single-voice__image01 img {
   width: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-single-voice__image-group {
@@ -151,8 +145,6 @@
 .p-single-voice__swiper-bottom .swiper-slide {
   width: auto !important;
   height: myrem(182) !important;
-  @include mq(md) {
-  }
 }
 
 .p-single-voice__image02,
@@ -202,7 +194,7 @@
     line-height: 1;
     letter-spacing: 0.1em;
     text-align: left;
-    margin: 20px 0 0 0;
+    margin: myrem(20) 0 0 0;
   }
 }
 
@@ -213,14 +205,14 @@
   letter-spacing: 0.1em;
   color: $black2;
   text-align: right;
-  margin: 15px 0 0 0;
+  margin: myrem(15) 0 0 0;
   @include mq(md) {
     font-size: myrem(16);
     font-weight: normal;
     line-height: 1;
     letter-spacing: 0.1em;
     text-align: left;
-    margin: 10px 0 0 0;
+    margin: myrem(10) 0 0 0;
   }
 }
 .p-single-voice__content-person-spell {
@@ -229,11 +221,9 @@
   line-height: 1;
   letter-spacing: 0.06em;
   color: $blue;
-  opacity: .5;
+  opacity: 0.5;
   text-align: right;
-  margin: 8px 0 0 0;
-  @include mq(md) {
-  }
+  margin: myrem(8) 0 0 0;
 }
 
 .p-single-voice__btn {
@@ -241,14 +231,135 @@
   display: flex;
   justify-content: flex-end;
   @include mq(md) {
-    margin: 28px 0 0 0;
+    margin: myrem(28) 0 0 0;
+    padding: 0 0 0 myrem(167);
   }
 }
-//
 
+// swiperページ下
+.p-single-related-voice {
+  width: 100%;
+  padding: 0 0 myrem(50) 0;
+  @include mq(md) {
+    padding: 0 0 myrem(80) 0;
+  }
+}
 
-
-/* 特定のサイズを指定したい場合 */
+.p-common-voice-slider {
+  padding: myrem(10);
+  @include mq(md) {
+    padding: myrem(81) 0 0 0;
+  }
+}
 .p-common-voice-slider__item {
-    // max-width: 300px; /* 必要なら最大幅を制限 */
+  position: relative;
+  width: myrem(257) !important;
+    height: myrem(246);
+  @include mq(md) {
+    width: myrem(340) !important;
+    height: myrem(301);
+  }
+}
+.p-single-voice__slider-title-wrapper {
+  width: 91%;
+  bottom: myrem(-81);
+  @include mq(md) {
+    width: 91%;
+    bottom: myrem(-71);
+  }
+}
+
+// 矢印wrapper
+.p-voice-slider__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: myrem(40);
+  margin: myrem(45) 0 0 0;
+  padding: 0;
+  @include mq(md) {
+  gap: myrem(40);
+  margin: myrem(44) 0 0 0;
+  padding: 0 myrem(60) 0 0;
+}
+}
+
+.p-voice-slider__nav .swiper-button-prev,
+.p-voice-slider__nav .swiper-button-next {
+  position: initial;
+  width: myrem(50);
+  height: myrem(50);
+  border: myrem(2) solid #353535;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(md) {
+    width: myrem(60);
+    height: myrem(60);
+  }
+}
+
+// デフォルトの矢印画像を消す
+.p-voice-slider__nav .swiper-button-prev::after,
+.p-voice-slider__nav .swiper-button-next::after {
+  content: "" !important;
+}
+
+// 矢印の<>
+.p-voice-slider__nav .swiper-button-prev,
+.p-voice-slider__nav .swiper-button-next {
+  position: relative;
+}
+
+.p-voice-slider__nav .swiper-button-prev::before,
+.p-voice-slider__nav .swiper-button-prev::after,
+.p-voice-slider__nav .swiper-button-next::before,
+.p-voice-slider__nav .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  width: myrem(8);
+  height: myrem(1);
+  border-radius: 50%;
+  background: #2a2a2a;
+  @include mq(md) {
+    width: myrem(10);
+  }
+}
+
+// 左矢印
+.p-voice-slider__nav .swiper-button-prev::before {
+  transform: translate(0, myrem(-2)) rotate(-45deg);
+  @include mq(md) {
+    transform: translate(0, myrem(-2)) rotate(-45deg);
+  }
+}
+
+.p-voice-slider__nav .swiper-button-prev::after {
+  transform: translate(0, myrem(3)) rotate(45deg);
+  @include mq(md) {
+    transform: translate(0, myrem(5)) rotate(45deg);
+  }
+}
+
+// 右矢印
+.p-voice-slider__nav .swiper-button-next::before {
+  transform: translate(0, myrem(-2)) rotate(45deg);
+  @include mq(md) {
+    transform: translate(0, myrem(-2)) rotate(45deg);
+  }
+}
+
+.p-voice-slider__nav .swiper-button-next::after {
+  transform: translate(0, myrem(3)) rotate(-45deg);
+  @include mq(md) {
+    transform: translate(0, myrem(5)) rotate(-45deg);
+  }
+}
+
+// disabled状態
+.p-voice-slider__nav .swiper-button-disabled::before,
+.p-voice-slider__nav .swiper-button-disabled::after {
+  background: rgba(51, 51, 51, 0.9);
 }
