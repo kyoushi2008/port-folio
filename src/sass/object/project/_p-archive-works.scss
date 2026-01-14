@@ -2,8 +2,6 @@
 
 .p-archive-works {
   width: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-archive-works__container {
@@ -45,15 +43,11 @@
   display: block;
   text-decoration: none;
   transition: opacity 0.3s;
-  @include mq(md) {
-  }
 }
 
 .p-archive-works__card-image {
   position: relative;
   width: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-archive-works__card-image img {
@@ -104,6 +98,10 @@
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $black2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
   @include mq(md) {
     font-size: myrem(16);
   }

@@ -371,3 +371,22 @@ const worksSlider = new Swiper('.js-works-slider', {
         }
     }
 });
+
+// top-works swiper
+const topWorksSlider = new Swiper('.p-top-works-slider', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.js-top-works-slider-next',
+        prevEl: '.js-top-works-slider-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 50
+        }
+    }
+});
