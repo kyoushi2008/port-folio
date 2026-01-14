@@ -2,13 +2,14 @@
 
 .p-top-works {
   width: 100%;
+  background: #F3F7FA;
 }
 
 .p-top-works__content {
   width: inherit;
-  padding: myrem(58) 0 0 0;
+  padding: myrem(58) 0 myrem(53) 0;
   @include mq(md) {
-    padding: myrem(56) 0 0 0;
+    padding: myrem(56) 0 myrem(60) 0;
   }
 }
 
@@ -44,10 +45,6 @@
   line-height: calc(26 / 14);
   letter-spacing: 0.06em;
   color: $black2;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
   @include mq(md) {
     font-size: myrem(16);
   }
@@ -164,7 +161,5 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  @include mq(md) {
-    margin: myrem(31) 0 0 0;
-  }
+  margin: myrem(31) 0 0 0;
 }

@@ -990,7 +990,7 @@ button {
   width: 100%;
 }
 .p-archive-voice__container {
-  width: inherit;
+  width: 100%;
   padding: 4.9375rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
@@ -6357,17 +6357,24 @@ body.active {
 
 .p-top-message {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
 }
+.p-top-message__container {
+  width: 100%;
+}
 @media screen and (min-width: 768px) {
-  .p-top-message {
+  .p-top-message__container {
     width: 72.9166666667%;
   }
 }
 
-.p-top-message__container {
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
   .p-top-message__inner {
     padding-right: 1.875rem;
@@ -7082,17 +7089,32 @@ body.active {
   background: linear-gradient(to left, rgba(30, 58, 138, .3), transparent);
 }
 
+.p-top-voice {
+  width: 22.2222222222%;
+}
+.p-to-voice__card-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .p-top-works {
   width: 100%;
+  background: #F3F7FA;
 }
 
 .p-top-works__content {
   width: inherit;
-  padding: 3.625rem 0 0 0;
+  padding: 3.625rem 0 3.3125rem 0;
 }
 @media screen and (min-width: 768px) {
   .p-top-works__content {
-    padding: 3.5rem 0 0 0;
+    padding: 3.5rem 0 3.75rem 0;
   }
 }
 
@@ -7135,10 +7157,6 @@ body.active {
   line-height: 1.8571428571;
   letter-spacing: 0.06em;
   color: #2A2A2A;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .p-top-works__slider-card-title {
@@ -7287,11 +7305,7 @@ body.active {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-@media screen and (min-width: 768px) {
-  .p-top-works__btn {
-    margin: 1.9375rem 0 0 0;
-  }
+  margin: 1.9375rem 0 0 0;
 }
 
 .u-desktop {

@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.p-top-voice {
+  width: calc(320 / 1440 * 100%);
+  @include mq(md) {
+  }
+}
+
+.p-to-voice__card-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

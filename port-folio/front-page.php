@@ -76,7 +76,7 @@
                       $term = array_shift($terms); ?>
                       <span class="p-archive-works__card-category"><?php echo esc_html($term->name); ?></span>
                     <?php endif; ?>
-                    <div class="p-archive-works__card-title-wrapper p-single-works__slider-title-wrapper">
+                    <div class="p-archive-works__card-title-wrapper p-top-works__slider-card-title-wrapper">
                       <h3 class="p-archive-works__card-title p-top-works__slider-card-title"><?php the_title(); ?></h3>
                     </div>
                   </div>
@@ -161,6 +161,8 @@
       </div>
     </div>
   </div>
+  <!-- section voice -->
+  <?php get_template_part('template/top-voice'); ?>
 </section>
 
 

@@ -7,7 +7,7 @@
 }
 
 .p-archive-voice__container {
-  width: inherit;
+  width: 100%;
   padding: myrem(79) 0 0 0;
   @include mq(md) {
     padding: myrem(105) 0 0 0;
