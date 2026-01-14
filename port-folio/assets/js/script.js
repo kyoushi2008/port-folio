@@ -352,3 +352,22 @@ const voiceSlider = new Swiper('.js-voice-slider', {
         }
     }
 });
+
+// works詳細ページ下swiper
+const worksSlider = new Swiper('.js-works-slider', {
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.js-works-slider-next',
+        prevEl: '.js-works-slider-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 50
+        }
+    }
+});

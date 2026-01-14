@@ -341,6 +341,9 @@ add_action('init', 'create_post_type_voice');
 // サムネイル voicw
 add_image_size('voice-card-sp', 335, 226, true); // SP
 add_image_size('voice-card-pc', 410, 278, true); // PC
+// サムネイル works
+add_image_size('works-card-sp', 335, 226, true); // SP
+add_image_size('works-card-pc', 410, 278, true); // PC
 
 
 // アーカイブページごとに表示件数を個別に制御する（404エラー防止策）
