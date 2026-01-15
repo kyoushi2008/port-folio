@@ -5,7 +5,7 @@
         <div class="p-archive-news__inner l-inner">
             <div class="c-title">
                 <h2 class="c-title--l c-title--lp">NEWS</h2>
-                <p class="c-title--s">お知らせ：<?php single_term_title(); // カテゴリー名を表示 ?></p>
+                <p class="c-title--s">お知らせ</p>
             </div>
             <div class="p-breadcrumb">
                 <?php breadcrumb(); ?>

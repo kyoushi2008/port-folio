@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.p-top-voice {
+  width: 100%;
+  @include mq(md) {
+    width: calc(390 / 1440 * 100%);
+  }
+}
+
+.p-top-voice__container {
+  width: 100%;
+  padding: myrem(18) 0 myrem(80) 0;
+  @include mq(md) {
+    padding: myrem(115) 0 0 0;
+  }
+}
+
+.p-top-voice__inner {
+@include mq(md) {
+  padding-left: 0;
+}
+}
+
+.p-top-voice__content {
+  width: 100%;
+  padding: 0;
+ }
+
+.p-to-voice__card-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: myrem(41) 0 0 0;
+  row-gap: myrem(100);
+  @include mq(md) {
+    margin: myrem(24) 0 0 0;
+    row-gap: myrem(105);
+  }
+}
+
+// spで4記事以降非表示
+.p-top-voice .p-archive-voice__card-item:nth-child(n+4) {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}

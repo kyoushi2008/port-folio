@@ -1,0 +1,179 @@
+@use "global" as *;
+
+.p-top-service {
+  width: 100%;
+}
+
+.p-top-service__content {
+  position: relative;
+  width: inherit;
+  background: linear-gradient(to bottom, #104c93 0%, #104c93 41%, #0e2d52 100%);
+  padding: 0 0 myrem(68) 0;
+  @include mq(md) {
+    padding: 0 0 myrem(28) 0;
+  }
+}
+.p-top-service__content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top/top-service.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  height: 100%;
+  @include mq(md) {
+    pointer-events: none;
+  }
+}
+
+.p-top-sercive__title-group {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(14);
+  padding: myrem(55) 0 0 0;
+  @include mq(md) {
+    flex-direction: row;
+    gap: myrem(14);
+    padding: myrem(83) 0 0 0;
+  }
+}
+
+.p-top-service__btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @include mq(md) {
+    justify-content: center;
+    padding: 0 0 0 myrem(170);
+  }
+}
+
+// テキストアニメーション
+.p-top-service__scroll-area {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: myrem(5);
+  margin: myrem(30) 0 0 0;
+  @include mq(md) {
+    gap: myrem(15);
+    margin: myrem(15) 0 0 0;
+  }
+}
+
+.p-top-service__scroll-row {
+  display: flex;
+  cursor: pointer;
+}
+
+.p-top-service__scroll-inner {
+  color: $white;
+  display: flex;
+  align-items: flex-end;
+  gap: myrem(32);
+  animation: scroll 30s linear infinite;
+  @include mq(md) {
+    padding: 0 0 myrem(20) 0;
+  }
+}
+
+.p-top-service__scroll-text30 {
+  font-size: myrem(30);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  opacity: 0.5;
+  display: inline-block;
+  white-space: nowrap;
+  @include mq(md) {
+    font-size: myrem(56);
+    font-weight: 800;
+  }
+}
+.p-top-service__scroll-text34 {
+  font-size: myrem(34);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  opacity: 0.5;
+  display: inline-block;
+  white-space: nowrap;
+  @include mq(md) {
+    font-size: myrem(87);
+    font-weight: 800;
+  }
+}
+.p-top-service__scroll-text40 {
+  font-size: myrem(40);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0em;
+  opacity: 0.5;
+  display: inline-block;
+  white-space: nowrap;
+  @include mq(md) {
+    font-weight: 800;
+    font-size: myrem(98);
+  }
+}
+
+.p-top-service__scroll-text70 {
+  @include mq(md) {
+    font-size: myrem(70);
+    font-weight: 800;
+  }
+}
+
+.p-top-service__scroll-row--1 .p-top-service__scroll-inner {
+  animation: scroll 65s linear infinite;
+}
+.p-top-service__scroll-row--2 .p-top-service__scroll-inner {
+  animation: scroll 45s linear infinite reverse;
+}
+.p-top-service__scroll-row--3 .p-top-service__scroll-inner {
+  animation: scroll 40s linear infinite;
+}
+.p-top-service__scroll-row--4 .p-top-service__scroll-inner {
+  animation: scroll 70s linear infinite reverse;
+}
+.p-top-service__scroll-row--5 .p-top-service__scroll-inner {
+  animation: scroll 65s linear infinite;
+}
+.p-top-service__scroll-row--6 .p-top-service__scroll-inner {
+  animation: scroll 90s linear infinite reverse;
+}
+
+// ポーズ
+.p-top-service__scroll-row:hover .p-top-service__scroll-inner {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.p-top-service__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: myrem(130);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.p-top-service__fade--left {
+  left: 0;
+  background: linear-gradient(to right, rgba(30, 58, 138, 0.3), transparent);
+}
+
+.p-top-service__fade--right {
+  right: 0;
+  background: linear-gradient(to left, rgba(30, 58, 138, 0.3), transparent);
+}
