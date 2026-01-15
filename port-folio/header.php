@@ -16,12 +16,12 @@
       <?php if (is_front_page()): ?>
         <!-- トップページの場合はh1 -->
         <h1 class="p-header__logo js-header">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-image js-header">CODO ASSIST</a>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-image js-header">CODE ASSIST</a>
         </h1>
       <?php else: ?>
         <!-- 下層ページの場合はdiv -->
         <h1 class="p-header__logo js-header">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-image js-header">CODO ASSIST</a>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-image js-header">CODE ASSIST</a>
         </h1>
       <?php endif; ?>
       <!-- sp contactボタン -->
