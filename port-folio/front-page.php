@@ -139,7 +139,7 @@
               <span class="c-label p-top-message__label u-desktop">ハイクオリティなコードを納品。</span>
             </div>
             <!-- ボタンroboto -->
-            <div class="c-btn p-top-message__btn u-desktop">
+            <div class="c-btn p-top-message__btn">
               <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
             </div>
           </div>
@@ -163,6 +163,10 @@
   </div>
   <!-- section voice -->
   <?php get_template_part('template/top-voice'); ?>
+  <!-- ボタンroboto -->
+  <div class="c-btn p-top-message__row-btn">
+    <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+  </div>
 </section>
 
 

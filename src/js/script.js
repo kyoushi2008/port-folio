@@ -1,18 +1,32 @@
 jQuery(function ($) {
-  // ページトップボタン
   var topBtn = $(".js-pagetop");
   topBtn.hide();
 
-  // ページトップボタンの表示設定
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
+    // FV要素が存在する場合のみ高さを取得
+    var fv = $(".p-fv");
+    if (fv.length) {
+      var fvHeight = fv.outerHeight(); // FVの高さを取得
+
+      if ($(this).scrollTop() > fvHeight) {
+        topBtn.fadeIn();
+      } else {
+        topBtn.fadeOut();
+      }
     }
   });
+
+  topBtn.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      300,
+      "swing"
+    );
+    return false;
+  });
+});
 
   // ページトップボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
@@ -36,7 +50,6 @@ jQuery(function ($) {
     $("html,body").animate({ scrollTop: targetY }, time, "swing");
     return false;
   });
-});
 
 // ハンバーガー
 $(".js-hamburger").on("click", function () {
@@ -389,4 +402,18 @@ const topWorksSlider = new Swiper('.p-top-works-slider', {
             spaceBetween: 50
         }
     }
+});
+
+// header スクロール
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.p-header');
+  const fv = document.querySelector('.p-fv');
+  const fvHeight = fv.offsetHeight;
+
+  // スクロール量がFVの高さを超えたらクラス付与
+  if (window.scrollY > fvHeight) {
+    header.classList.add('is-color');
+  } else {
+    header.classList.remove('is-color');
+  }
 });

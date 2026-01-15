@@ -131,7 +131,7 @@
                         <?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
                             <div class="swiper-slide p-common-voice-slider__item">
 
-                                <div class="p-archive-voice__card">
+                                <a href="<?php the_permalink(); ?>" class="p-archive-voice__card">
                                     <div class="p-archive-voice__card-image">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <picture>
@@ -151,7 +151,7 @@
                                             <h2 class="p-archive-voice__card-title"><?php the_title(); ?></h2>
                                         </div>
                                     </div>
-                                </div>
+                                        </a>
 
                             </div>
                         <?php endwhile; ?>

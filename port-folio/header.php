@@ -92,7 +92,7 @@
                 <?php endforeach; ?> <!-- 親メニューのループ終了 -->
               <?php endif; ?> <!-- メニュー項目が空でない場合のチェック終了 -->
               <li class="p-header__btn-item p-header-nav-item p-header__nav-item">
-                <a href="" class="p-header__btn-link p-header-nav-item__link" target="_blank">CONTACT</a>
+                <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="p-header__btn-link p-header-nav-item__link" target="_blank">CONTACT</a>
               </li>
             </ul>
           </div>

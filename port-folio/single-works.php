@@ -127,7 +127,7 @@
                     <div class="swiper-wrapper">
                         <?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
                             <div class="swiper-slide p-common-works-slider__item">
-                                <div class="p-archive-works__card">
+                                <a href="<?php the_permalink(); ?>" class="p-archive-works__card">
                                     <div class="p-archive-works__card-image">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <picture>
@@ -145,7 +145,7 @@
                                             <h2 class="p-archive-works__card-title"><?php the_title(); ?></h2>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         <?php endwhile; ?>
                     </div>
