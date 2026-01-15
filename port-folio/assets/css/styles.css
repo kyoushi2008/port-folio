@@ -267,6 +267,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .breadcrumb-item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3099,7 +3100,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    top: 80px;
+    top: 5rem;
   }
 }
 
@@ -4235,6 +4236,7 @@ body.active {
   line-height: 1.7142857143;
   letter-spacing: 0.1em;
 }
+
 .p-profile__content02-person {
   width: 100%;
   margin: 3.8125rem 0 0 0;
@@ -4458,7 +4460,7 @@ body.active {
   line-height: 1;
   letter-spacing: 0.05em;
   color: #104C93;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .price-title {
@@ -4691,6 +4693,7 @@ body.active {
 .price-unit02 {
   margin: 0;
 }
+
 .price-label {
   font-size: 0.875rem;
   font-weight: bold;
@@ -5327,6 +5330,7 @@ body.active {
 .p-single-voice__top-image {
   width: inherit;
 }
+
 .p-single-voice__top-image img {
   width: 100%;
   aspect-ratio: 375/230;

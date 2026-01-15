@@ -521,8 +521,6 @@
   font-weight: normal;
   line-height: calc(24 / 14);
   letter-spacing: 0.1em;
-  @include mq(md) {
-  }
 }
 
 .p-profile__content02-person {
