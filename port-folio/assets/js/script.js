@@ -28,18 +28,6 @@ jQuery(function ($) {
   });
 });
 
-  // ページトップボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      300,
-      "swing"
-    );
-    return false;
-  });
-
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。)
   $(document).on("click", 'a[href*="#"]', function () {
     let time = 400;
@@ -56,12 +44,6 @@ $(".js-hamburger").on("click", function () {
   $(this).toggleClass("is-active");
   $(".js-drawer").fadeToggle();
   $("body").toggleClass("active");
-});
-
-$(".js-drawer a").on("click", function () {
-  $(".js-hamburger").removeClass("is-active");
-  $(".js-drawer").fadeOut();
-  $("body").removeClass("active");
 });
 
 // ファーストビュー

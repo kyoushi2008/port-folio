@@ -2505,7 +2505,7 @@ button {
 @media screen and (min-width: 768px) {
   .p-fv__scroll {
     width: 0.125rem;
-    height: 7.5rem;
+    height: 8.3333333333vw;
     position: absolute;
     right: 6.5625rem;
     top: 43.8vw;
@@ -6923,6 +6923,11 @@ body.active {
   background-size: cover;
   width: inherit;
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-top-service__content::before {
+    pointer-events: none;
+  }
 }
 
 .p-top-sercive__title-group {

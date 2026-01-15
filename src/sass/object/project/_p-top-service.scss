@@ -22,6 +22,9 @@
   background-size: cover;
   width: inherit;
   height: 100%;
+  @include mq(md) {
+    pointer-events: none;
+  }
 }
 
 .p-top-sercive__title-group {
