@@ -5,7 +5,7 @@
     <div class="p-footer__wrapper">
       <div class="p-footer__group">
         <div class="p-footer__logo">
-          <a href="<?php echo esc_url(home_url('/')); ?>">CODO ASSIST</a>
+          <a href="<?php echo esc_url(home_url('/')); ?>">CODE ASSIST</a>
         </div>
 
         <div class="p-footer__icon-group">

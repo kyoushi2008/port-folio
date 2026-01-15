@@ -3,6 +3,8 @@
 .p-top-message {
   width: 100%;
   overflow: hidden;
+}
+.p-top-message__inner {
   @include mq(md) {
     display: flex;
   }
@@ -12,12 +14,6 @@
   width: 100%;
   @include mq(md) {
     width: calc(1050 / 1440 * 100%);
-  }
-}
-
-.p-top-message__inner {
-  @include mq(md) {
-    padding-right: myrem(30);
   }
 }
 
@@ -129,53 +125,132 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0 myrem(20) myrem(60) 0;
+  padding: 0 0 myrem(60) 0;
   @include mq(md) {
-    display: none
+    display: none;
   }
 }
 
 .p-top-message__img-group {
+  position: relative;
   width: 100%;
+}
+.p-top-message__img-group:before {
+  position: absolute;
+  content: "";
+  width: calc(315 / 375 * 100%);
+  height: myrem(448);
+  background: red;
+  margin-left: calc(50% - 50vw);
+  z-index: -1;
+  top: myrem(101);
+  @include mq(md) {
+    width: calc(100% + (50vw - 50%));
+    top: myrem(220);
+  }
+}
+
+.p-top-message__img-text-group {
+  position: absolute;
+  width: 100%;
+  top: 34%;
+  left: 8%;
+  z-index: 2;
+  @include mq(md) {
+    top: 38%;
+    left: -8%;
+  }
+}
+
+.p-top-message__img-group-text {
+  position: relative;
+  font-family: $font-sub;
+  font-size: myrem(80);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $white;
+  @include mq(md) {
+    font-size: myrem(160);
+  }
+}
+.p-top-message__img-group-text::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/top/assist.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: myrem(260);
+  height: myrem(50);
+  display: inline-block;
+  left: 106%;
+  top: 23%;
+  @include mq(md) {
+    width: myrem(620);
+    height: myrem(118);
+    left: 106%;
+    top: 23%;
+  }
 }
 
 .p-top-message__image02 {
-  width: 100vw;
-  max-width: none;
-  @include mq(md) {
-    margin: myrem(40) 0 0 calc(68% - 50vw);
-  }
-}
-.p-top-message__image02 img {
   width: 100%;
-  aspect-ratio: 352 / 189;
-  object-fit: cover;
-  margin: myrem(42) calc(50% - 50vw) 0 0;
-  padding: 0 myrem(24) myrem(12) 0;
+  position: relative;
+  height: myrem(189);
   @include mq(md) {
-    width: vw(1440, 690);
-    aspect-ratio: 690 / 370;
-    padding: 0;
+    height: myrem(370);
   }
 }
+.p-top-message__image02:before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/top/top-message-sp02.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  width: myrem(352);
+  height: 100%;
+  top: myrem(40);
+  left: myrem(0);
+  @include mq(md) {
+    background-image: url("../images/top/top-message-pc02.png");
+    width: myrem(690);
+    top: myrem(40);
+    left: myrem(-70);
+  }
+}
+// .p-top-message__image02 img {
+//   width: 100%;
+//   aspect-ratio: 352 / 189;
+//   object-fit: cover;
+//   margin: myrem(42) calc(50% - 50vw) 0 0;
+//   padding: 0 myrem(24) myrem(12) 0;
+//   @include mq(md) {
+//     width: myrem(690);
+//     aspect-ratio: 690 / 370;
+//     padding: 0;
+//   }
+// }
 
 .p-top-message__image03 {
   width: 100vw;
   display: flex;
   justify-content: flex-end;
-  margin: myrem(25) calc(50% - 50vw) 0 myrem(-20);
+  margin: myrem(80) calc(50% - 50vw) 0 myrem(-20);
   max-width: none;
   @include mq(md) {
     width: 100%;
-    margin: myrem(50) 0 0 0;
+    margin: myrem(88) 0 0 0;
   }
 }
 .p-top-message__image03 img {
-  width: vw(375, 284);
+  width: myrem(284);
   aspect-ratio: 284 / 162;
   object-fit: cover;
   @include mq(md) {
-    width: vw(1440, 533);
+    width: myrem(533);
     aspect-ratio: 533 / 285;
   }
 }
@@ -187,12 +262,12 @@
   }
 }
 .p-top-message__image04 img {
-  width: vw(375, 305);
+  width: myrem(305);
   aspect-ratio: 305 / 139;
   object-fit: cover;
   margin: myrem(36) auto;
   @include mq(md) {
-    width: vw(1440, 460);
+    width: myrem(460);
     aspect-ratio: 460 / 210;
     margin: 0;
   }

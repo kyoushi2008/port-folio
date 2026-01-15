@@ -103,8 +103,8 @@
 
 <!-- section message -->
 <section class="p-top-message">
-  <div class="p-top-message__container">
-    <div class="p-top-message__inner l-inner">
+  <div class="p-top-message__inner l-inner">
+    <div class="p-top-message__container">
       <div class="p-top-message__content">
         <div class="p-top-message__content-group">
           <div class="p-top-message__box">
@@ -144,9 +144,12 @@
             </div>
           </div>
           <div class="p-top-message__img-group">
+            <div class="p-top-message__img-text-group">
+              <span class="p-top-message__img-group-text">CODE</span>
+            </div>
             <picture class="p-top-message__image02">
-              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp02.png">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc02.png" alt="message" loading="lazy">
+              <!-- <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp02.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc02.png" alt="message" loading="lazy"> -->
             </picture>
             <picture class="p-top-message__image03">
               <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp03.png">
@@ -160,12 +163,13 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- section voice -->
-  <?php get_template_part('template/top-voice'); ?>
-  <!-- ボタンroboto -->
-  <div class="c-btn p-top-message__row-btn">
-    <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+    <!-- </div> -->
+    <!-- section voice -->
+    <?php get_template_part('template/top-voice'); ?>
+    <!-- ボタンroboto -->
+    <div class="c-btn p-top-message__row-btn">
+      <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+    </div>
   </div>
 </section>
 

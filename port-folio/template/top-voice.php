@@ -1,13 +1,13 @@
 <section class="p-top-voice l-top-voice ">
     <div class="p-archive-voice__container p-top-voice__container">
-        <div class="p-top-voice__inner l-inner">
+        <!-- <div class="p-top-voice__inner l-inner"> -->
             <!-- タイトル -->
             <div class="c-title">
                 <h2 class="c-title--l">VOICE</h2>
                 <p class="c-title--s">お客様の声</p>
             </div>
             <div class="p-archive-voice__content p-top-voice__content">
-                <ul class="p-archive-voice__card-list p-to-voice__card-list">
+                <ul class="p-archive-voice__card-list p-top-voice__card-list">
                     <?php
                     $args = array(
                         'post_type'      => 'voice',
@@ -50,5 +50,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </section>
