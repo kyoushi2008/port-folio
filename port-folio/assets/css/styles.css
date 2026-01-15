@@ -6577,7 +6577,7 @@ body.active {
   content: "";
   width: 84%;
   height: 28rem;
-  background: red;
+  background: #F3F7FA;
   margin-left: calc(50% - 50vw);
   z-index: -1;
   top: 6.3125rem;
