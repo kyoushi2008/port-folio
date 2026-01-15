@@ -14,8 +14,6 @@
 
 .p-single-voice__top-image {
   width: inherit;
-  @include mq(md) {
-  }
 }
 .p-single-voice__top-image img {
   width: 100%;

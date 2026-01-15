@@ -90,6 +90,10 @@
     <small class="p-footer__copyright">&copy;2024&emsp;&thinsp;CODO ASSIST</small>
   </div>
 </footer>
+ <!-- ボタントップへもどる -->
+        <div class="c-btn c-btn--l js-pagetop">
+            <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link"><span class="c-btn--circle c-btn--l-circle"></span></a>
+        </div>
 <?php wp_footer(); ?>
 </body>
 

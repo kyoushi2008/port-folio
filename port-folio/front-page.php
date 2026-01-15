@@ -95,7 +95,7 @@
       ?>
       <!-- ボタンroboto -->
       <div class="c-btn p-top-works__btn">
-        <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+        <a href="<?php echo home_url('/works/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
               <span class="c-label p-top-message__label u-desktop">ハイクオリティなコードを納品。</span>
             </div>
             <!-- ボタンroboto -->
-            <div class="c-btn p-top-message__btn u-desktop">
+            <div class="c-btn p-top-message__btn">
               <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
             </div>
           </div>
@@ -163,6 +163,10 @@
   </div>
   <!-- section voice -->
   <?php get_template_part('template/top-voice'); ?>
+  <!-- ボタンroboto -->
+  <div class="c-btn p-top-message__row-btn">
+    <a href="<?php echo home_url('/message/'); ?>" class="c-btn__link">Read more<span class="c-btn--circle"></span></a>
+  </div>
 </section>
 
 
@@ -177,7 +181,7 @@
           <p class="c-title--s c-title--ws">サービス</p>
         </div>
         <div class="c-btn p-top-service__btn">
-          <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link c-btn__link--w">Read more<span class="c-btn--circle c-btn--circle--w"></span></a>
+          <a href="<?php echo home_url('/service/'); ?>" class="c-btn__link c-btn__link--w">Read more<span class="c-btn--circle c-btn--circle--w"></span></a>
         </div>
       </div>
     </div>

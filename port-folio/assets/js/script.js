@@ -1,20 +1,21 @@
 jQuery(function ($) {
-  // ページトップボタン
   var topBtn = $(".js-pagetop");
   topBtn.hide();
 
-  // ページトップボタンの表示設定
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
+    // FV要素が存在する場合のみ高さを取得
+    var fv = $(".p-fv");
+    if (fv.length) {
+      var fvHeight = fv.outerHeight(); // FVの高さを取得
+
+      if ($(this).scrollTop() > fvHeight) {
+        topBtn.fadeIn();
+      } else {
+        topBtn.fadeOut();
+      }
     }
   });
 
-  // ページトップボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
     $("body,html").animate(
       {
@@ -25,6 +26,7 @@ jQuery(function ($) {
     );
     return false;
   });
+});
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。)
   $(document).on("click", 'a[href*="#"]', function () {
@@ -36,19 +38,12 @@ jQuery(function ($) {
     $("html,body").animate({ scrollTop: targetY }, time, "swing");
     return false;
   });
-});
 
 // ハンバーガー
 $(".js-hamburger").on("click", function () {
   $(this).toggleClass("is-active");
   $(".js-drawer").fadeToggle();
   $("body").toggleClass("active");
-});
-
-$(".js-drawer a").on("click", function () {
-  $(".js-hamburger").removeClass("is-active");
-  $(".js-drawer").fadeOut();
-  $("body").removeClass("active");
 });
 
 // ファーストビュー
@@ -389,4 +384,18 @@ const topWorksSlider = new Swiper('.p-top-works-slider', {
             spaceBetween: 50
         }
     }
+});
+
+// header スクロール
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.p-header');
+  const fv = document.querySelector('.p-fv');
+  const fvHeight = fv.offsetHeight;
+
+  // スクロール量がFVの高さを超えたらクラス付与
+  if (window.scrollY > fvHeight) {
+    header.classList.add('is-color');
+  } else {
+    header.classList.remove('is-color');
+  }
 });

@@ -180,7 +180,7 @@
 .p-fv__scroll {
   @include mq(md) {
     width: myrem(2);
-    height: myrem(120);
+    height: vw(1440, 120);
     position: absolute;
     right: myrem(105);
     top: 43.8vw;

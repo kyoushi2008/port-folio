@@ -158,9 +158,14 @@
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
   color: $white;
-  @include mq(md) {
-  }
 }
+
+// @media (hover: hover) {
+//   .p-footer__nav-link:hover .p-footer__nav-text--l,
+//   .p-footer__nav-link:hover .p-footer__nav-text {
+//     color: $blue;
+//   }
+// }
 
 .p-footer__copyright {
   font-family: $font-tertiary;
