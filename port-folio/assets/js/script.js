@@ -387,13 +387,24 @@ const topWorksSlider = new Swiper('.p-top-works-slider', {
 });
 
 // header スクロール
+// window.addEventListener('scroll', function() {
+//   const header = document.querySelector('.p-header');
+//   const fv = document.querySelector('.p-fv');
+//   const fvHeight = fv.offsetHeight;
+
+//   // スクロール量がFVの高さを超えたらクラス付与
+//   if (window.scrollY > fvHeight) {
+//     header.classList.add('is-color');
+//   } else {
+//     header.classList.remove('is-color');
+//   }
+// });
+
 window.addEventListener('scroll', function() {
   const header = document.querySelector('.p-header');
-  const fv = document.querySelector('.p-fv');
-  const fvHeight = fv.offsetHeight;
 
-  // スクロール量がFVの高さを超えたらクラス付与
-  if (window.scrollY > fvHeight) {
+  // 100pxスクロールしたらクラス付与（数値は調整可能）
+  if (window.scrollY > 700) {
     header.classList.add('is-color');
   } else {
     header.classList.remove('is-color');

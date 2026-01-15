@@ -368,3 +368,23 @@ function my_pre_get_posts($query) {
     }
 }
 add_action( 'pre_get_posts', 'my_pre_get_posts' );
+
+
+/////////////////////
+// wordpressバージョン非表示
+remove_action('wp_head', 'wp_generator');
+
+// css/jsバージョン非表示
+function remove_wp_version_strings($src) {
+    global $wp_version;
+    parse_str(parse_url($src, PHP_URL_QUERY), $query);
+    if (!empty($query['ver']) && $query['ver'] === $wp_version) {
+        $src = remove_query_arg('ver', $src);
+    }
+    return $src;
+}
+add_filter('style_loader_src', 'remove_wp_version_strings', 9999);
+add_filter('script_loader_src', 'remove_wp_version_strings', 9999);
+
+// RSSフィードのバージョン非表示
+add_filter('the_generator', '__return_empty_string');

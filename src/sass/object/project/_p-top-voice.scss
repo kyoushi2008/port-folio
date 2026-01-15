@@ -11,7 +11,7 @@
   width: 100%;
   padding: myrem(18) 0 myrem(80) 0;
   @include mq(md) {
-    padding: myrem(115) 0 0 0;
+    padding: myrem(115) 0 0 myrem(30);
   }
 }
 
@@ -26,7 +26,7 @@
   padding: 0;
  }
 
-.p-to-voice__card-list {
+.p-top-voice__card-list {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   row-gap: myrem(100);
   @include mq(md) {
     margin: myrem(24) 0 0 0;
-    row-gap: myrem(105);
+    row-gap: myrem(104);
   }
 }
 
