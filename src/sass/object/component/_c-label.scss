@@ -7,6 +7,7 @@
   letter-spacing: 0.1em;
   color: $white;
   display: inline-block;
+  width: fit-content;
   background: linear-gradient(to right, #104c93 0%, #104c93 41%, #0e2d52 100%);
   padding: myrem(8) 0 myrem(9) myrem(5);
   @include mq(md) {

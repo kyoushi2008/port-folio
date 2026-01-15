@@ -70,7 +70,7 @@
 .c-title--s::before {
   position: absolute;
   content: "";
-  width: myrem(32);
+  width: myrem(16);
   height: myrem(4);
   background: linear-gradient(
     to right,
@@ -109,7 +109,7 @@
 .c-title--ws::before {
   position: absolute;
   content: "";
-  width: myrem(32);
+  width: myrem(16);
   height: myrem(4);
   background: linear-gradient(
     to right,
@@ -132,18 +132,19 @@
   width: 100%;
   text-align: center;
   padding: 0;
-  margin: myrem(20) 0 0 0;
+  margin: myrem(10) 0 0 0;
   @include mq(md) {
     text-align: initial;
     padding: 0 0 0 myrem(52);
     margin: myrem(4) 0 0 0;
+    line-height: 1;
   }
 }
 
 .c-title--wsc::before {
   position: absolute;
   content: "";
-  top: -79%;
+  top: -23%;
   left: 50%;
   transform: translate(-50%, -50%);
   @include mq(md) {

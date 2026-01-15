@@ -1,21 +1,17 @@
 @use "global" as *;
 
 .p-fv {
-  @include mq(md) {
-  }
+  width: 100%;
 }
 
 .p-fv__swiper {
   overflow: hidden;
   width: 100%;
-  height: 100vh;
-  @include mq(md) {
-  }
+  // height: 100vh;
 }
 
 .swiper-wrapper {
-  @include mq(md) {
-  }
+  width: 100%;
 }
 
 .p-fv__swiper .swiper-slide {
@@ -37,15 +33,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  @include mq(md) {
-  }
 }
 .p-fv__image picture {
   display: block;
   width: 100%;
   height: 100%;
-  @include mq(md) {
-  }
 }
 
 .p-fv__image::before {
@@ -59,8 +51,6 @@
   opacity: 0.2;
   z-index: 1;
   pointer-events: none;
-  @include mq(md) {
-  }
 }
 
 .p-fv__image img {
@@ -77,15 +67,15 @@
 
 .p-fv__title-group {
   position: absolute;
-  top: 59.5%;
+  top: 74.5vw;
   left: 52.5%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  color: #fff;
+  color: $white;
   text-align: left;
   @include mq(md) {
-    top: 62.5%;
-    left: 28.5%;
+    top: 38vw;
+    left: 28.5vw;
   }
 }
 
@@ -184,4 +174,52 @@
 
 .is-fv-title.is-fv-show {
   opacity: 1;
+}
+
+// scroll-line
+.p-fv__scroll {
+  @include mq(md) {
+    width: myrem(2);
+    height: myrem(120);
+    position: absolute;
+    right: myrem(105);
+    top: 43.8vw;
+    background: $white;
+    background-image: linear-gradient(
+      to bottom,
+      #104c93 50%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    background-size: 100% 200%;
+    background-position: 0 myrem(-120);
+    animation: scrolldown 2.6s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    z-index: 2;
+  }
+}
+
+// テキスト
+.p-fv__scroll::before {
+  @include mq(md) {
+    position: absolute;
+    content: "SCROLL";
+    font-family: $font-sub;
+    font-size: myrem(16);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    top: -5.9vw;
+    left: 0vw;
+    transform: translateX(-50%);
+    writing-mode: vertical-rl;
+    color: $blue;
+  }
+}
+
+// 上から下のアニメーション
+@keyframes scrolldown {
+  0% {
+    background-position: 0 myrem(-120);
+  }
+  100% {
+    background-position: 0 myrem(120);
+  }
 }

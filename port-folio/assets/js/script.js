@@ -299,3 +299,94 @@ $(function () {
   observer.observe(document.querySelector(".price-number--j"));
   observer.observe(document.querySelector(".price-number"));
 });
+
+
+////////// single-voice swiper
+if (window.innerWidth < 768) {
+  // 上のSwiper
+  const swiperTop = new Swiper('.p-single-voice__swiper-top', {
+    loop: true,
+    loopedSlides: 2,
+    slidesPerView: 'auto',
+    spaceBetween: 25,
+    speed: 10000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+
+  // 下のSwiper
+  const swiperBottom = new Swiper('.p-single-voice__swiper-bottom', {
+    loop: true,
+    loopedSlides: 2,
+    slidesPerView: 'auto',
+    spaceBetween: 25,
+    speed: 10000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      reverseDirection: true,
+      disableOnInteraction: false,
+    },
+  });
+}
+
+
+// voice詳細ページ下swiper
+const voiceSlider = new Swiper('.js-voice-slider', {
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.js-voice-slider-next',
+        prevEl: '.js-voice-slider-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 50
+        }
+    }
+});
+
+// works詳細ページ下swiper
+const worksSlider = new Swiper('.js-works-slider', {
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.js-works-slider-next',
+        prevEl: '.js-works-slider-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 50
+        }
+    }
+});
+
+// top-works swiper
+const topWorksSlider = new Swiper('.p-top-works-slider', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.js-top-works-slider-next',
+        prevEl: '.js-top-works-slider-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 50
+        }
+    }
+});
