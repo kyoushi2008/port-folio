@@ -994,7 +994,14 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 5.1875rem 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .p-archive-news__pagination {
+    margin: 0;
+  }
+}
+
 .p-archive-voice {
   width: 100%;
 }
