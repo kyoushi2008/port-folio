@@ -50,9 +50,14 @@ if (is_tax('news-category')) {
                         <p>現在お知らせはありません。</p>
                     <?php endif; ?>
                 </div>
+                <div class="p-archive-news__pagination u-mobile">
+                <?php
+                get_template_part('template/pagination');
+                ?>
+            </div>
                 <?php get_template_part('template/sideber-news'); ?>
             </div>
-            <div class="p-archive-news__pagination">
+            <div class="p-archive-news__pagination u-desktop">
                 <?php
                 get_template_part('template/pagination');
                 ?>
