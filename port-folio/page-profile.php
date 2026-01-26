@@ -67,11 +67,11 @@
                             <p class="p-profile__title">デザイン</p>
                             <ul class="p-profile__list p-profile__design-list">
                                 <li class="p-profile__item">
-                                    <img src="<?php echo $img_path; ?>Illustrator-icon.png" alt="Illustrator-icon" loading="lazy" class="Illustrator-icon">
+                                    <img src="<?php echo $img_path; ?>illustrator-icon.png" alt="illustrator-icon" loading="lazy" class="illustrator-icon">
                                     <span class="p-profile__name p-profile__name--l">Illustrator</span>
                                 </li>
                                 <li class="p-profile__item">
-                                    <img src="<?php echo $img_path; ?>Photoshop-icon.png" alt="Photoshop-icon" loading="lazy" class="Photoshop-icon">
+                                    <img src="<?php echo $img_path; ?>photoshop-icon.png" alt="photoshop-icon" loading="lazy" class="photoshop-icon">
                                     <span class="p-profile__name p-profile__name--l">Photoshop</span>
                                 </li>
                                 <li class="p-profile__item">

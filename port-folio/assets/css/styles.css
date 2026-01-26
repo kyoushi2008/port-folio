@@ -3883,27 +3883,27 @@ body.active {
   }
 }
 
-.Illustrator-icon {
+.illustrator-icon {
   width: 21.8666666667vw;
   aspect-ratio: 82/81;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media screen and (min-width: 768px) {
-  .Illustrator-icon {
+  .illustrator-icon {
     width: 6.0625rem;
     aspect-ratio: 97/97;
   }
 }
 
-.Photoshop-icon {
+.photoshop-icon {
   width: 21.8666666667vw;
   aspect-ratio: 82/82;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media screen and (min-width: 768px) {
-  .Photoshop-icon {
+  .photoshop-icon {
     width: 6.0625rem;
     aspect-ratio: 97/97;
   }
@@ -7287,6 +7287,7 @@ body.active {
 .p-top-works {
   width: 100%;
   background: #F3F7FA;
+  overflow: hidden;
 }
 
 .p-top-works__content {
