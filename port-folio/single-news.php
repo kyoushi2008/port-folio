@@ -4,7 +4,7 @@
     <div class="p-single-news__container">
         <div class="p-single-news__inner l-inner">
             <div class="c-title">
-                <h2 class="c-title--l c-title--lp">NEWS</h2>
+                <h1 class="c-title--l c-title--lp">NEWS</h1>
                 <p class="c-title--s">お知らせ</p>
             </div>
             <div class="p-breadcrumb">
@@ -31,7 +31,8 @@
                         <?php the_content(); ?>
                         <!-- ボタン -->
                         <div class="c-btn p-single-news__btn">
-                            <a href="<?php echo home_url('/news/'); ?>" class="c-btn__link-n">一覧に戻る<span class="c-btn--circle"></span></a>
+                            <a href="<?php echo home_url('/news/'); ?>" class="c-btn__link-n">一覧に戻る<span
+                                    class="c-btn--circle"></span></a>
                         </div>
                     </div>
                 </div>

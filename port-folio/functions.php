@@ -134,6 +134,7 @@ function my_menu_init()
             'global'  => 'ヘッダーメニュー',
             'utility' => 'ユーティリティメニュー',
             'drawer'  => 'ドロワーメニュー',
+            'footer'  => 'フッターメニュー',
         )
     );
 }
@@ -195,7 +196,7 @@ function breadcrumb()
 
     // TOP
     echo '<li class="breadcrumb-item"><a href="' . home_url() . '">TOP</a></li>';
-    echo '<span class="breadcrumb-separator"> / </span>';
+    
 
     // 1. 固定ページ
     if (is_page()) {
@@ -209,7 +210,7 @@ function breadcrumb()
     // get_post_type() を併用して、カスタム投稿 news のアーカイブであることを確実に判定
     if (is_date() && get_post_type() === 'news') {
         echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link('news') . '">NEWS</a></li>';
-        echo '<span class="breadcrumb-separator"> / </span>';
+        
 
         $y = get_query_var('year');
         $m = get_query_var('monthnum');
@@ -222,7 +223,6 @@ function breadcrumb()
     // 3. カテゴリー判定 (news-category)
     if (is_tax('news-category')) {
         echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link('news') . '">NEWS</a></li>';
-        echo '<span class="breadcrumb-separator"> / </span>';
         echo '<li class="breadcrumb-item active">' . single_term_title('', false) . '</li>';
         echo '</ul>';
         return;
@@ -243,8 +243,7 @@ function breadcrumb()
         if (is_singular($type)) {
             $post_type_obj = get_post_type_object($type);
             $archive_link = get_post_type_archive_link($type);
-            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';
-            echo '<span class="breadcrumb-separator"> / </span>';
+            echo '<li class="breadcrumb-item"><a href="' . $archive_link . '">' . strtoupper($post_type_obj->name) . '</a></li>';            
             echo '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
             echo '</ul>';
             return;

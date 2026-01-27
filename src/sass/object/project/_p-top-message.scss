@@ -140,7 +140,7 @@
   content: "";
   width: calc(315 / 375 * 100%);
   height: myrem(448);
-  background: #F3F7FA;
+  background: #f3f7fa;
   margin-left: calc(50% - 50vw);
   z-index: -1;
   top: myrem(101);
@@ -150,12 +150,23 @@
   }
 }
 
+@keyframes infinity-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .p-top-message__img-text-group {
   position: absolute;
-  width: 100%;
+  width: auto;
   top: 34%;
   left: 8%;
   z-index: 2;
+  display: flex;
+  animation: infinity-scroll 20s linear infinite;
   @include mq(md) {
     top: 38%;
     left: -8%;
@@ -170,6 +181,7 @@
   line-height: 1;
   letter-spacing: 0.1em;
   color: $white;
+  display: inline-block;
   @include mq(md) {
     font-size: myrem(160);
   }

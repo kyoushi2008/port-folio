@@ -5,7 +5,7 @@
         <div class="p-service__inner l-inner">
             <!-- タイトル -->
             <div class="c-title">
-                <h2 class="c-title--l c-title--lp">SERVICE</h2>
+                <h1 class="c-title--l c-title--lp">SERVICE</h1>
                 <p class="c-title--s">サービス</p>
             </div>
             <?php

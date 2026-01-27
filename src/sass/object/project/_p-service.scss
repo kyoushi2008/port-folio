@@ -8,6 +8,7 @@
 .p-service__container {
   width: inherit;
   padding: myrem(79) 0 0 0;
+  overflow: hidden;
   @include mq(md) {
     padding: myrem(105) 0 0 0;
   }

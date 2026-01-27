@@ -2,7 +2,7 @@
 
 .p-top-works {
   width: 100%;
-  background: #F3F7FA;
+  background: #f3f7fa;
   overflow: hidden;
 }
 
@@ -35,9 +35,11 @@
 .p-top-works__slider-card-title-wrapper {
   width: 85%;
   bottom: myrem(-72);
+  left: myrem(-18);
   @include mq(md) {
     width: 91%;
     bottom: myrem(-71);
+    left: myrem(-21);
   }
 }
 .p-top-works__slider-card-title {
@@ -50,8 +52,6 @@
     font-size: myrem(16);
   }
 }
-
-
 
 .p-top-works-slider__nav {
   position: absolute;
@@ -163,4 +163,21 @@
   display: flex;
   justify-content: flex-end;
   margin: myrem(31) 0 0 0;
+}
+
+// 投稿がない場合
+.p-top-works__empty {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: myrem(301);
+  }
+}
+
+.p-top-works__empty-text {
+  @include mq(md) {
+    font-size: myrem(16);
+  }
 }
