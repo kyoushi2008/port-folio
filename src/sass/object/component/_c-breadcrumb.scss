@@ -23,6 +23,20 @@
   }
 }
 
+.breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  font-size: myrem(11);
+  font-weight: bold;
+  line-height: 1.6;
+  display: inline-block;
+  margin-inline: myrem(4);
+  color: $black2;
+  @include mq(md) {
+    font-size: myrem(14);
+    margin-inline: myrem(10);
+  }
+}
+
 .breadcrumb-separator {
   font-size: myrem(11);
   font-weight: bold;

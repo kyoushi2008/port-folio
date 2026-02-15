@@ -7,6 +7,7 @@
 .p-profile__container {
   width: inherit;
   padding: myrem(79) 0 0 0;
+  overflow: hidden;
   @include mq(md) {
     padding: myrem(102) 0 0 0;
   }
@@ -238,7 +239,7 @@
   }
 }
 
-.Illustrator-icon {
+.illustrator-icon {
   // width: myrem(82);
   width: vw(375, 82);
   aspect-ratio: 82 / 81;
@@ -249,7 +250,7 @@
   }
 }
 
-.Photoshop-icon {
+.photoshop-icon {
   // width: myrem(82);
   width: vw(375, 82);
   aspect-ratio: 82 / 82;

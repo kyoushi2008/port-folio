@@ -45,3 +45,20 @@
     display: block;
   }
 }
+
+.p-top-voice__empty {
+  width: 100%;
+  height: auto;
+  padding: myrem(80) 0;
+  text-align: center;
+}
+
+.p-top-voice__empty-text {
+  font-size: myrem(16);
+}
+
+.p-archive-voice__btn {
+@include mq(md) {
+  margin: myrem(80) 0 0 0;
+}
+}

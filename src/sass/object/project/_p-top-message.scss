@@ -134,13 +134,15 @@
 .p-top-message__img-group {
   position: relative;
   width: 100%;
+  // overflow: hidden;
 }
 .p-top-message__img-group:before {
   position: absolute;
   content: "";
   width: calc(315 / 375 * 100%);
   height: myrem(448);
-  background: #F3F7FA;
+  // background: orange;
+  background: #f3f7fa;
   margin-left: calc(50% - 50vw);
   z-index: -1;
   top: myrem(101);
@@ -150,15 +152,27 @@
   }
 }
 
+@keyframes infinity-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .p-top-message__img-text-group {
   position: absolute;
-  width: 100%;
   top: 34%;
-  left: 8%;
-  z-index: 2;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: infinity-scroll 60s linear infinite;
   @include mq(md) {
     top: 38%;
-    left: -8%;
+    z-index: 0;
   }
 }
 
@@ -170,69 +184,40 @@
   line-height: 1;
   letter-spacing: 0.1em;
   color: $white;
+  display: inline-block;
+  width: auto;
   @include mq(md) {
     font-size: myrem(160);
-  }
-}
-.p-top-message__img-group-text::before {
-  position: absolute;
-  content: "";
-  background-image: url("../images/top/assist.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: myrem(260);
-  height: myrem(50);
-  display: inline-block;
-  left: 106%;
-  top: 23%;
-  @include mq(md) {
-    width: myrem(620);
-    height: myrem(118);
-    left: 106%;
-    top: 23%;
   }
 }
 
 .p-top-message__image02 {
   width: 100%;
   position: relative;
-  height: myrem(189);
+  height: auto;
   @include mq(md) {
     height: myrem(370);
   }
 }
-.p-top-message__image02:before {
-  position: absolute;
-  content: "";
-  background-image: url("../images/top/top-message-sp02.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 2;
-  width: myrem(352);
-  height: 100%;
-  top: myrem(40);
-  left: myrem(0);
+
+.p-top-message__image02 img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50vw);
+  width: calc(100% + (50vw - 50%));
+  max-width: none;
+  aspect-ratio: 352 / 189;
+  margin-top: myrem(40);
+  object-fit: cover;
   @include mq(md) {
-    background-image: url("../images/top/top-message-pc02.png");
     width: myrem(690);
-    top: myrem(40);
-    left: myrem(-70);
+    left: 0;
+    transform: none;
+    margin-left: myrem(-70);
+    margin-top: myrem(40);
+    aspect-ratio: 690 / 370;
   }
 }
-// .p-top-message__image02 img {
-//   width: 100%;
-//   aspect-ratio: 352 / 189;
-//   object-fit: cover;
-//   margin: myrem(42) calc(50% - 50vw) 0 0;
-//   padding: 0 myrem(24) myrem(12) 0;
-//   @include mq(md) {
-//     width: myrem(690);
-//     aspect-ratio: 690 / 370;
-//     padding: 0;
-//   }
-// }
 
 .p-top-message__image03 {
   width: 100vw;
