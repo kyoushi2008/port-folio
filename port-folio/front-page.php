@@ -60,54 +60,53 @@
             ?>
 
             <?php if ($slider_query->have_posts()) : ?>
-            <div class="swiper js-works-slider p-common-works-slider p-top-works-slider">
-                <div class="swiper-wrapper">
-                    <?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
-                    <div class="swiper-slide p-common-works-slider__item p-top-works-slider__item">
-                        <a href="<?php the_permalink(); ?>" class="p-archive-works__card">
-                            <div class="p-archive-works__card-image p-top-works__card-image">
-                                <?php if (has_post_thumbnail()) : ?>
-                                <picture>
-                                    <source media="(min-width: 768px)"
-                                        srcset="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'works-card-pc'); ?>">
-                                    <img src="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'works-card-sp'); ?>"
-                                        alt="<?php the_title_attribute(); ?>">
-                                </picture>
-                                <?php endif; ?>
+                <div class="swiper js-works-slider p-common-works-slider p-top-works-slider">
+                    <div class="swiper-wrapper">
+                        <?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
+                            <div class="swiper-slide p-common-works-slider__item p-top-works-slider__item">
+                                <a href="<?php the_permalink(); ?>" class="p-archive-works__card">
+                                    <div class="p-archive-works__card-image p-top-works__card-image">
+                                        <?php if (has_post_thumbnail()) : ?>
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'works-card-pc'); ?>">
+                                                <img src="<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(), 'works-card-sp'); ?>"
+                                                    alt="<?php the_title_attribute(); ?>">
+                                            </picture>
+                                        <?php endif; ?>
 
-                                <?php
+                                        <?php
                                         $terms = get_the_terms(get_the_ID(), 'works-category');
                                         if ($terms && !is_wp_error($terms)) :
                                             $term = array_shift($terms); ?>
-                                <span class="p-archive-works__card-category"><?php echo esc_html($term->name); ?></span>
-                                <?php endif; ?>
+                                            <span class="p-archive-works__card-category"><?php echo esc_html($term->name); ?></span>
+                                        <?php endif; ?>
 
-                                <div class="p-archive-works__card-title-wrapper p-top-works__slider-card-title-wrapper">
-                                    <h3 class="p-archive-works__card-title p-top-works__slider-card-title">
-                                        <?php the_title(); ?></h3>
-                                </div>
+                                        <div class="p-archive-works__card-title-wrapper p-top-works__slider-card-title-wrapper">
+                                            <h3 class="p-archive-works__card-title p-top-works__slider-card-title">
+                                                <?php the_title(); ?></h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        <?php endwhile; ?>
                     </div>
-                    <?php endwhile; ?>
+                    <div class="p-top-works-slider__nav">
+                        <div class="swiper-button-prev js-top-works-slider-prev"></div>
+                        <div class="swiper-button-next js-top-works-slider-next"></div>
+                    </div>
                 </div>
-                <div class="p-top-works-slider__nav">
-                    <div class="swiper-button-prev js-top-works-slider-prev"></div>
-                    <div class="swiper-button-next js-top-works-slider-next"></div>
-                </div>
-            </div>
 
-            <div class="c-btn p-top-works__btn">
-                <a href="<?php echo home_url('/works/'); ?>" class="c-btn__link">Read more<span
-                        class="c-btn--circle"></span></a>
-            </div>
+                <div class="c-btn p-top-works__btn">
+                    <a href="<?php echo home_url('/works/'); ?>" class="c-btn__link">Read more<span
+                            class="c-btn--circle"></span></a>
+                </div>
 
             <?php else : ?>
-            <div class="p-top-works__empty">
-                <p class="p-top-works__empty-text">現在、実績を準備中です。公開まで今しばらくお待ちください。</p>
-            </div>
-            <?php endif;
-            wp_reset_postdata(); ?>
+                <div class="p-top-works__empty">
+                    <p class="p-top-works__empty-text">現在、実績を準備中です。公開まで今しばらくお待ちください。</p>
+                </div>
+            <?php endif; wp_reset_postdata(); ?>
 
         </div>
     </div>
@@ -161,12 +160,12 @@
                     </div>
                     <div class="p-top-message__img-group">
                         <div class="p-top-message__img-text-group">
-                            <span class="p-top-message__img-group-text">CODE</span>
-                            <span class="p-top-message__img-group-text">CODE</span>
+                            <span class="p-top-message__img-group-text">CODE ASSIST</span>
+                            <span class="p-top-message__img-group-text">CODE ASSIST</span>
                         </div>
                         <picture class="p-top-message__image02">
-                            <!-- <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp02.png">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc02.png" alt="message" loading="lazy"> -->
+                            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-sp02.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-message-pc02.png" alt="message" loading="lazy">
                         </picture>
                         <picture class="p-top-message__image03">
                             <source media="(max-width: 767px)"

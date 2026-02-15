@@ -92,41 +92,41 @@
 </footer> -->
 
 <footer class="p-footer l-footer">
-    <div class="p-footer__inner l-inner">
-        <div class="p-footer__wrapper">
-            <div class="p-footer__group">
-                <div class="p-footer__logo">
-                    <a href="<?php echo esc_url(home_url('/')); ?>">CODE ASSIST</a>
-                </div>
-                <div class="p-footer__icon-group">
-                    <?php
+  <div class="p-footer__inner l-inner">
+    <div class="p-footer__wrapper">
+      <div class="p-footer__group">
+        <div class="p-footer__logo">
+          <a href="<?php echo esc_url(home_url('/')); ?>">CODE ASSIST</a>
+        </div>
+        <div class="p-footer__icon-group">
+          <?php
           // 画像パスを簡潔にするための変数
           $img_path = get_theme_file_uri('/assets/images/footer/');
           ?>
-                    <a href="https://line.me/" class="p-footer__icon-line" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo $img_path; ?>line-icon.png" alt="lineアイコン">
-                    </a>
-                    <a href="https://x.com/" class="p-footer__icon-x" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo $img_path; ?>x-icon.png" alt="xアイコン">
-                    </a>
-                    <a href="https://instagram.com/" class="p-footer__icon-instagram" target="_blank"
-                        rel="noopener noreferrer">
-                        <img src="<?php echo $img_path; ?>instagram-icon.png" alt="instagramアイコン">
-                    </a>
-                    <a href="https://facebook.com/" class="p-footer__icon-facebook" target="_blank"
-                        rel="noopener noreferrer">
-                        <img src="<?php echo $img_path; ?>facebook-icon.png" alt="facebookアイコン">
-                    </a>
-                </div>
+          <a href="https://line.me/" class="p-footer__icon-line" target="_blank" rel="noopener noreferrer">
+            <img src="<?php echo $img_path; ?>line-icon.png" alt="lineアイコン">
+          </a>
+          <a href="https://x.com/" class="p-footer__icon-x" target="_blank" rel="noopener noreferrer">
+            <img src="<?php echo $img_path; ?>x-icon.png" alt="xアイコン">
+          </a>
+          <a href="https://instagram.com/" class="p-footer__icon-instagram" target="_blank"
+            rel="noopener noreferrer">
+            <img src="<?php echo $img_path; ?>instagram-icon.png" alt="instagramアイコン">
+          </a>
+          <a href="https://facebook.com/" class="p-footer__icon-facebook" target="_blank"
+            rel="noopener noreferrer">
+            <img src="<?php echo $img_path; ?>facebook-icon.png" alt="facebookアイコン">
+          </a>
+        </div>
 
-                <div class="p-footer__privacy">
-                    <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>"
-                        class="p-footer__privacy-text">プライバシーポリシー</a>
-                </div>
-            </div>
+        <div class="p-footer__privacy">
+          <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>"
+            class="p-footer__privacy-text">プライバシーポリシー</a>
+        </div>
+      </div>
 
-            <div class="p-footer__list-group">
-                <?php
+      <div class="p-footer__list-group">
+        <?php
         $menu_name = 'footer';
         $locations = get_nav_menu_locations();
 
@@ -148,29 +148,29 @@
             $chunks = array_chunk($parent_items, 4);
 
             foreach ($chunks as $items): ?>
-                <ul class="p-footer__nav-list">
-                    <?php foreach ($items as $item): ?>
-                    <li class="p-footer__nav-item">
-                        <a href="<?php echo esc_url($item->url); ?>" class="p-footer__nav-link">
-                            <p class="p-footer__nav-text--l"><?php echo esc_html($item->title); ?></p>
-                            <p class="p-footer__nav-text"><?php echo esc_html($item->attr_title); ?></p>
-                        </a>
-                    </li>
-                    <?php endforeach; ?>
-                </ul>
-                <?php endforeach;
+              <ul class="p-footer__nav-list">
+                <?php foreach ($items as $item): ?>
+                  <li class="p-footer__nav-item">
+                    <a href="<?php echo esc_url($item->url); ?>" class="p-footer__nav-link">
+                      <p class="p-footer__nav-text--l"><?php echo esc_html($item->title); ?></p>
+                      <p class="p-footer__nav-text"><?php echo esc_html($item->attr_title); ?></p>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+        <?php endforeach;
           endif;
         endif; ?>
-            </div>
-        </div>
-        <small class="p-footer__copyright">&copy;2024&emsp;&thinsp;CODE ASSIST</small>
+      </div>
     </div>
+    <small class="p-footer__copyright">&copy;2024&emsp;&thinsp;CODE ASSIST</small>
+  </div>
 </footer>
 
 <!-- ボタントップへもどる -->
 <div class="c-btn c-btn--l js-pagetop">
-    <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link"><span
-            class="c-btn--circle c-btn--l-circle"></span></a>
+  <a href="<?php echo home_url('/contact/'); ?>" class="c-btn__link"><span
+      class="c-btn--circle c-btn--l-circle"></span></a>
 </div>
 <?php wp_footer(); ?>
 </body>

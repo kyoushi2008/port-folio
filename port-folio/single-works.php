@@ -36,7 +36,17 @@
                         </tr>
                         <tr>
                             <th>URL</th>
-                            <td><?php the_field('url'); ?></td>
+                            <td><?php
+                                $works_url = get_field('url');
+                                if ($works_url) :
+                                ?>
+                                    <a href="<?php echo esc_url($works_url); ?>" class="p-single-works__link" target="_blank" rel="noopener noreferrer">
+                                        <?php echo esc_html($works_url); ?>
+                                    </a>
+                                <?php else : ?>
+                                    なし
+                                <?php endif; ?>
+                            </td>
                         </tr>
                         <tr>
                             <th>クライアント情報</th>

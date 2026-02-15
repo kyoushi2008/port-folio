@@ -5,14 +5,15 @@ jQuery(function ($) {
   $(window).scroll(function () {
     // FV要素が存在する場合のみ高さを取得
     var fv = $(".p-fv");
-    if (fv.length) {
-      var fvHeight = fv.outerHeight(); // FVの高さを取得
-
-      if ($(this).scrollTop() > fvHeight) {
-        topBtn.fadeIn();
-      } else {
-        topBtn.fadeOut();
-      }
+    var footerStart = $(
+      ".p-footer-cta,.p-footer",
+    ).first();
+    if (fv.length && footerStart.length) {
+      var fvHeight = fv.outerHeight();
+      var scrollTop = $(this).scrollTop();
+      var winH = $(window).height();
+      var footerTop = footerStart.offset().top;
+      var isNearFooter = scrollTop + winH > footerTop - 50; if (scrollTop > fvHeight && !isNearFooter) { topBtn.fadeIn(); } else { topBtn.fadeOut(); }
     }
   });
 

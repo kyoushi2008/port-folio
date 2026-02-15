@@ -13,7 +13,7 @@
     <?php wp_body_open(); ?>
     <header class="p-header l-header js-header">
         <div class="p-header__wrapper">
-            <?php if (is_front_page()): ?>
+            <?php if (is_front_page() || is_home()): ?>
             <!-- トップページの場合はh1 -->
             <h1 class="p-header__logo js-header">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-image js-header">CODE ASSIST</a>

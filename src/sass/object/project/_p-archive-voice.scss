@@ -56,12 +56,25 @@
   }
 }
 
+.p-archive-voice__card-image picture {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
 .p-archive-voice__card-image img {
   width: 100%;
   aspect-ratio: 335 / 226;
   object-fit: cover;
   @include mq(md) {
+    transition: transform 0.3s ease;
     aspect-ratio: 410 / 278;
+  }
+}
+
+@media (hover: hover) {
+  .p-archive-voice__card:hover .p-archive-voice__card-image img {
+    transform: scale(1.1);
   }
 }
 
@@ -115,7 +128,7 @@
 
 .p-archive-voice__pagination {
   margin: myrem(145) 0 0 0;
-@include mq(md) {
-  margin: myrem(144) 0 0 0;
-}
+  @include mq(md) {
+    margin: myrem(144) 0 0 0;
+  }
 }
