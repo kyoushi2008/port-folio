@@ -7,6 +7,7 @@
 .p-profile__container {
   width: inherit;
   padding: myrem(79) 0 0 0;
+  overflow: hidden;
   @include mq(md) {
     padding: myrem(102) 0 0 0;
   }

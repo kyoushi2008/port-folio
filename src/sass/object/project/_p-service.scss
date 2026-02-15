@@ -8,6 +8,7 @@
 .p-service__container {
   width: inherit;
   padding: myrem(79) 0 0 0;
+  overflow: hidden;
   @include mq(md) {
     padding: myrem(105) 0 0 0;
   }
@@ -471,6 +472,7 @@
   display: flex;
   flex-direction: row;
   padding: myrem(18) 0 0 0;
+  cursor: pointer;
   @include mq(md) {
     padding: 0 myrem(21) myrem(5) myrem(70);
   }

@@ -7,6 +7,21 @@
 
 .p-top-profile__link {
   width: 100%;
+  @include mq(md) {
+    width: calc(1240 / 1440 * 100%);
+    display: block;
+    overflow: hidden;
+    margin: auto;
+  }
+}
+
+
+@media (hover: hover) {
+  .p-top-profile__link:hover .p-top-profile__content::before {
+      @include mq(md) {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .p-top-profile__content {
@@ -17,13 +32,32 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  position: relative;
+  z-index: 0;
   @include mq(md) {
     aspect-ratio: 1240 / 343;
-    background-image: url("../images/top/top-profile-pc.png");
+    background-image: none;
     margin-inline: auto;
-    width: calc(1240 / 1440 * 100%);
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: start;
     padding: 0 0 0 myrem(135);
+  }
+}
+
+.p-top-profile__content::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../images/top/top-profile-pc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease;
   }
 }
 

@@ -7,6 +7,7 @@
 .p-single-works__container {
   width: 100%;
   padding: myrem(78) 0 0 0;
+  overflow: hidden;
   @include mq(md) {
     padding: myrem(101) 0 0 0;
   }
@@ -137,6 +138,13 @@
   }
 }
 
+.p-single-works__link {
+  color: #104c93;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: opacity 0.3s;
+}
+
 .p-single-works__body {
   margin: myrem(73) 0 0 0;
   @include mq(md) {
@@ -216,7 +224,7 @@
   content: "";
   position: absolute;
   width: myrem(10);
-  height: myrem(2);
+  height: myrem(1);
   background: $blue;
   transition: all 0.3s;
 }
@@ -224,31 +232,27 @@
 // 前へ（＜）
 .p-single-works__nav-prev .p-single-works__nav-arrow::before {
   transform: rotate(-20deg);
-  transform-origin: bottom;
-  top: myrem(17);
-  left: myrem(12);
+  top: 46%;
+  left: myrem(14);
 }
 
 .p-single-works__nav-prev .p-single-works__nav-arrow::after {
   transform: rotate(20deg);
-  transform-origin: top;
-  bottom: myrem(14);
-  left: myrem(12);
+  top: 55%;
+  left: myrem(14);
 }
 
 // 次へ（＞）
 .p-single-works__nav-next .p-single-works__nav-arrow::before {
   transform: rotate(20deg);
-  transform-origin: bottom;
-  top: myrem(17);
-  right: myrem(12);
+  top: 46%;
+  right: myrem(14);
 }
 
 .p-single-works__nav-next .p-single-works__nav-arrow::after {
   transform: rotate(-20deg);
-  transform-origin: top;
-  bottom: myrem(14);
-  right: myrem(12);
+  top: 55%;
+  right: myrem(14);
 }
 
 .p-single-works__nav-text {
@@ -340,10 +344,24 @@
 
 // swiperページ下
 .p-single-related-works {
+  position: relative;
   width: 100%;
   padding: 0 0 myrem(50) 0;
   @include mq(md) {
     padding: 0 0 myrem(80) 0;
+  }
+}
+.p-single-related-works::before {
+  position: absolute;
+  content: "";
+  background: #f3f7fa;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include mq(md) {
   }
 }
 
