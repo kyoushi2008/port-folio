@@ -46,7 +46,6 @@
                     <div class="p-archive-voice__pagination">
                         <?php get_template_part('template/pagination'); ?>
                     </div>
-
                 <?php else : ?>
                     <div class="p-archive-voice__no-post">
                         <p class="c-text">Coming Soon...</p>
