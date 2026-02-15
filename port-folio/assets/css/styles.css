@@ -4976,6 +4976,7 @@ body.active {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 1.125rem 0 0 0;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .p-service-faq__text-box {
@@ -5094,6 +5095,11 @@ body.active {
     width: 26.9230769231%;
     gap: 4.375rem;
     padding: 0.125rem 0 0 1.8125rem;
+    position: sticky;
+    top: 6.25rem;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 

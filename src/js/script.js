@@ -153,49 +153,48 @@ $(function () {
   }
 });
 
-// FAQ
+
+//QA
 $(document).ready(function () {
-  $(".p-service-faq__list").each(function (e) {
-    var i = $(this),
-      s = i.find(".p-service-faq__text-box");
-    0 === e ? (i.addClass("is-open"), s.show()) : s.hide();
+  $(".p-service-faq__list").each(function (i) {
+    const $b = $(this).find(".p-service-faq__text-box");
+    if (i === 0) {
+      $(this).addClass("is-open");
+      $b.show();
+    } else {
+      $(this).removeClass("is-open").hide();
+      $b.hide();
+    }
   });
 
-  $(".p-service-faq__list-title").on("click", function () {
-    var e = $(this).closest(".p-service-faq__list"),
-      i = e.find(".p-service-faq__text-box");
-    e.hasClass("is-open")
-      ? (i.slideUp(400), e.removeClass("is-open"))
-      : (i.slideDown(400), e.addClass("is-open"));
+  const isPc = window.matchMedia("(min-width: 1025px)").matches;
+  $(".p-service-faq__icon-q").each(function (i) {
+    $(this).text("Q" + (i + 1) + (isPc ? "." : ""));
   });
 
-  $(".p-service-faq__icon-q").each(function (index) {
-    $(this).text("Q" + (index + 1));
+  $(document).on("click", ".p-service-faq__list-title, .p-service-faq__text-box", function () {
+    const $p = $(this).closest(".p-service-faq__list");
+    const $b = $p.find(".p-service-faq__text-box");
+
+    if ($p.hasClass("is-open")) {
+      $b.stop().slideUp(400);
+      $p.removeClass("is-open");
+    } else {
+      if ($(this).hasClass("p-service-faq__list-title")) {
+        $b.stop().slideDown(400);
+        $p.addClass("is-open");
+      }
+    }
   });
 
-  // PC のときだけ末尾にドットを付ける
-  if (window.matchMedia("(min-width: 1025px)").matches) {
-    $(".p-service-faq__icon-q").each(function (index) {
-      $(this).text("Q" + (index + 1) + ".");
-    });
-  }
-
-  // 初期状態で 15 個以降を非表示
-  $(".p-service-faq__list").slice(7).hide();
-
-  // もっと見る
+  $(".p-service-faq__list").slice(0, 7).show();
   $(".p-service-faq__more").on("click", function () {
-    $(".p-service-faq__list")
-      .slice(7)
-      .each(function () {
-        $(this)
-          .css({ display: "block", opacity: 0 })
-          .animate({ opacity: 1 }, 400);
-      });
-
+    $(".p-service-faq__list").slice(7).fadeIn(400);
     $(this).fadeOut(300);
   });
 });
+
+
 
 // カウント
 $(function () {

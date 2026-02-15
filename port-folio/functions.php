@@ -366,3 +366,14 @@ add_filter('script_loader_src', 'remove_wp_version_strings', 9999);
 
 // RSSフィードのバージョン非表示
 add_filter('the_generator', '__return_empty_string');
+
+
+
+/**
+ * NEWSの公開記事があるか判定する関数
+ */
+function has_visible_news() {
+    // 公開済み(publish)の記事数だけを取得する
+    $count = wp_count_posts('news');
+    return (intval($count->publish) > 0);
+}
