@@ -11,6 +11,9 @@
     width: calc(350 / 1300 * 100%);
     gap: myrem(70);
     padding: myrem(2) 0 0 myrem(29);
+    position: sticky;    // 追従させる
+    top: myrem(100);
+    height: max-content;
   }
 }
 
@@ -78,4 +81,3 @@
   bottom: myrem(15);
   transform: rotate(-37deg);
 }
-

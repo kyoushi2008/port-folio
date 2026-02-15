@@ -235,13 +235,10 @@
                         </dl>
                         <button class="p-service-faq__more">もっと見る</button>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <?php get_footer(); ?>
