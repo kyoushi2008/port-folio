@@ -170,8 +170,10 @@
   gap: myrem(17);
   margin-bottom: myrem(12);
   list-style: none;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
+  flex-wrap: nowrap; /* 折り返しを確実に防ぐ */
+  will-change: transform; /* ブラウザにアニメーションの準備をさせる */
   width: max-content;
   @include mq(md) {
     gap: myrem(18);
@@ -207,12 +209,8 @@
 }
 
 @keyframes slideRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @keyframes slideLeft {

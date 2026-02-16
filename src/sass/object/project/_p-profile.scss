@@ -7,7 +7,7 @@
 .p-profile__container {
   width: inherit;
   padding: myrem(79) 0 0 0;
-  overflow: hidden;
+  overflow: clip;
   @include mq(md) {
     padding: myrem(102) 0 0 0;
   }
@@ -363,6 +363,7 @@
   @include mq(md) {
     display: flex;
     padding: myrem(114) 0 myrem(110) 0;
+    align-items: flex-start;
   }
 }
 
@@ -530,6 +531,9 @@
   @include mq(md) {
     width: calc(320 / 1300 * 100%);
     margin: 0;
+    position: sticky;
+    top: myrem(100);
+    flex-shrink: 0;
   }
 }
 .p-profile__content02-person picture {
