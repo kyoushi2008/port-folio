@@ -182,6 +182,10 @@
 .p-single-voice__content-person {
   @include mq(md) {
     width: calc(320 / 1300 * 100%);
+    position: sticky;
+    top: myrem(100);
+    align-self: flex-start;
+    height: fit-content;
   }
 }
 
