@@ -317,7 +317,7 @@
 </section>
 
 <!-- section profile -->
-<secton class="p-top-profile l-top-profile">
+<section class="p-top-profile l-top-profile">
     <a href="<?php echo esc_url(home_url('/profile/')); ?>" class="p-top-profile__link">
         <div class="p-top-profile__content">
             <div class="p-top-profile__title-group">
@@ -331,7 +331,7 @@
             </div>
         </div>
     </a>
-</secton>
+</section>
 
 <!-- section news -->
 <?php get_template_part('template/top-news'); ?>
