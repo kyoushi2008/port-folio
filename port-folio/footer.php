@@ -1,4 +1,8 @@
 </main>
+<?php
+$locations = get_nav_menu_locations();
+var_dump($locations); // サーバー側でどのキーが登録されているか確認
+?>
 <?php get_template_part('template/footer-cta'); ?>
 <!-- <footer class="p-footer l-footer">
   <div class="p-footer__inner l-inner">
