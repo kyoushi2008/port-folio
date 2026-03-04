@@ -132,33 +132,33 @@
 
         if (isset($locations[$menu_name])):
           $menu = wp_get_nav_menu_object($locations[$menu_name]);
-          $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-          if ($menu_items):
-            // 親メニューだけを抽出
-            $parent_items = [];
-            foreach ($menu_items as $item) {
-              if ($item->menu_item_parent == 0) {
-                $parent_items[] = $item;
+          if ($menu && !is_wp_error($menu)):   // ← $menuの存在チェックを追加
+            $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+            if ($menu_items):
+              $parent_items = [];
+              foreach ($menu_items as $item) {
+                if ($item->menu_item_parent == 0) {
+                  $parent_items[] = $item;
+                }
               }
-            }
 
-            // ★ここが重要：4つずつ「横の塊」として分ける
-            // 1段目（1, 2, 3, 4番目）と 2段目（5, 6, 7, 8番目）に分割
-            $chunks = array_chunk($parent_items, 4);
+              $chunks = array_chunk($parent_items, 4);
 
-            foreach ($chunks as $items): ?>
-              <ul class="p-footer__nav-list">
-                <?php foreach ($items as $item): ?>
-                  <li class="p-footer__nav-item">
-                    <a href="<?php echo esc_url($item->url); ?>" class="p-footer__nav-link">
-                      <p class="p-footer__nav-text--l"><?php echo esc_html($item->title); ?></p>
-                      <p class="p-footer__nav-text"><?php echo esc_html($item->attr_title); ?></p>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
+              foreach ($chunks as $items): ?>
+                <ul class="p-footer__nav-list">
+                  <?php foreach ($items as $item): ?>
+                    <li class="p-footer__nav-item">
+                      <a href="<?php echo esc_url($item->url); ?>" class="p-footer__nav-link">
+                        <p class="p-footer__nav-text--l"><?php echo esc_html($item->title); ?></p>
+                        <p class="p-footer__nav-text"><?php echo esc_html($item->attr_title); ?></p>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
         <?php endforeach;
+            endif;
           endif;
         endif; ?>
       </div>
