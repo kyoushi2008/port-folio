@@ -127,14 +127,11 @@
       </div>
 
 
-
       <div class="p-footer__list-group">
         <?php
         $locations = get_nav_menu_locations();
         if (isset($locations['footer'])):
           $menu_items = wp_get_nav_menu_items($locations['footer']);
-
-var_dump(wp_get_nav_menu_items($locations['footer']));
 
           if ($menu_items):
             // 親メニュー（第1階層）だけを抽出
